@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        /*
         User u = new User("A", "password");
         Reporter r = new Reporter("A", "password");
         Triager t = new Triager("A", "password");
@@ -14,7 +15,10 @@ public class Main {
         System.out.println(t.toString());
         System.out.println(d.toString());
         System.out.println(re.toString());
+         */
 
         UserAccessDatabase uad = new UserAccessDatabase();
+        LoginUI loginUI = new LoginUI(uad);
+
     }
 }

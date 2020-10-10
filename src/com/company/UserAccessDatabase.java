@@ -12,13 +12,14 @@ class UserAccessDatabase {
     private HashMap<String, String> userAccountMap = new HashMap<>();
 
     public UserAccessDatabase(){
-        generateUserAccount();
 
+        generateUserAccount();
         viewUserAccountMap();
-        readUserAccountFromFile();
+        //readUserAccountFromFile();
+
     }
 
-    public String generatePassword(){
+    private String generatePassword(){
 
         final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
@@ -33,9 +34,8 @@ class UserAccessDatabase {
         return builder.toString();
     }
 
-    public void generateUserAccount(){
-        String tempPassword ="", tempUserName = "";
-
+    private void generateUserAccount(){
+        String tempPassword, tempUserName;
 
         try{
             FileWriter fw = new FileWriter("userAccount.txt", true);
@@ -50,20 +50,19 @@ class UserAccessDatabase {
             fw.close();
 
         }catch (IOException e){
-            System.err.println(e);
             e.printStackTrace();
         }
 
     }
 
-    public void viewUserAccountMap(){
+    private void viewUserAccountMap(){
         System.out.println("\nReading from hashmap");
         for(String s : userAccountMap.keySet()){
             System.out.println(s + "\t" + userAccountMap.get(s));
         }
     }
 
-    public void readUserAccountFromFile(){
+    private void readUserAccountFromFile(){
         try{
             System.out.println("\nReading from file userAccount.txt");
             FileReader fw = new FileReader("userAccount.txt");
@@ -77,9 +76,12 @@ class UserAccessDatabase {
             fw.close();
 
         }catch (IOException e){
-            System.err.println(e);
             e.printStackTrace();
         }
+    }
+
+    public HashMap<String, String> getUserAccountMap(){
+        return userAccountMap;
     }
 
 }
