@@ -36,6 +36,8 @@ class Reporter extends User{
     public String toString(){
         return "I am in Reporter";
     }
+    
+
 }
 
 class Triager extends User{

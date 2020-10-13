@@ -20,5 +20,9 @@ public class Main {
         UserAccessDatabase uad = new UserAccessDatabase();
         LoginUI loginUI = new LoginUI(uad);
 
+        //when user is bug reporter
+        //how we know when its bug reporter, do we auto launch from the user class?
+        //BugReporterUI bugUI = new BugReporterUI();
+
     }
 }
