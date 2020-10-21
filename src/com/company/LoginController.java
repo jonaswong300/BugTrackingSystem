@@ -18,4 +18,13 @@ class LoginController {
 
         return false;
     }
+
+    public boolean accountCheck(String username, String password)
+    {
+        boolean check = false;
+        User u = new User();
+        check = u.checkUser(username, password);
+
+        return check;
+    }
 }

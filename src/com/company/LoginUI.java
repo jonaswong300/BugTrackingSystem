@@ -18,6 +18,11 @@ class LoginUI implements ActionListener {
     private LoginController loginController = new LoginController();
     private UserAccessDatabase uad;
 
+    public LoginUI()
+    {
+        prepareGUI();
+    }
+
     public LoginUI(UserAccessDatabase uad){
        prepareGUI();
        this.uad = uad;
@@ -68,8 +73,7 @@ class LoginUI implements ActionListener {
                 String userName = userText.getText();
                 String password = passwordField.getText();
 
-                boolean authenticate = loginController.authenticUser(uad, userName, password);
-
+                boolean authenticate = loginController.accountCheck(userName, password);
                 if(authenticate){
                     successLabel.setText("Login Successful");
                 }else{
