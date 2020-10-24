@@ -20,6 +20,7 @@ class userAddBugsUI extends JFrame implements ActionListener
     public userAddBugsUI()
     {
         System.out.println("At add bugs UI");
+        showForm();
     }
 
     public void showForm()

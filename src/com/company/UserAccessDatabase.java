@@ -13,7 +13,7 @@ class UserAccessDatabase {
 
     public UserAccessDatabase(){
 
-        generateUserAccount();
+        //generateUserAccount();
         viewUserAccountMap();
         //readUserAccountFromFile();
 

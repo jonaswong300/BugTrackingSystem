@@ -1,5 +1,8 @@
 package com.company;
 
+import java.text.SimpleDateFormat;  
+import java.util.Date;
+
 class userAddBugController
 {
     String title;
@@ -14,13 +17,22 @@ class userAddBugController
         addBugsDetails();
     }
 
+    public String getDate()
+    {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+        Date date = new Date();  
+        String date_S = formatter.format(date);
+        return date_S;
+    }
+
     public void addBugsDetails()
     {
         String randomDev = "randomDev";
         boolean solved = false;
-        Bug report = new Bug(title, keywords, description, randomDev, solved);
         BugDatabase bd = new BugDatabase();
-        bd.addBugToDatabase(report);
+        String bugID = bd.getNewBugID();
+        bd.writeNewFileToDatabase(getDate());
+        Bug report = new Bug(title, keywords, description, bugID, randomDev, solved);
     }
 
 }
