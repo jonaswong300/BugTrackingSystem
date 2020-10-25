@@ -6,27 +6,59 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
 import java.util.Scanner;
 
 class BugDatabase {
 
-    //btw i made the delimiter for the bug database ", \n"
-
-    private HashMap<String, Bug> bugMap = new HashMap<>();
-    private String bugReporterName = "";
+    //private String bugReporterName = "";
 
 
     //bugFileStoring, int is bugid and string is filename
+    //eg. <0,Bug0000.txt> <1,Bug0001.txt>
     private HashMap<Integer, String> fileMap = new HashMap<>();
+
+    //holds the titles of all files
+    //eg. <Bug0000.txt, title>
+    private HashMap<String, String> titles = new HashMap<>();
 
     public BugDatabase()
     {
-
+        getFileMap();
     }
 
-    public BugDatabase(String bugReporter)
+    /*public BugDatabase(String bugReporter)
     {
         bugReporterName = bugReporter;
+    }*/
+
+    public void getFileMap()
+    {
+        try{
+            //File bugFD = new File("BugFileDatabase.txt");
+            FileReader fr = new FileReader("BugFileDatabase.txt");
+            Scanner input = new Scanner(fr);
+
+            int idCount = 0;
+            String str = "";
+            String pad = "0000";
+            while(input.hasNextLine())
+            {
+                input.nextLine();
+                str = String.valueOf(idCount);
+                String file = "Bug" + (pad.substring(0, pad.length() - str.length()) + str) + ".txt";
+                fileMap.put(idCount, file);
+                idCount++;
+            }
+
+            fr.close();
+            input.close();
+        }catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
     public String getNewBugID()
@@ -41,7 +73,7 @@ class BugDatabase {
 
             while(input.hasNextLine())
             {
-                System.out.println(input.nextLine());   //FOR SOME REASON, THE CODE DOESN'T WORK WITHOUT THIS LINE, DONT REMOVE IT
+                input.nextLine();   //FOR SOME REASON, THE CODE DOESN'T WORK WITHOUT THIS LINE, DONT REMOVE IT
                 idCount++;
             }
 
@@ -93,10 +125,28 @@ class BugDatabase {
             e.printStackTrace();
         }
     }
+*/
+    public HashMap<String, String> getTitleMap() 
+    {
+        for(Map.Entry<Integer, String> test : fileMap.entrySet())
+        {
+            try
+            {
+                
+                FileReader fr = new FileReader(test.getValue());
+                Scanner input = new Scanner(fr);
+                String title = input.nextLine();
+                String [] split = title.split(" : ");
+                titles.put(test.getValue(), split[1]);
+            }
+            catch(IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
 
-    public HashMap<String, Bug> getBugMap() {
-        return bugMap;
-    }*/
+        return titles;
+    }
 
     public String returnAddBugResponse()
     {

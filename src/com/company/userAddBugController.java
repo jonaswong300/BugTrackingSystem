@@ -9,12 +9,28 @@ class userAddBugController
     String keywords;
     String description;
 
+    public userAddBugController()
+    {
+
+    }
+
     public userAddBugController(String title, String keywords, String description)
     {
+        
         this.title = title;
         this.keywords = keywords;
         this.description = description;
-        addBugsDetails();
+        //addBugsDetails();
+    }
+
+    public boolean checkEmpty()
+    {
+        boolean empty = false;
+        if(title.isEmpty() || keywords.isEmpty() || description.isEmpty())
+        {
+            empty = true;
+        }
+        return empty;
     }
 
     public String getDate()

@@ -16,9 +16,15 @@ class Bug {
     private String description;
     private String assignDeveloper;
     private boolean solved;
+    private String filename;
 
-    public Bug(String ID)
+    public Bug()
     {
+    }
+
+    public Bug(String fileName)
+    {
+        filename = fileName;   
     }
 
     public Bug(String title, String keywords, String description, String ID, String assignDeveloper, boolean solved){
@@ -38,6 +44,7 @@ class Bug {
         
         writeBugToFile();
     }
+
 
     public String getTitle() {
         return title;

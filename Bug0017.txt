@@ -1,0 +1,21 @@
+Title : 'File moved or missing' status is not kept after downloading again the same file 
+Keywords : status,download,file,missing,
+Assigned Developer : randomDev
+
+Solved status : open
+Bug : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+
+
+
+Step to reproduce:
+Please Download a file http://ipv4.download.thinkbroadband.com/5MB.zip
+After download is complete, navigate to download folder and delete the file.
+Navigate to download Panel and make sure 'File moved or missing' status is displayed.
+Download again the above file.
+Navigate to download Panel and check the status for the first file download.
+
+Actual results:
+Download status is changed in "Completed".
+
+Expected results:
+Download status is maintained as "File moved or missing".
