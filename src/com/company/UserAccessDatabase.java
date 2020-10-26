@@ -13,12 +13,8 @@ class UserAccessDatabase {
     private HashMap<String, String> userRoleMap = new HashMap<>();
 
     public UserAccessDatabase(){
-
-        //generateUserAccount();
-        viewUserAccountMap();
-
-        //readUserAccountFromFile();
-
+        readUserAccountFromFile();
+        //viewUserAccountMap();
     }
 
     private String generatePassword(){
@@ -62,25 +58,31 @@ class UserAccessDatabase {
     }
 
     private void viewUserAccountMap(){
-        System.out.println("\nReading from hashmap");
+        System.out.println("\nDisplay user account");
+        System.out.println("---------------------------------------------");
         for(String s : userAccountMap.keySet()){
             System.out.println(s + "\t" + userAccountMap.get(s));
         }
 
+        System.out.println("\nDisplay user roles");
+        System.out.println("---------------------------------------------");
         for(String s : userRoleMap.keySet()){
             System.out.println(s + "\t" + userRoleMap.get(s));
         }
     }
 
     private void readUserAccountFromFile(){
+        String [] temp;
         try{
-            System.out.println("\nReading from file userAccount.txt");
+            System.out.println("\nStoring user accounts from file userAccount.txt");
             FileReader fw = new FileReader("userAccount.txt");
 
             Scanner input = new Scanner(fw);
 
             while(input.hasNextLine()){
-                System.out.println(input.nextLine());
+                temp = input.nextLine().split("\t");
+                userAccountMap.put(temp[0], temp[1]);
+                userRoleMap.put(temp[0], temp[2]);
             }
 
             fw.close();

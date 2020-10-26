@@ -45,7 +45,6 @@ class Bug {
         writeBugToFile();
     }
 
-
     public String getTitle() {
         return title;
     }
@@ -103,14 +102,14 @@ class Bug {
         try
         {
             FileWriter fw = new FileWriter(fileName, true);
-            String toWrite = "Title : " + title + "\n"
-                            + "Keywords : ";
+            StringBuilder toWrite = new StringBuilder("Title : " + title + "\n"
+                    + "Keywords : ");
             for(String s : keywords_AL)
             {
-                toWrite = toWrite + s + ",";
+                toWrite.append(s).append(",");
             }
 
-            toWrite = toWrite + "\nAssigned Developer : " + assignDeveloper + "\n";
+            toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
             String solved_S = "";
             if(solved)
             {
@@ -120,9 +119,9 @@ class Bug {
             {
                 solved_S = "open";
             }
-            toWrite = toWrite + "\nSolved status : " + solved_S;
-            toWrite = toWrite + "\nBug : " + description;
-            fw.write(toWrite);
+            toWrite.append("\nSolved status : ").append(solved_S);
+            toWrite.append("\nBug : ").append(description);
+            fw.write(toWrite.toString());
 
             fw.close();
         }

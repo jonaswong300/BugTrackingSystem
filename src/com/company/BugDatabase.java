@@ -21,44 +21,45 @@ class BugDatabase {
 
     //holds the titles of all files
     //eg. <Bug0000.txt, title>
-    private HashMap<String, String> titles = new HashMap<>();
+    private HashMap<String, String> titleMap = new HashMap<>();
 
     public BugDatabase()
     {
-        getFileMap();
+        initializeMaps();
     }
 
-    /*public BugDatabase(String bugReporter)
-    {
-        bugReporterName = bugReporter;
-    }*/
 
-    public void getFileMap()
-    {
+    public void initializeMaps(){
         try{
-            //File bugFD = new File("BugFileDatabase.txt");
             FileReader fr = new FileReader("BugFileDatabase.txt");
             Scanner input = new Scanner(fr);
+            Scanner in;
 
-            int idCount = 0;
-            String str = "";
-            String pad = "0000";
-            while(input.hasNextLine())
-            {
-                input.nextLine();
-                str = String.valueOf(idCount);
-                String file = "Bug" + (pad.substring(0, pad.length() - str.length()) + str) + ".txt";
-                fileMap.put(idCount, file);
-                idCount++;
+            int idCounter = 0;
+            String [] temp, split;
+
+            while(input.hasNextLine()){
+                temp = input.nextLine().split(",");
+                fileMap.put(idCounter, temp[0]);
+                idCounter++;
+
+                //Edit this line if folder name changes
+                FileReader reader = new FileReader("Bugs/" + temp[0]);
+                in = new Scanner(reader);
+                split = in.nextLine().split(" : ");
+                titleMap.put(temp[0], split[1]);
             }
 
-            fr.close();
-            input.close();
-        }catch (IOException e)
-        {
+        }catch (IOException e){
             e.printStackTrace();
         }
+    }
 
+    //Rewrote this function to combine to initializeMap
+    public HashMap<Integer, String> getFileMap()
+    {
+
+        return fileMap;
     }
 
     public String getNewBugID()
@@ -85,8 +86,7 @@ class BugDatabase {
         }
 
         str = String.valueOf(idCount);
-        String ans = pad.substring(0, pad.length() - str.length()) + str;
-        return ans;
+        return pad.substring(0, pad.length() - str.length()) + str;
     }
 
     public void writeNewFileToDatabase(String date)
@@ -126,27 +126,14 @@ class BugDatabase {
         }
     }
 */
+
+    //Rewrote this function to combine to initializeMap
     public HashMap<String, String> getTitleMap() 
     {
-        for(Map.Entry<Integer, String> test : fileMap.entrySet())
-        {
-            try
-            {
-                
-                FileReader fr = new FileReader(test.getValue());
-                Scanner input = new Scanner(fr);
-                String title = input.nextLine();
-                String [] split = title.split(" : ");
-                titles.put(test.getValue(), split[1]);
-            }
-            catch(IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
-
-        return titles;
+        return titleMap;
     }
+
+
 
     public String returnAddBugResponse()
     {

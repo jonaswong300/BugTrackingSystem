@@ -21,6 +21,10 @@ class BugReporterUI extends JFrame
         // abit inefficient but the gui will have 3 buttons. 
         //each button will be assigned to a class where further functions will be done
 
+        JLabel user = new JLabel("Welcome Bug Reporter");
+        user.setBounds(330, 10, 200, 100);
+        panel.add(user);
+
         JButton addBugReport = new JButton("Add Bug Report");
         addBugReport.setBounds(60, 80, 200, 100);
         addBugReport.addActionListener(new addBugReport());
@@ -35,10 +39,6 @@ class BugReporterUI extends JFrame
         searchBugs.setBounds(540, 80, 200, 100);
         searchBugs.addActionListener(new searchForBugs());
         panel.add(searchBugs);
-        
-        JLabel user = new JLabel("Welcome Bug Reporter");
-        user.setBounds(300, 300, 200, 100);
-        panel.add(user);
 
         frame.setVisible(true);
         
@@ -63,8 +63,7 @@ class trackBugReport implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-
+        userTrackBugUI trackUI = new userTrackBugUI();
     }
     
 }

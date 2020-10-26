@@ -9,6 +9,8 @@ class userAddBugController
     String keywords;
     String description;
 
+    BugDatabase bd;
+
     public userAddBugController()
     {
 
@@ -36,16 +38,15 @@ class userAddBugController
     public String getDate()
     {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
-        Date date = new Date();  
-        String date_S = formatter.format(date);
-        return date_S;
+        Date date = new Date();
+        return formatter.format(date);
     }
 
     public void addBugsDetails()
     {
         String randomDev = "randomDev";
         boolean solved = false;
-        BugDatabase bd = new BugDatabase();
+        bd = new BugDatabase();
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());
         Bug report = new Bug(title, keywords, description, bugID, randomDev, solved);

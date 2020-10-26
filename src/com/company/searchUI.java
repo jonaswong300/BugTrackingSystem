@@ -20,6 +20,11 @@ class searchUI extends JFrame implements ActionListener
 
     public searchUI()
     {
+        System.out.println("At search UI");
+        showForm();
+    }
+
+    public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
         panel.setLayout(null);
@@ -45,7 +50,6 @@ class searchUI extends JFrame implements ActionListener
 
 
         frame.setVisible(true);
-        
     }
 
     @Override

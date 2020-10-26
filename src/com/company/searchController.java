@@ -24,6 +24,9 @@ class searchController
         HashMap<String, String> tMap = new HashMap<>();
         tMap = bd.getTitleMap();
 
+        for(String s : tMap.keySet())
+            System.out.println(s);
+
         for (Map.Entry<String, String> entry : tMap.entrySet()) {
             if(entry.getValue().trim().equals(searchTerms))
             {
