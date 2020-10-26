@@ -20,41 +20,46 @@ class userAddBugsUI extends JFrame implements ActionListener
     public userAddBugsUI()
     {
         System.out.println("At add bugs UI");
+        showForm();
     }
 
     public void showForm()
     {
 
-        form.setSize(600,350);
+        form.setSize(1000,590);
         form.add(panel);
         panel.setLayout(null);
         
         JLabel titleLabel = new JLabel("Title : " );
-        titleLabel.setBounds(20, 20, 80, 25);
+        titleLabel.setBounds(20, 20, 160, 25);
         panel.add(titleLabel);
 
         titleText = new JTextField(150);
-        titleText.setBounds(200,20,200,25);
+        titleText.setBounds(200,20,400,25);
         panel.add(titleText);
 
         JLabel keywordLabel = new JLabel("Add some keywords : ");
-        keywordLabel.setBounds(20, 60, 150, 25);
+        keywordLabel.setBounds(20, 60, 300, 25);
         panel.add(keywordLabel);
 
         keywordsField = new JTextField(150);
-        keywordsField.setBounds(200, 60, 200, 25);
+        keywordsField.setBounds(200, 60, 400, 25);
         panel.add(keywordsField);
 
         JLabel descriptLabel = new JLabel("Description : ");
-        descriptLabel.setBounds(20, 100, 100, 25);
+        descriptLabel.setBounds(20, 100, 200, 25);
         panel.add(descriptLabel);
 
         descriptionArea = new JTextArea();
-        descriptionArea.setBounds(200, 100, 300, 150);
+        descriptionArea.setBounds(200, 105, 600, 300);
         panel.add(descriptionArea);
 
+        JLabel submitLabel = new JLabel("Submit your bug report : ");
+        submitLabel.setBounds(20, 410, 400, 100);
+        panel.add(submitLabel);
+
         submit = new JButton("Submit");
-        submit.setBounds(20, 280, 80,30);
+        submit.setBounds(200, 430, 100,50);
         submit.addActionListener(this);
         panel.add(submit);
 
@@ -66,6 +71,15 @@ class userAddBugsUI extends JFrame implements ActionListener
     public void sendBugRequest(String title, String keywords, String description)
     {
         userAddBugController addBugController = new userAddBugController(title, keywords, description);
+        if(addBugController.checkEmpty())
+        {
+            JOptionPane.showMessageDialog(form, "Ensure that you have filled in the bug report and did not leave any empty text fields.", 
+                                            "Form empty", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            addBugController.addBugsDetails();
+        }
     }
 
     @Override

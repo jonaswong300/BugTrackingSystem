@@ -18,11 +18,17 @@ public class Main {
          */
 
         UserAccessDatabase uad = new UserAccessDatabase();
-        LoginUI loginUI = new LoginUI();
+        //LoginUI loginUI = new LoginUI();
+        
 
         //when user is bug reporter
         //how we know when its bug reporter, do we auto launch from the user class?
-        //BugReporterUI bugUI = new BugReporterUI();
+        BugReporterUI bugUI = new BugReporterUI();
+        
+        //searchUI test
+        //searchUI search = new searchUI();
+        //BugDatabase bd = new BugDatabase();
+        //bd.writeNewFileToDatabase("02/03/2019");
 
     }
 }

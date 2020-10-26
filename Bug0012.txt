@@ -1,0 +1,19 @@
+Title : OS username disclosure using downloads manager 
+Keywords : OS,username,download,manager,disclosure,
+Assigned Developer : randomDev
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+
+
+Step to reproduce:
+Drag and dropping downloaded files into attacker controlled web page exposes OS username by reading 'text/uri-list' which contains full path to file which includes the OS name.
+PoC attached, open and follow instructions.
+
+
+Actual results:
+'text/uri-list' contains OS username (assuming by default the download points to the /Downloads/ folder)
+
+
+Expected results:
+'text/uri-list' should be cleared from containing the full path.

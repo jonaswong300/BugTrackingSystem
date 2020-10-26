@@ -47,7 +47,6 @@ class BugReporterUI extends JFrame
 
 class addBugReport implements ActionListener
 {
-    userAddBugsUI addbugUI = new userAddBugsUI();
     public addBugReport()
     {
     }
@@ -55,7 +54,7 @@ class addBugReport implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) 
     {   
-        addbugUI.showForm();
+        userAddBugsUI addbugUI = new userAddBugsUI();
     }
 }
 
@@ -75,8 +74,7 @@ class searchForBugs implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-
+        searchUI searchUI = new searchUI();
     }
     
 }

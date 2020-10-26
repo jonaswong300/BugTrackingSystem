@@ -1,0 +1,27 @@
+Title : Selection of Address Bar is collapsed randomly when switching tab 
+Keywords : select,tab,address,collapse,random,
+Assigned Developer : randomDev
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
+Build ID: 20170302120751
+Address bar randomly collapsed when switching around the tabs. It is not consistent and can be hard to reproduce.
+
+Step to reproduce:
+Open several web page in new tabs
+i.e, Tab1: about:home
+Tab2: http://ftp.mozilla.org/pub/firefox/nightly/
+Tab3: http://ftp.mozilla.org/pub/firefox/nightly/
+Select all url text of a Tab3
+Switch tabs
+Tab3 -> Tab1 -> Tab3
+Switch tabs
+Tab3 -> Tab2 -> Tab3
+Actual results:
+Step3: Selection of Address Bar is collapsed randomly.
+Step4: selection of Address Bar is re-built randomly.
+It is not consistent, It is very annoying.
+
+Expected results:
+Selection should not be collapsed.
+It should be consistent

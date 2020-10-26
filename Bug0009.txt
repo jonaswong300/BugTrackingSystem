@@ -1,0 +1,15 @@
+Title : When I drag & drop text to address bar it's giving other result than entering text and pressing enter
+Keywords : enter,text,drap,drop,address,
+Assigned Developer : randomDev
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
+
+Step to reproduce:
+When I enter abc/def to address bar and press enter, it's searching on google - which is the way I need. If I drag & drop the same text to the address bar it's going to abc.de/def which is completely wrong
+
+Actual results:
+Firefox is looking for domain instead of searching
+
+Expected results:
+the same as pressing enter on address bar -> searching on google.
