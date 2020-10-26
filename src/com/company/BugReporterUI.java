@@ -9,16 +9,20 @@ class BugReporterUI extends JFrame
 {
     final static int width = 800, height = 500;
 
-    private JFrame frame = new JFrame();
-    private JPanel panel = new JPanel();
+    private final JFrame frame = new JFrame();
+    private final JPanel panel = new JPanel();
 
     public BugReporterUI()
     {
+        showForm();
+    }
+
+    public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
         panel.setLayout(null);
 
-        // abit inefficient but the gui will have 3 buttons. 
+        // abit inefficient but the gui will have 3 buttons.
         //each button will be assigned to a class where further functions will be done
 
         JLabel user = new JLabel("Welcome Bug Reporter");
@@ -41,16 +45,11 @@ class BugReporterUI extends JFrame
         panel.add(searchBugs);
 
         frame.setVisible(true);
-        
     }
 }
 
 class addBugReport implements ActionListener
 {
-    public addBugReport()
-    {
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) 
     {   

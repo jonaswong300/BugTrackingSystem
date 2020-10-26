@@ -24,8 +24,10 @@ public class Main {
         //when user is bug reporter
         //how we know when its bug reporter, do we auto launch from the user class?
         //YES, we will do login then point to the UI via if else
-        BugReporterUI bugUI = new BugReporterUI();
-        
+        //BugReporterUI bugUI = new BugReporterUI();
+
+        TriagerUI tUI = new TriagerUI();
+
         //searchUI test
         //searchUI search = new searchUI();
         //BugDatabase bd = new BugDatabase();
