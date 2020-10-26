@@ -31,7 +31,8 @@ class LoginUI implements ActionListener {
     private void prepareGUI(){
 
         frame.setSize(width, height);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setTitle("Bug Tracking System");
         frame.add(panel);
         panel.setLayout(null);
 

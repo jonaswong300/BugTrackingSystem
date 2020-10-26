@@ -10,11 +10,13 @@ import java.util.Scanner;
 class UserAccessDatabase {
 
     private HashMap<String, String> userAccountMap = new HashMap<>();
+    private HashMap<String, String> userRoleMap = new HashMap<>();
 
     public UserAccessDatabase(){
 
         //generateUserAccount();
         viewUserAccountMap();
+
         //readUserAccountFromFile();
 
     }
@@ -35,16 +37,20 @@ class UserAccessDatabase {
     }
 
     private void generateUserAccount(){
-        String tempPassword, tempUserName;
+        String tempPassword, tempUserName, role;
+
+        String [] roleArray = new String [] {"Developer", "Reporter", "Reviewer", "Triager"};
 
         try{
-            FileWriter fw = new FileWriter("userAccount.txt", true);
+            FileWriter fw = new FileWriter("userAccount.txt");
 
             for(int i = 1; i <= 50; i++){
                 tempPassword = generatePassword();
                 tempUserName = "user" + i;
-                fw.write(tempUserName + "\t" + tempPassword + "\n");
+                role = roleArray[(int)(Math.random() * 4)];
+                fw.write(tempUserName + "\t" + tempPassword + "\t" + role + "\n");
                 userAccountMap.put(tempUserName, tempPassword);
+                userRoleMap.put(tempUserName, role);
             }
 
             fw.close();
@@ -59,6 +65,10 @@ class UserAccessDatabase {
         System.out.println("\nReading from hashmap");
         for(String s : userAccountMap.keySet()){
             System.out.println(s + "\t" + userAccountMap.get(s));
+        }
+
+        for(String s : userRoleMap.keySet()){
+            System.out.println(s + "\t" + userRoleMap.get(s));
         }
     }
 
