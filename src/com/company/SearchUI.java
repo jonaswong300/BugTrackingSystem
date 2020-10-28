@@ -11,7 +11,7 @@ import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-class searchUI implements ActionListener
+class SearchUI implements ActionListener
 {
     final static int width = 1050, height = 600;
 
@@ -22,7 +22,7 @@ class searchUI implements ActionListener
     final JComboBox<String> options = new JComboBox<String>(terms);
     JButton submit = new JButton("Search");
 
-    public searchUI()
+    public SearchUI()
     {
         System.out.println("At search UI");
         showForm();
@@ -65,7 +65,7 @@ class searchUI implements ActionListener
         JLabel bugLabel = new JLabel("Bug Descriptions : ");
         JTextArea bug = new JTextArea();
 
-        searchController sc = new searchController(search.getText());
+        SearchController sc = new SearchController(search.getText());
         if(options.getSelectedItem().equals("Title"))
         {
             String bugFile = sc.searchByTitle();
@@ -231,7 +231,7 @@ class getSpecificBug implements ActionListener
 
         bugFile = e.getActionCommand();
 
-        searchController sc = new searchController(bugFile);
+        SearchController sc = new SearchController(bugFile);
         String specificBugFile = sc.searchByTitle();
         
         specificBugFile = "Bugs/" + specificBugFile;

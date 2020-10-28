@@ -4,16 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
 
-class searchController 
+class SearchController
 {
     String searchTerms;
 
-    public searchController()
+    public SearchController()
     {
 
     }
 
-    public searchController(String searchTerms)
+    public SearchController(String searchTerms)
     {
         this.searchTerms =searchTerms;
     }

@@ -2,11 +2,11 @@ package com.company;
 
 import java.util.HashMap;
 
-class userTrackBugController {
+class UserTrackBugController {
 
     private BugDatabase bd = new BugDatabase();
 
-    public userTrackBugController(){
+    public UserTrackBugController(){
 
     }
 

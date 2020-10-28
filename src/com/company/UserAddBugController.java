@@ -3,7 +3,7 @@ package com.company;
 import java.text.SimpleDateFormat;  
 import java.util.Date;
 
-class userAddBugController
+class UserAddBugController
 {
     String title;
     String keywords;
@@ -11,12 +11,12 @@ class userAddBugController
 
     BugDatabase bd;
 
-    public userAddBugController()
+    public UserAddBugController()
     {
 
     }
 
-    public userAddBugController(String title, String keywords, String description)
+    public UserAddBugController(String title, String keywords, String description)
     {
         
         this.title = title;

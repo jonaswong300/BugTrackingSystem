@@ -36,7 +36,7 @@ class TriagerUI
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new searchForBugs());
+        searchBugs.addActionListener(new SearchForBugs());
         panel.add(searchBugs);
 
         JButton generateReports = new JButton("Generate System Reports");

@@ -30,48 +30,48 @@ class BugReporterUI
 
         JButton addBugReport = new JButton("Add Bug Report");
         addBugReport.setBounds(60, 80, 200, 100);
-        addBugReport.addActionListener(new addBugReport());
+        addBugReport.addActionListener(new AddBugReport());
         panel.add(addBugReport);
 
         JButton trackBug = new JButton("Track Reported Bugs");
         trackBug.setBounds(300, 80, 200, 100);
-        trackBug.addActionListener(new trackBugReport());
+        trackBug.addActionListener(new TrackBugReport());
         panel.add(trackBug);
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new searchForBugs());
+        searchBugs.addActionListener(new SearchForBugs());
         panel.add(searchBugs);
 
         frame.setVisible(true);
     }
 }
 
-class addBugReport implements ActionListener
+class AddBugReport implements ActionListener
 {
     @Override
     public void actionPerformed(ActionEvent e) 
     {   
-        userAddBugsUI addbugUI = new userAddBugsUI();
+        UserAddBugsUI addbugUI = new UserAddBugsUI();
     }
 }
 
-class trackBugReport implements ActionListener
+class TrackBugReport implements ActionListener
 {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        userTrackBugUI trackUI = new userTrackBugUI();
+        UserTrackBugUI trackUI = new UserTrackBugUI();
     }
     
 }
 
-class searchForBugs implements ActionListener
+class SearchForBugs implements ActionListener
 {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        searchUI searchUI = new searchUI();
+        SearchUI searchUI = new SearchUI();
     }
     
 }
