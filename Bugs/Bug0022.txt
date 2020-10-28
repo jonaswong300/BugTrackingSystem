@@ -1,0 +1,27 @@
+Title : cant change jpg file association to firefox developer
+Keywords : change,file,jpg,developer,firefox,
+Assigned Developer : randomDev
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0
+Build ID: 20161023004025
+
+
+
+Step to reproduce:
+I use firefox to default preview my images.
+I recently switched to firefox developer, but I'm unable to associate .jpg with firefox devloper. It keeps opening the file in the default firefox.
+I associated the .jpg to firefox developer trough the properties menu of the jpg file, and selected the firefox developer executable to open jpg.
+But it still keeps the association with the default firefox.
+
+In the windows settings (file association), I don't have the choice to select firefox developers at all.
+
+
+Actual results:
+No matter what i do it keeps the file association to the default firefox
+
+
+
+
+Expected results:
+File association, should change to firefox developers

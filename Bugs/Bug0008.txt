@@ -1,0 +1,16 @@
+Title : When scrolled to the right of a long URL, the end is faded away
+Keywords : scroll,url,end,fade,right,
+Assigned Developer : randomDev2
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+Build ID: 20171129230227
+
+Step to reproduce:
+Scrolled the address bar to the end of a long URL.
+
+Actual results:
+The end of the URL was faded away, even though the whole of the URL was within view. This suggested there was more URL to show (there wasn't).
+
+Expected results:
+The end of the URL should be shown without a fade effect, to aid readability and to make it clear that there is no more URL hidden to the right.

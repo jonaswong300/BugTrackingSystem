@@ -1,0 +1,29 @@
+Title : The "preview in Firefox" option for PDF files may not take effect
+Keywords : preview,pdf,file,
+Assigned Developer : randomDev3
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0
+Build ID: 20170413192749
+
+Step to reproduce:
+Open a PDF from an attachment in Wunderlist desktop.
+In settings->applications, the way PDF is set up is:
+"Portable Document Format (PDF)" -> "Preview in Firefox"
+
+Actual results:
+I've seen several results.
+
+In every case, it first opens an ampty tab with the Wunderlist-url. Then:
+1) Firefox may display dialog box asking the user what to do with the file. 
+
+1a) Opening it with Firefox causes it to open another tab and preview the PDF there.
+
+1b) The default action is in some cases something called "TWINUI", which opens the PDF with Edge. 
+This option isn't always there, and I haven't been able to figure when and when not.
+
+2) Firefox might download the PDF instantly, without any user interaction, to the desktop (i.e. to the default download folder).
+
+
+Expected results:
+The it is set in the settings to open PDF with "preview in Firefox", it should do exactly that. Always.

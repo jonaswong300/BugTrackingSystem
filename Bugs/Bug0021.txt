@@ -1,0 +1,23 @@
+Title : Using "Save Image As" on a large canvas is slow
+Keywords : save,slow,canvas,
+Assigned Developer : randomDev5
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Build ID: 20150826185640
+
+
+Step to reproduce:
+Open the attached file.
+Right-click anywhere on the canvas.
+Choose "Save Image As".
+
+
+Actual results:
+During several seconds, nothing happens.
+Then a save dialog is shown, and the image is downloaded immediately after the user picks a directory.
+
+
+
+Expected results:
+The file dialog should be shown immediately, and only then the image should be converted to PNG and saved.

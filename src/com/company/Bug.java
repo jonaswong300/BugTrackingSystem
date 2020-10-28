@@ -99,6 +99,7 @@ class Bug {
     public void writeBugToFile()
     {
         String fileName = "Bug" + ID + ".txt";
+        fileName = "Bugs/" + fileName;
         try
         {
             FileWriter fw = new FileWriter(fileName, true);

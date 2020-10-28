@@ -1,0 +1,18 @@
+Title : Download panel don't respond when click frequently
+Keywords : download,click,respond,
+Assigned Developer : randomDev3
+
+Solved status : open
+Bug : Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
+
+
+Step to reproduce:
+After I click the download arrow icon on menu frequently, it don't response. because the transaction consumes time too long , about 174ms。
+
+
+Actual results:
+the download icon don't response click action.
+
+
+Expected results:
+the download icon display download list.

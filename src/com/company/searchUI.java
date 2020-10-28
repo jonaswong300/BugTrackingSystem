@@ -1,11 +1,16 @@
 package com.company;
 
 import javax.swing.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.awt.FlowLayout;
+import java.util.HashMap;
+import java.util.Map;
 
 class searchUI extends JFrame implements ActionListener
 {
@@ -56,6 +61,11 @@ class searchUI extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e) 
     {   
 
+        JFrame bugThread = new JFrame();
+        JPanel bugPanel = new JPanel(); 
+        JLabel bugLabel = new JLabel("Bug Descriptions : ");
+        JTextArea bug = new JTextArea();
+
         searchController sc = new searchController(search.getText());
         if(options.getSelectedItem().equals("Title"))
         {
@@ -70,27 +80,23 @@ class searchUI extends JFrame implements ActionListener
             else
             {
                 //open thread in new frame
-
-                JFrame bugThread = new JFrame();
-                JPanel bugPanel = new JPanel();                
-                bugThread.setSize(1200,750); 
+               
+                bugThread.setSize(1330,750); 
                 bugThread.setVisible(true);
 
                 bugThread.add(bugPanel);
-                panel.setLayout(null);
+                bugPanel.setLayout(null);
 
-                JLabel bugLabel = new JLabel("Bug Descriptions : ");
                 bugLabel.setBounds(10, 10, 150, 20);
                 bugPanel.add(bugLabel);
-                JTextArea bug = new JTextArea();
-                bug.setBounds(130,10,200,200);
-                bugPanel.add(bug);
 
+                bug.setBounds(130,10,1250,750);
+                bugPanel.add(bug);
 
 
                 try 
                 {
-                    FileReader fr = new FileReader(bugFile);
+                    FileReader fr = new FileReader("Bugs/" + bugFile);
                     bug.read(fr, bugFile);
                     fr.close();
                 }
@@ -102,12 +108,144 @@ class searchUI extends JFrame implements ActionListener
         }
         else if(options.getSelectedItem().equals("Keywords"))
         {
-            sc.searchByKeywords();
+            boolean valid = sc.checkValidKeyword();
+            if(valid)
+            {
+                BugDatabase bd = new BugDatabase();
+                ArrayList<String> keywordFiles = sc.searchByKeywords();
+                HashMap<String, String> titlesMap = bd.getTitleMap();
+                
+                bugThread.setSize(1200,750); 
+                bugThread.setVisible(true);
+    
+                bugThread.add(bugPanel);
+                bugPanel.setLayout(new FlowLayout());
+    
+                String title = "";
+                JButton [] bugButtons = new JButton[keywordFiles.size()];
+
+                for(int i = 0; i < keywordFiles.size(); i++)
+                {
+                    for(Map.Entry<String,String> me : titlesMap.entrySet())
+                    {
+
+                        System.out.println(me.getKey());
+                        if(("Bugs/" + me.getKey()).equals(keywordFiles.get(i)))
+                        {
+                            title = me.getValue();
+                        }
+                    }
+                    //String title = titlesMap.get(devFilesList.get(i));
+                    bugButtons[i] = new JButton(title);
+                    bugButtons[i].setSize(300, 50);
+                    bugButtons[i].addActionListener(new getSpecificBug());
+                    bugPanel.add(bugButtons[i]);
+                    
+                }
+
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(frame, "You have entered an invalid keyword. Please check for spelling errors. "
+                                            , "Invalid Keyword Search", JOptionPane.ERROR_MESSAGE);
+            }
         }
         else
         {
-            sc.searchByDev();
+            if(sc.checkDevExists())
+            {
+                BugDatabase bd = new BugDatabase();
+                ArrayList<String> devFilesList = sc.searchByDev();
+                HashMap<String, String> titlesMap = bd.getTitleMap();
+                //System.out.println(titlesMap.get("Bug0001.txt"));
+
+
+                bugThread.setSize(1200,750); 
+                bugThread.setVisible(true);
+    
+                bugThread.add(bugPanel);
+                bugPanel.setLayout(new FlowLayout());
+    
+                String title = "";
+                JButton [] bugButtons = new JButton[devFilesList.size()];
+
+                for(int i = 0; i < devFilesList.size(); i++)
+                {
+                    for(Map.Entry<String,String> me : titlesMap.entrySet())
+                    {
+                        if(me.getKey().equals(devFilesList.get(i)))
+                        {
+                            title = me.getValue();
+                        }
+                    }
+                    //String title = titlesMap.get(devFilesList.get(i));
+                    bugButtons[i] = new JButton(title);
+                    bugButtons[i].setSize(300, 50);
+                    bugButtons[i].addActionListener(new getSpecificBug());
+                    bugPanel.add(bugButtons[i]);
+                    
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(frame, "You have entered an invalid developer username. Please check for spelling errors. "
+                                            , "Invalid Developer Search", JOptionPane.ERROR_MESSAGE);
+            }
         }
 
     }
+}
+
+
+
+// USED FOR SEARCHBYDEV AND SEARCHBYKEYWORDS
+// FOR THE BUTTONS OF BUGS LISTED
+class getSpecificBug implements ActionListener
+{
+    String bugFile;
+    JFrame bugThread = new JFrame();
+    JPanel bugPanel = new JPanel(); 
+    JLabel bugLabel = new JLabel("Bug Descriptions : ");
+    JTextArea bug = new JTextArea();
+
+    public getSpecificBug()
+    {
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    {
+
+        bugThread.setSize(1330,750); 
+        bugThread.setVisible(true);
+
+        bugThread.add(bugPanel);
+        bugPanel.setLayout(null);
+
+        bugLabel.setBounds(10, 10, 150, 20);
+        bugPanel.add(bugLabel);
+
+        bug.setBounds(130,10,1250,750);
+        bugPanel.add(bug);
+
+        bugFile = e.getActionCommand();
+
+        searchController sc = new searchController(bugFile);
+        String specificBugFile = sc.searchByTitle();
+        
+        specificBugFile = "Bugs/" + specificBugFile;
+        try 
+        {
+            FileReader fr = new FileReader(specificBugFile);
+            bug.read(fr, specificBugFile);
+            fr.close();
+        }
+        catch (IOException except) 
+        {
+            except.printStackTrace();
+        }
+    }
+    
 }

@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 class BugDatabase {
 
@@ -23,6 +24,13 @@ class BugDatabase {
     //eg. <Bug0000.txt, title>
     private HashMap<String, String> titleMap = new HashMap<>();
 
+    //holds the dev of all files
+    //eg. <Bug0001.txt, devName> 
+    private HashMap<String, String> devMap = new HashMap<>();
+
+    //holds all keywords
+    private ArrayList<String> keywordsList = new ArrayList<>();
+
     public BugDatabase()
     {
         initializeMaps();
@@ -36,18 +44,49 @@ class BugDatabase {
             Scanner in;
 
             int idCounter = 0;
-            String [] temp, split;
+            String [] temp, split, keySplit, keywords, devSplit;
 
             while(input.hasNextLine()){
                 temp = input.nextLine().split(",");
                 fileMap.put(idCounter, temp[0]);
                 idCounter++;
 
+                //TITLE
                 //Edit this line if folder name changes
                 FileReader reader = new FileReader("Bugs/" + temp[0]);
+                //FileReader reader = new FileReader(temp[0]);
                 in = new Scanner(reader);
                 split = in.nextLine().split(" : ");
                 titleMap.put(temp[0], split[1]);
+
+                //KEYWORDS
+                // will hold array list as eg.
+                // [keyword : file1 : file2,
+                //  keyword2 : file1 : file2, file3,
+                //  keyword3 : file1]
+
+                keySplit = in.nextLine().split(" : ");
+                keywords = keySplit[1].split(",");
+                
+                for(int i = 0 ; i < keywords.length; i++)
+                {
+                    if(!keywordsList.contains(keywords[i]))
+                    {
+                        keywordsList.add(keywords[i] + " : Bugs/" + temp[0]);
+                    }
+                    else
+                    {
+                        if(keywordsList.get(i).equals(keywords[i]))
+                        {
+                            String addFile = keywordsList.get(i) + (" : Bugs/" + temp[0]);
+                            keywordsList.set(i, addFile);
+                        }
+                    }
+                }
+
+                //DEVELOPER
+                devSplit = in.nextLine().split(" : ");
+                devMap.put(temp[0], devSplit[1]);
             }
 
         }catch (IOException e){
@@ -133,7 +172,15 @@ class BugDatabase {
         return titleMap;
     }
 
+    public HashMap<String, String> getDevMap()
+    {
+        return devMap;
+    }
 
+    public ArrayList<String> getKeywordsList()
+    {
+        return keywordsList;
+    }
 
     public String returnAddBugResponse()
     {

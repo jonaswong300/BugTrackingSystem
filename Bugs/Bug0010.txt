@@ -1,0 +1,19 @@
+Title : No warning displayed when downloading malicious files using drag and drop
+Keywords : malicious,files,drag,drop,warning,
+Assigned Developer : randomDev2
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
+Build ID: 20170302120751
+
+Step to reproduce:
+Open Firefox with a new profile and go to https://testsafebrowsing.appspot.com/.
+Download a random file from “Desktop Download Warnings” (e.g 3).
+Drag and drop a random link from “Desktop Download Warnings” to the download arrow.
+Observe the download panel.
+
+Actual results:
+The downloaded file via drag and drop has no warning.
+
+Expected results:
+Both downloads have a warning displayed.

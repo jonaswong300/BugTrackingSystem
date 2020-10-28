@@ -1,0 +1,18 @@
+Title : Firefox Library downloads view shows non-private downloads in a private window
+Keywords : download,private,window,firefox,library,
+Assigned Developer : randomDev1
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
+Build ID: 20170302120751
+
+Step to reproduce:
+1. In a non-private window download some files.
+2. Open a private window, and click on the Library icon.
+3. Click on Downloads.
+
+Actual results:
+The downloads from your non-private session are listed there.
+
+Expected results:
+No downloads from your non-private session should be listed there.
