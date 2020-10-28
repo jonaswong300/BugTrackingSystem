@@ -3,12 +3,15 @@ package com.company;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.HashMap;
 
 class Comment 
 {
     HashMap<Integer, String> commentMap = new HashMap<>();
+    LinkedList <String> linkedComments = new LinkedList<>();
+
     String filename;
     public Comment()
     {
