@@ -1,6 +1,8 @@
 package com.company;
 
-import java.text.SimpleDateFormat;  
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 class UserAddBugController
@@ -49,7 +51,8 @@ class UserAddBugController
         bd = new BugDatabase();
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());
-        Bug report = new Bug(title, keywords, description, bugID, emptyDev, solved);
+
+        Bug report = new Bug(bugID,title, new ArrayList<String>(Arrays.asList(keywords.split(" "))), description, emptyDev, solved);
     }
 
 }

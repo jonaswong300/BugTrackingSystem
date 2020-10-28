@@ -1,5 +1,5 @@
 Title : The "preview in Firefox" option for PDF files may not take effect
-Keywords : preview,pdf,file,
+Keywords :preview,pdf,file,
 Assigned Developer : randomDev3
 
 Solved status : open

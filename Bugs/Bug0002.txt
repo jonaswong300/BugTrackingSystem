@@ -1,5 +1,5 @@
 Title : Awesomebar should not auto-complete "about:blank" to "about:blank/"
-Keywords : auto-complete,awesomebar,
+Keywords :auto-complete,awesomebar,
 Assigned Developer : randomDev3
 
 Solved status : open

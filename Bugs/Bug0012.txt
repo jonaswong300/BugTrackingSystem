@@ -1,5 +1,5 @@
 Title : OS username disclosure using downloads manager
-Keywords : OS,username,download,manager,disclosure,
+Keywords :OS,username,download,manager,disclosure,
 Assigned Developer : randomDev5
 
 Solved status : open

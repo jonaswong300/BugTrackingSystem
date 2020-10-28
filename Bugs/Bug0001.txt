@@ -1,5 +1,5 @@
 Title : Selection of Address Bar is collapsed randomly when switching tab
-Keywords : select,tab,address,collapse,random,
+Keywords :select,tab,address,collapse,random,
 Assigned Developer : randomDev2
 
 Solved status : open
@@ -17,6 +17,7 @@ Switch tabs
 Tab3 -> Tab1 -> Tab3
 Switch tabs
 Tab3 -> Tab2 -> Tab3
+
 Actual results:
 Step3: Selection of Address Bar is collapsed randomly.
 Step4: selection of Address Bar is re-built randomly.

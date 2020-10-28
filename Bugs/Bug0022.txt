@@ -1,5 +1,5 @@
 Title : cant change jpg file association to firefox developer
-Keywords : change,file,jpg,developer,firefox,
+Keywords :change,file,jpg,developer,firefox,
 Assigned Developer : randomDev
 
 Solved status : open

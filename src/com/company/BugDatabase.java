@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 
 class BugDatabase {
 
@@ -15,24 +13,27 @@ class BugDatabase {
 
     //bugFileStoring, int is bugid and string is filename
     //eg. <0,Bug0000.txt> <1,Bug0001.txt>
-    private HashMap<Integer, String> fileMap = new HashMap<>();
+    private final HashMap<Integer, String> fileMap = new HashMap<>();
 
     //holds the titles of all files
     //eg. <Bug0000.txt, title>
-    private HashMap<String, String> titleMap = new HashMap<>();
+    private final HashMap<String, String> titleMap = new HashMap<>();
 
     //holds the dev of all files
     //eg. <Bug0001.txt, devName> 
-    private HashMap<String, String> devMap = new HashMap<>();
+    private final HashMap<String, String> devMap = new HashMap<>();
+
+    //Holds all the Bug objects
+    //eg. <Integer, Bug> <1, Bug>
+    private final HashMap<String, Bug> bugMap = new HashMap<>();
 
     //holds all keywords
-    private ArrayList<String> keywordsList = new ArrayList<>();
+    private final ArrayList<String> keywordsList = new ArrayList<>();
 
     public BugDatabase()
     {
         initializeMaps();
     }
-
 
     public void initializeMaps(){
         try{
@@ -50,11 +51,15 @@ class BugDatabase {
 
                 //TITLE
                 //Edit this line if folder name changes
-                FileReader reader = new FileReader("Bugs/" + temp[0]);
-                //FileReader reader = new FileReader(temp[0]);
+                String bugFileName = "Bugs/" + temp[0];
+                FileReader reader = new FileReader(bugFileName);
+
+                createBugObject(bugFileName, idCounter);
+
                 in = new Scanner(reader);
                 split = in.nextLine().split(" : ");
                 titleMap.put(temp[0], split[1]);
+
 
                 //KEYWORDS
                 // will hold array list as eg.
@@ -62,7 +67,7 @@ class BugDatabase {
                 //  keyword2 : file1 : file2, file3,
                 //  keyword3 : file1]
 
-                keySplit = in.nextLine().split(" : ");
+                keySplit = in.nextLine().split(" :");
                 keywords = keySplit[1].split(",");
                 
                 for(int i = 0 ; i < keywords.length; i++)
@@ -94,11 +99,51 @@ class BugDatabase {
         }
     }
 
-    //Rewrote this function to combine to initializeMap
-    public HashMap<Integer, String> getFileMap()
-    {
+    public void createBugObject(String bugFileName, int idCounter){
+        String title, ID, description, assignDeveloper;
+        ArrayList<String> keywords_AL = new ArrayList<>();
+        boolean solved;
 
-        return fileMap;
+        String [] split, keywordsTemp;
+
+        try{
+            FileReader fr = new FileReader(bugFileName);
+            Scanner fileInput = new Scanner(fr);
+
+            if(fileInput.hasNextLine()){
+                //Assign ID
+                ID = String.valueOf(idCounter);
+
+                //Split title
+                split = fileInput.nextLine().split(":");
+                title = split[1];
+
+                //Splitting keywords
+                split = fileInput.nextLine().split(":");
+                keywordsTemp = split[1].split(",");
+                Collections.addAll(keywords_AL, keywordsTemp);
+
+                //Split Assigned developer
+                assignDeveloper = fileInput.nextLine().split(":")[1];
+
+                fileInput.nextLine();
+
+                //Split solved
+                split = fileInput.nextLine().split(":");
+                solved = !split[1].equals("open");
+
+                split = fileInput.nextLine().split(":");
+                description = split[1];
+
+                bugMap.put(ID, new Bug(ID, title, keywords_AL, description, assignDeveloper, solved));
+
+            }else{
+                System.out.println(bugFileName + "  is empty.");
+            }
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public String getNewBugID()
@@ -172,12 +217,12 @@ class BugDatabase {
         {
             FileReader fr = new FileReader("BugFileDatabase.txt");
             Scanner input = new Scanner(fr);
-            StringBuffer holdAll = new StringBuffer();
+            StringBuilder holdAll = new StringBuilder();
             String toChange = "";
             while(input.hasNextLine())
             {
                 toChange = "!" + fileName;
-                holdAll.append(input.nextLine()+System.lineSeparator());
+                holdAll.append(input.nextLine()).append(System.lineSeparator());
                 
             }
             
@@ -203,9 +248,17 @@ class BugDatabase {
         return titleMap;
     }
 
+    public HashMap<Integer, String> getFileMap() {
+        return fileMap;
+    }
+
     public HashMap<String, String> getDevMap()
     {
         return devMap;
+    }
+
+    public HashMap<String, Bug> getBugMap(){
+        return bugMap;
     }
 
     public ArrayList<String> getKeywordsList()

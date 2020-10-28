@@ -1,5 +1,5 @@
 Title : Using "Save Image As" on a large canvas is slow
-Keywords : save,slow,canvas,
+Keywords :save,slow,canvas,
 Assigned Developer : user3
 
 Solved status : open

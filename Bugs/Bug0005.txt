@@ -1,5 +1,5 @@
 Title : Unresolvable www subdomain unexpectedly redirects to domain without www
-Keywords : domain,redirect,unresolvable,www,
+Keywords :domain,redirect,unresolvable,www,
 Assigned Developer : randomDev1
 
 Solved status : open

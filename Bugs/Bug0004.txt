@@ -1,5 +1,5 @@
 Title : "% text" doesn't find text in urls after switching containers
-Keywords : containers,switch,url,
+Keywords :containers,switch,url,
 Assigned Developer : randomDev2
 
 Solved status : open

@@ -61,18 +61,15 @@ class BugDeveloperCloseBugReportUI implements ActionListener {
 
         form.setVisible(true);
     }
+    public void closeBugRequest(String bugID, String title, String remarks){
+        BugDeveloperCloseBugReportController bdcbrc = new BugDeveloperCloseBugReportController();
+        bdcbrc.closeReport(bugID, title, remarks);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        BugDeveloperCloseBugReportController bdcbrc = new BugDeveloperCloseBugReportController();
-
-        bugID = bugIDField.getText();
-        title = titleField.getText();
-        remarks = remarksArea.getText();
-
-        System.out.println(bugID);
-        System.out.println(title);
-        System.out.println(remarks);
-
+        closeBugRequest(bugIDField.getText(), titleField.getText(), remarksArea.getText());
     }
+
+
 }

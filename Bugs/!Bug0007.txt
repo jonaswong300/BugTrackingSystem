@@ -1,5 +1,5 @@
 Title : For a new profile, second character is lost when typing into the URL bar
-Keywords : second,url,profile,new,
+Keywords :second,url,profile,new,
 Assigned Developer : 
 
 Solved status : open

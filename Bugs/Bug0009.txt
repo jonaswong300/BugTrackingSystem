@@ -1,5 +1,5 @@
 Title : When I drag & drop text to address bar it's giving other result than entering text and pressing enter
-Keywords : enter,text,drap,drop,address,
+Keywords :enter,text,drap,drop,address,
 Assigned Developer : randomDev5
 
 Solved status : open

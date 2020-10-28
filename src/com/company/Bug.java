@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 class Bug {
     private String title;
@@ -23,22 +24,13 @@ class Bug {
         filename = fileName;   
     }
 
-    public Bug(String title, String keywords, String description, String ID, String assignDeveloper, boolean solved){
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, boolean solved){
+        this.ID = ID;
         this.title = title;
+        this.keywords_AL = keywords;
         this.assignDeveloper = assignDeveloper;
         this.description = description;
         this.solved = solved;
-        this.ID = ID;
-
-        //seperate the keyword string into arraylist, delimiter ","
-        String [] splitKeywords = keywords.split(" ");
-        for(String key : splitKeywords)
-        {
-            keywords_AL.add(key);
-        }
-
-        
-        writeBugToFile();
     }
 
     public String getTitle() {
@@ -62,10 +54,7 @@ class Bug {
     public void setKeywords(String keywords)
     {
         String [] splitKeywords = keywords.split(" ");
-        for(String key : splitKeywords)
-        {
-            keywords_AL.add(key);
-        }
+        keywords_AL.addAll(Arrays.asList(splitKeywords));
     }
 
     public String getDescription() {
@@ -136,4 +125,13 @@ class Bug {
 
     }
 
+    @Override
+    public String toString(){
+        return  "Bug Id: " + ID + "\n" +
+                "Bug Title: " + title + "\n" +
+                "Keywords: " +  keywords_AL + "\n" +
+                "Description: " + description + "\n" +
+                "Assigned Developer: " + assignDeveloper + "\n" +
+                "Solved: " + solved + "\n";
+    }
 }

@@ -1,5 +1,5 @@
 Title : Download Panel doesn't show progress bar in high contrast
-Keywords : download,panel,progress,bar,contrast,
+Keywords :download,panel,progress,bar,contrast,
 Assigned Developer : randomDev5
 
 Solved status : open
