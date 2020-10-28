@@ -4,8 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TriagerUI {
-    final static int width = 800, height = 500;
+class TriagerUI 
+{
+    final static int width = 1040, height = 500;
 
     private final JFrame frame = new JFrame();
     private final JPanel panel = new JPanel();
@@ -20,7 +21,7 @@ public class TriagerUI {
         panel.setLayout(null);
 
         JLabel user = new JLabel("Welcome Triager");
-        user.setBounds(330, 10, 200, 100);
+        user.setBounds(470, 10, 200, 100);
         panel.add(user);
 
         JButton viewBugReport = new JButton("View All Bugs");
@@ -38,6 +39,11 @@ public class TriagerUI {
         searchBugs.addActionListener(new searchForBugs());
         panel.add(searchBugs);
 
+        JButton generateReports = new JButton("Generate System Reports");
+        generateReports.setBounds(780, 80, 200, 100);
+        generateReports.addActionListener(new generateReports());
+        panel.add(generateReports);
+
         frame.setVisible(true);
     }
 }
@@ -50,12 +56,22 @@ class viewAllBugReport implements ActionListener{
     }
 }
 
-class AssignBugToDeveloper implements ActionListener{
+class AssignBugToDeveloper implements ActionListener
+{
     @Override
     public void actionPerformed(ActionEvent e)
     {
-
+        TriagerAssignDevUI assignUI = new TriagerAssignDevUI();
     }
 }
 
+class generateReports implements ActionListener
+{
 
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    {
+        TriagerGenerateReportUI reportUI = new TriagerGenerateReportUI();
+    }
+    
+}

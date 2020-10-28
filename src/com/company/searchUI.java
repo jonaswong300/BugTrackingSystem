@@ -5,14 +5,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileReader;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-class searchUI extends JFrame implements ActionListener
+class searchUI implements ActionListener
 {
     final static int width = 1050, height = 600;
 

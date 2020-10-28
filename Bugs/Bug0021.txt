@@ -1,6 +1,6 @@
 Title : Using "Save Image As" on a large canvas is slow
 Keywords : save,slow,canvas,
-Assigned Developer : randomDev5
+Assigned Developer : user3
 
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0

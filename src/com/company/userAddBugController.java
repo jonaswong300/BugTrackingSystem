@@ -44,12 +44,12 @@ class userAddBugController
 
     public void addBugsDetails()
     {
-        String randomDev = "randomDev";
+        String emptyDev = "";
         boolean solved = false;
         bd = new BugDatabase();
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());
-        Bug report = new Bug(title, keywords, description, bugID, randomDev, solved);
+        Bug report = new Bug(title, keywords, description, bugID, emptyDev, solved);
     }
 
 }

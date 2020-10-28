@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.security.SecureRandom;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -85,8 +82,11 @@ class BugDatabase {
                 }
 
                 //DEVELOPER
-                devSplit = in.nextLine().split(" : ");
-                devMap.put(temp[0], devSplit[1]);
+                if(temp[0].charAt(0) != '!')
+                {
+                    devSplit = in.nextLine().split(" : ");
+                    devMap.put(temp[0], devSplit[1]);
+                }
             }
 
         }catch (IOException e){
@@ -130,7 +130,7 @@ class BugDatabase {
 
     public void writeNewFileToDatabase(String date)
     {
-        String fileName = "Bug" + getNewBugID() + ".txt";
+        String fileName = "!Bug" + getNewBugID() + ".txt";
         try
         {
             FileWriter fw = new FileWriter("BugFileDatabase.txt", true);
@@ -165,6 +165,37 @@ class BugDatabase {
         }
     }
 */
+
+    public void setFileName(String fileName)
+    {
+        try
+        {
+            FileReader fr = new FileReader("BugFileDatabase.txt");
+            Scanner input = new Scanner(fr);
+            StringBuffer holdAll = new StringBuffer();
+            String toChange = "";
+            while(input.hasNextLine())
+            {
+                toChange = "!" + fileName;
+                holdAll.append(input.nextLine()+System.lineSeparator());
+                
+            }
+            
+            String fileContents = holdAll.toString();
+            fileContents = fileContents.replace(toChange, fileName);
+            System.out.println(fileContents);
+            FileWriter writer = new FileWriter("BugFileDatabase.txt");
+            writer.append(fileContents);
+            writer.close();
+
+            fr.close();
+            input.close();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 
     //Rewrote this function to combine to initializeMap
     public HashMap<String, String> getTitleMap() 

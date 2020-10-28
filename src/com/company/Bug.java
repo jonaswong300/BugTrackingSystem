@@ -1,12 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Scanner;
 
 class Bug {
     private String title;
@@ -99,7 +95,14 @@ class Bug {
     public void writeBugToFile()
     {
         String fileName = "Bug" + ID + ".txt";
-        fileName = "Bugs/" + fileName;
+        if(assignDeveloper.isEmpty())
+        {
+            fileName = "Bugs/!" + fileName;
+        }
+        else
+        {
+            fileName = "Bugs/" + fileName;
+        }
         try
         {
             FileWriter fw = new FileWriter(fileName, true);

@@ -1,0 +1,30 @@
+Title : Firefox "save page as" deletes locally opened files.
+Keywords : firefox,save,delete,files,open,local,
+Assigned Developer : user3
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
+
+Step to reproduce:
+1.) Open a local file (html, xml, txt, jpeg, png, svg,...) with Firefox.
+
+2.) Press [Ctrl]+[s].
+
+3.) In the "save as..." dialog, select the original file and hit "save".
+
+4.) Firefox asks to overwrite the existing file (confirm).
+
+5.) Firefox removes the existing file.
+
+6.) Firefox cannot access the file anymore to write it back to itself: It is gone.
+
+
+
+Actual results:
+Firefox removes the existing files
+
+
+
+
+Expected results:
+Existing file should remain

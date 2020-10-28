@@ -1,6 +1,6 @@
 Title : Escaped backslashes replaced with backslashes (leading to forward slashes when hitting enter again)
 Keywords : escape,backslash,replace,
-Assigned Developer : randomDev4
+Assigned Developer : user3
 
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0

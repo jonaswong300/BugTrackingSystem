@@ -3,9 +3,8 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.GridLayout;
 
-class BugReporterUI extends JFrame
+class BugReporterUI
 {
     final static int width = 800, height = 500;
 

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class userAddBugsUI extends JFrame implements ActionListener
+class userAddBugsUI implements ActionListener
 {
 
     JFrame form = new JFrame();
@@ -40,26 +40,29 @@ class userAddBugsUI extends JFrame implements ActionListener
 
         JLabel keywordLabel = new JLabel("Add some keywords : ");
         keywordLabel.setBounds(20, 60, 300, 25);
+        JLabel warningKeys = new JLabel("(Make sure to seperate with only a whitespace, eg. search files keyboard)");
+        warningKeys.setBounds(20,85,500,25);
         panel.add(keywordLabel);
+        panel.add(warningKeys);
 
         keywordsField = new JTextField(150);
         keywordsField.setBounds(200, 60, 400, 25);
         panel.add(keywordsField);
 
         JLabel descriptLabel = new JLabel("Description : ");
-        descriptLabel.setBounds(20, 100, 200, 25);
+        descriptLabel.setBounds(20, 120, 200, 25);
         panel.add(descriptLabel);
 
         descriptionArea = new JTextArea();
-        descriptionArea.setBounds(200, 105, 600, 300);
+        descriptionArea.setBounds(200, 125, 600, 300);
         panel.add(descriptionArea);
 
         JLabel submitLabel = new JLabel("Submit your bug report : ");
-        submitLabel.setBounds(20, 410, 400, 100);
+        submitLabel.setBounds(20, 430, 400, 100);
         panel.add(submitLabel);
 
         submit = new JButton("Submit");
-        submit.setBounds(200, 430, 100,50);
+        submit.setBounds(200, 460, 100,50);
         submit.addActionListener(this);
         panel.add(submit);
 
