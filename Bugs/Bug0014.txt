@@ -1,8 +1,8 @@
-Title : Download panel don't respond when click frequently
-Keywords :download,click,respond,
-Assigned Developer : user22
+Title :  Download panel don't respond when click frequently
+Keywords : download,click,respond,
+Assigned Developer :  user22
 
-Solved status : open
+Solved status : closed
 Bug : Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
 
 

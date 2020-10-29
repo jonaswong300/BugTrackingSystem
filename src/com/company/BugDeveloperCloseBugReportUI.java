@@ -69,6 +69,8 @@ class BugDeveloperCloseBugReportUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         closeBugRequest(bugIDField.getText(), titleField.getText(), remarksArea.getText());
+        JOptionPane.showMessageDialog(form, "Closing bug now", "Close Bug Report", JOptionPane.INFORMATION_MESSAGE);
+        form.dispose();
     }
 
 

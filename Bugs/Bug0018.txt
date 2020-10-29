@@ -1,8 +1,8 @@
-Title : Warn when downloading executable files over HTTP
-Keywords :warn,download,executable,file,http,
-Assigned Developer : randomDev1
+Title :  Warn when downloading executable files over HTTP
+Keywords : warn,download,executable,file,http,
+Assigned Developer :  randomDev1
 
-Solved status : open
+Solved status : closed
 Bug : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:48.0) Gecko/20100101 Firefox/48.0
 Build ID: 20160823121617
 
