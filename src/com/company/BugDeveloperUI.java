@@ -55,7 +55,6 @@ class FixBugReport implements ActionListener
 
 class CloseBugReport implements ActionListener
 {
-
     @Override
     public void actionPerformed(ActionEvent e) {
         BugDeveloperCloseBugReportUI closeBugUI = new BugDeveloperCloseBugReportUI();

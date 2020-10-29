@@ -33,7 +33,9 @@ public class Main {
 
         //TriagerUI tUI = new TriagerUI();
 
-        BugDeveloperUI bdUI = new BugDeveloperUI();
+        //BugDeveloperUI bdUI = new BugDeveloperUI();
+
+        BugReviewerUI brUI = new BugReviewerUI();
 
         //searchUI test
         //searchUI search = new searchUI();
