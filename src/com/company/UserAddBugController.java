@@ -47,7 +47,7 @@ class UserAddBugController
     public void addBugsDetails()
     {
         String emptyDev = "";
-        boolean solved = false;
+        String solved = "open";
         bd = new BugDatabase();
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());

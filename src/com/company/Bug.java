@@ -12,7 +12,7 @@ class Bug {
     private ArrayList<String> keywords_AL = new ArrayList<>();
     private String description;
     private String assignDeveloper;
-    private boolean solved;
+    private String solved;
     private String filename;
 
     public Bug()
@@ -24,7 +24,7 @@ class Bug {
         filename = fileName;   
     }
 
-    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, boolean solved){
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, String solved){
         this.ID = ID;
         this.title = title;
         this.keywords_AL = keywords;
@@ -43,6 +43,9 @@ class Bug {
 
     public String getID()
     {
+        String str = ID;
+        String pad = "0000";
+        ID = pad.substring(0, pad.length() - str.length()) + str;
         return ID;
     }
 
@@ -73,17 +76,18 @@ class Bug {
         this.assignDeveloper = assignDeveloper;
     }
 
-    public boolean isSolved() {
+    public String isSolved() {
         return solved;
     }
 
-    public void setSolved(boolean solved) {
+    public void setSolved(String solved) 
+    {
         this.solved = solved;
     }
 
     public void writeBugToFile()
     {
-        String fileName = "Bug" + ID + ".txt";
+        String fileName = "Bug" + getID() + ".txt";
         if(assignDeveloper.isEmpty())
         {
             fileName = "Bugs/!" + fileName;
@@ -103,16 +107,7 @@ class Bug {
             }
 
             toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
-            String solved_S = "";
-            if(solved)
-            {
-                solved_S = "closed";
-            }
-            else
-            {
-                solved_S = "open";
-            }
-            toWrite.append("\nSolved status : ").append(solved_S);
+            toWrite.append("\nSolved status : ").append(solved);
             toWrite.append("\nBug : ").append(description);
             fw.write(toWrite.toString());
 

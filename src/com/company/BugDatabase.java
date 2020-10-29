@@ -24,7 +24,8 @@ class BugDatabase {
     private final HashMap<String, String> devMap = new HashMap<>();
 
     //Holds all the Bug objects
-    //eg. <Integer, Bug> <1, Bug>
+    //instead of integer, just the filename is easier to manipulate
+    //eg. <Integer, Bug> <1, Bug> --> <Bugs/Bug0001.txt, Bug>
     private final HashMap<String, Bug> bugMap = new HashMap<>();
 
     //holds all keywords
@@ -47,7 +48,6 @@ class BugDatabase {
             while(input.hasNextLine()){
                 temp = input.nextLine().split(",");
                 fileMap.put(idCounter, temp[0]);
-                idCounter++;
 
                 //TITLE
                 //Edit this line if folder name changes
@@ -60,6 +60,7 @@ class BugDatabase {
                 split = in.nextLine().split(" : ");
                 titleMap.put(temp[0], split[1]);
 
+                idCounter++;
 
                 //KEYWORDS
                 // will hold array list as eg.
@@ -102,7 +103,7 @@ class BugDatabase {
     public void createBugObject(String bugFileName, int idCounter){
         String title, ID, description, assignDeveloper;
         ArrayList<String> keywords_AL = new ArrayList<>();
-        boolean solved;
+        String solved;
 
         String [] split, keywordsTemp;
 
@@ -130,12 +131,17 @@ class BugDatabase {
 
                 //Split solved
                 split = fileInput.nextLine().split(":");
-                solved = !split[1].equals("open");
+                solved = split[1];
 
-                split = fileInput.nextLine().split(":");
+                split = fileInput.nextLine().split(" : ");
                 description = split[1];
+                
+                while(fileInput.hasNextLine())
+                {
+                    description = description + "\n" + fileInput.nextLine();
+                }
 
-                bugMap.put(ID, new Bug(ID, title, keywords_AL, description, assignDeveloper, solved));
+                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description, assignDeveloper, solved));
 
             }else{
                 System.out.println(bugFileName + "  is empty.");
@@ -158,7 +164,7 @@ class BugDatabase {
 
             while(input.hasNextLine())
             {
-                input.nextLine();   //FOR SOME REASON, THE CODE DOESN'T WORK WITHOUT THIS LINE, DONT REMOVE IT
+                input.nextLine(); 
                 idCount++;
             }
 
@@ -189,27 +195,6 @@ class BugDatabase {
             e.printStackTrace();
         }
     }
-    /*
-    public void addBugToDatabase(Bug report)
-    {
-
-        try{
-            FileWriter fw = new FileWriter("bugDatabase.txt", true);
-
-            fw.write("Title : " + report.getTitle() + " Keywords : " + report.getKeywords() + 
-                    " Description : " + report.getDescription() + " Assignee : " + report.getAssignDeveloper() +
-                    " Solved : " + report.isSolved() + ", \n");
-            
-            //Bug newBug = new Bug(title, keywords, description, assignDeveloper, false);
-            bugMap.put(bugReporterName, report);
-
-            fw.close();
-
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-*/
 
     public void setFileName(String fileName)
     {

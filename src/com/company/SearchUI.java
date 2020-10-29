@@ -24,7 +24,6 @@ class SearchUI implements ActionListener
 
     public SearchUI()
     {
-        System.out.println("At search UI");
         showForm();
     }
 

@@ -14,7 +14,7 @@ class BugDeveloperCloseBugReportController {
         HashMap<String, Bug> bugMap = bd.getBugMap();
 
         if(bugMap.containsKey(bugID)){
-            bugMap.get(bugID).setSolved(false);
+            bugMap.get(bugID).setSolved("closed");
             System.out.println("Bug ID: " + bugID);
             if(title.equals("")){
                title = bugMap.get(bugID).getTitle();

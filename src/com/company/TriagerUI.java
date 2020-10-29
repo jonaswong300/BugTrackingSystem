@@ -52,7 +52,7 @@ class viewAllBugReport implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e)
     {
-
+        TriagerViewAllBugsUI viewUI = new TriagerViewAllBugsUI();
     }
 }
 

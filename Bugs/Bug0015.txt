@@ -15,7 +15,8 @@ Open the Downloads Panel (about:download).
 
 
 Actual results:
-The progress bar cannot be seen because it's the same colour as the background. I tried to do a MozRegression but went as far back as version 66 (December 2018) and it seems it's always been like this.
+The progress bar cannot be seen because it's the same colour as the background. 
+I tried to do a MozRegression but went as far back as version 66 (December 2018) and it seems it's always been like this.
 
 
 Expected results:

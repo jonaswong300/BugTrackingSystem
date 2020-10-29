@@ -3,6 +3,11 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileReader;
+import java.io.IOException;
+import java.awt.FlowLayout;
+import java.util.HashMap;
+import java.util.Map;
 
 class TriagerViewAllBugsUI implements ActionListener
 {
@@ -12,12 +17,61 @@ class TriagerViewAllBugsUI implements ActionListener
     //after triager open, let the triager click a button to flag as duplicate, therefore marking it as solved. 
     //in the file, instead of solved, it'll be solved(Duplicate of another bug)
 
+
     JFrame viewFrame = new JFrame();
     JPanel viewPanel = new JPanel();
 
+    final static int width = 1050, height = 600;
+
+    JTextField search = new JTextField(600);
+    String[] terms = { "Title","Keywords", "Assigned Developer"};
+    final JComboBox<String> options = new JComboBox<String>(terms);
+    JButton submit = new JButton("Search");
+
     public TriagerViewAllBugsUI()
     {
+        showAllBugs();
+    }
+
+    public void showAllBugs()
+    {
+        viewFrame.setSize(width, height);
+        viewFrame.add(viewPanel);
+        viewPanel.setLayout(null);
+
+        BugDatabase bd = new BugDatabase();
+        HashMap<Integer, String> filesMap = bd.getFileMap();
+        HashMap<String, String> titlesMap = bd.getTitleMap();
+        //System.out.println(titlesMap.get("Bug0001.txt"));
+
+
+        viewFrame.setSize(1200,750);
+
+        viewFrame.add(viewPanel);
+        viewPanel.setLayout(new FlowLayout());
+
+        JButton [] bugButtons = new JButton[filesMap.size()];
+
+        String title = "";
         
+        for(int i = 0; i < filesMap.size(); i++)
+        {
+            for(Map.Entry me : titlesMap.entrySet())
+            {
+                //compare if bugMap key is same as titleMap key
+                if(me.getKey().equals(filesMap.get(i)))
+                {
+                    title = String.valueOf(me.getValue());
+                }
+            }
+            bugButtons[i] = new JButton(title);
+            bugButtons[i].setSize(300, 50);
+            bugButtons[i].addActionListener(new getBug());
+            viewPanel.add(bugButtons[i]);
+            
+        }
+
+        viewFrame.setVisible(true);
     }
 
     @Override
@@ -25,4 +79,76 @@ class TriagerViewAllBugsUI implements ActionListener
         // TODO Auto-generated method stub
 
     }
+}
+class getBug implements ActionListener
+{
+    String bugFile;
+    JFrame bugThread = new JFrame();
+    JPanel bugPanel = new JPanel(); 
+    JLabel bugLabel = new JLabel("Bug Descriptions : ");
+    JTextArea bug = new JTextArea();
+    JButton flag = new JButton("Flag as duplicate bug");
+
+    public getBug()
+    {
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    {
+
+        bugThread.setSize(1400,750); 
+        bugThread.setVisible(true);
+
+        bugThread.add(bugPanel);
+        bugPanel.setLayout(null);
+
+        bugLabel.setBounds(10, 10, 150, 20);
+        bugPanel.add(bugLabel);
+
+        bug.setBounds(130,10,1250,620);
+        bugPanel.add(bug);
+
+        bugFile = e.getActionCommand();
+        System.out.println(bugFile);
+
+        SearchController sc = new SearchController(bugFile);
+        String specificBugFile = sc.searchByTitle();
+        
+        specificBugFile = "Bugs/" + specificBugFile;
+        try 
+        {
+            FileReader fr = new FileReader(specificBugFile);
+            bug.read(fr, specificBugFile);
+            fr.close();
+        }
+        catch (IOException except) 
+        {
+            except.printStackTrace();
+        }
+        flag.setBounds(130,650,200,50);
+        flag.addActionListener(new flagDuplicate(specificBugFile, bugThread));
+        bugPanel.add(flag);
+    }
+    
+}
+
+class flagDuplicate implements ActionListener
+{
+    String bugFile;
+    JFrame frame = new JFrame();
+    public flagDuplicate(String bugFile, JFrame frame)
+    {
+        this.bugFile = bugFile;
+        this.frame = frame;
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    {
+        TriagerViewAllBugsController flagControl = new TriagerViewAllBugsController(bugFile);
+        frame.dispose();
+    }
+    
 }

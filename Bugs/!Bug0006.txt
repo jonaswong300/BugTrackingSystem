@@ -1,13 +1,14 @@
 Title : Escaped backslashes replaced with backslashes (leading to forward slashes when hitting enter again)
 Keywords :escape,backslash,replace,
-Assigned Developer : user3
+Assigned Developer : 
 
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751
 
 Step to reproduce:
-On macOS with FF 52, enter a URL with a backslash into the location bar. I'm entering a JSON query in the location bar and need to escape some curly braces (escaped with a backslash, and that backslash needs a backslash escape as well), so I enter a URL like this into my browser:
+On macOS with FF 52, enter a URL with a backslash into the location bar. 
+I'm entering a JSON query in the location bar and need to escape some curly braces (escaped with a backslash, and that backslash needs a backslash escape as well), so I enter a URL like this into my browser:
 https://example.com/query/{"field": "\\{value\\}"}/
 
 Actual results:
@@ -20,4 +21,5 @@ This path contains six parts rather than the intended two.
 Expected results:
 Firefox should instead request a path as entered by a user like so:
 /query/%7B%22field%22:%20%22%5C%5C%7Bvalue%5C%5C%7D%22%7D/
-If one instead enters into the location bar the quoted %5C character for the backslashes, the query is transmitted as expected and the browser renders a literal backslash in the location bar. However, because these backslashes are now literals, if one re-submits that location, the literal backslashes are converted to forward slashes.
+If one instead enters into the location bar the quoted %5C character for the backslashes, the query is transmitted as expected and the browser renders a literal backslash in the location bar. 
+However, because these backslashes are now literals, if one re-submits that location, the literal backslashes are converted to forward slashes.

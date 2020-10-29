@@ -19,5 +19,3 @@ Expected results:
 Should display a warning when the user attempts to download a executable file (.exe, .msi, .deb, .rpm) over HTTP.
 
 Since HTTP is not trusted and vulnerable to MITM attacks. This would encourage websites to host files over HTTPS and encourage users to beware.
-
-
