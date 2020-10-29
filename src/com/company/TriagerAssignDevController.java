@@ -76,9 +76,11 @@ class TriagerAssignDevController
                 String dev = split[2];
                 if(!allDevelopers.contains(dev) && dev.equals("Developer"))
                 {
-                    allDevelopers.add(name);
+                    allDevelopers.add(name.trim());
                 }
             }
+            fr.close();
+            input.close();
         }
         catch(IOException e )
         {

@@ -31,11 +31,11 @@ public class Main {
         //YES, we will do login then point to the UI via if else
         //BugReporterUI bugUI = new BugReporterUI();
 
-        //TriagerUI tUI = new TriagerUI();
+        TriagerUI tUI = new TriagerUI();
 
         //BugDeveloperUI bdUI = new BugDeveloperUI();
 
-        BugReviewerUI brUI = new BugReviewerUI();
+        //BugReviewerUI brUI = new BugReviewerUI();
 
         //searchUI test
         //searchUI search = new searchUI();

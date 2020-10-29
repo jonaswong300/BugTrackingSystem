@@ -2,7 +2,7 @@ Title : Firefox "save page as" deletes locally opened files.
 Keywords :firefox,save,delete,files,open,local,
 Assigned Developer : user3
 
-Solved status : open
+Solved status : closed
 Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
 
 Step to reproduce:
