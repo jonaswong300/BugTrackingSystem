@@ -1,0 +1,2 @@
+Date : 22/11/2020 07:47:52
+Comment : From bug 1549814, about:logins allows users to create new logins but these logins will not get autofilled in HTTP auth dialogs since the login has formSubmitURL: "" which is incompatible with HTTP auth dialogs.,

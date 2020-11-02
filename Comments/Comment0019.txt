@@ -1,0 +1,4 @@
+Date : 25/10/2020 11:44:22
+Comment : I may have just reproduced this once on a Windows 10 non-admin account I last used in 2018 for testing OS re-auth… I logged into Windows with a PIN and then when I got the re-auth dialog to reveal a password I only had the password option… I entered my password, reloaded the tab, revealed the password again and then it defaulted to the PIN option… I assume this is an intentional Windows security design… not allowing the non-password auth if the user never entered their password for the Windows session.,
+Date : 02/11/2020 19:21:55
+Comment : for now you can set signon.management.page.os-auth.enabled to false in about:config but eventually when we work out the kinks we will remove that.,

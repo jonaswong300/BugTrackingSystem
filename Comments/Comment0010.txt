@@ -1,0 +1,2 @@
+Date : 18/10/2020 12:37:28
+Comment : I had to use a third party tool to be able to extract passwords that were stored only in Firefox on this portable computer.,
