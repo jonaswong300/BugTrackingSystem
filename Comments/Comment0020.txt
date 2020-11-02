@@ -1,6 +1,6 @@
 Date : 30/10/2020 09:18:32
 Comment : Hi, sorry for the delay. I haven't been checking my email.
-Seems like Mather has found a cause. I don't remember it working like that on my other laptop, but I will give it a try. It may be that it only disabled the non-password options once and after that never did again.,
+Seems like Mather has found a cause. I don't remember it working like that on my other laptop, but I will give it a try. It may be that it only disabled the non-password options once and after that never did again., 
 Date : 30/11/2020 12:27:15
 Comment : can you please test this build and let me know if you now get a PIN prompt?
-https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/B1u4NJwMRF2aX_P2KnBs1A/runs/0/artifacts/public/build/target.zip,
+https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/B1u4NJwMRF2aX_P2KnBs1A/runs/0/artifacts/public/build/target.zip, 

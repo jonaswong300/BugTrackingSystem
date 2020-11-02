@@ -1,4 +1,4 @@
 Date : 30/10/2020 13:29:42
-Comment : This is a regression from our old UI, but bug 1579184 is just a CSS change and I don't see how it could have caused this.,
+Comment : This is a regression from our old UI, but bug 1579184 is just a CSS change and I don't see how it could have caused this., 
 Date : 31/10/2020 19:19:15
-Comment : The signon.management.page.os-auth.enabled pref was introduced as a way for users to disable authentication due to a couple known issues (bug 1623277 and bug 1624255) and potential unknown issues. This pref should be removed once we are satisfied with the stability of the feature.,
+Comment : The signon.management.page.os-auth.enabled pref was introduced as a way for users to disable authentication due to a couple known issues (bug 1623277 and bug 1624255) and potential unknown issues. This pref should be removed once we are satisfied with the stability of the feature., 

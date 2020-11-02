@@ -1,6 +1,6 @@
 Date : 11/11/2020 10:16:32
-Comment : Bugbug thinks this bug should belong to this component, but please revert this change in case of error.,
+Comment : Bugbug thinks this bug should belong to this component, but please revert this change in case of error., 
 Date : 12/11/2020 09:26:55
-Comment : Thanks for your report. I'm going to look deeper in to this.,
+Comment : Thanks for your report. I'm going to look deeper in to this., 
 Date : 12/11/2020 19:16:25
-Comment : P1 for now so we don't lose track of it but we can lower it once we investigate.,
+Comment : P1 for now so we don't lose track of it but we can lower it once we investigate., 

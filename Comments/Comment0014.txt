@@ -4,4 +4,4 @@ https://hg.mozilla.org/integration/autoland/rev/38e0c3020d03
 disable browser_sessionRestore.js on debug builds. r=MattN,egao
 
 
-https://hg.mozilla.org/mozilla-central/rev/38e0c3020d03,
+https://hg.mozilla.org/mozilla-central/rev/38e0c3020d03, 

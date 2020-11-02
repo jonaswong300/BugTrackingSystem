@@ -1,4 +1,4 @@
 Date : 01/11/2020 13:56:32
-Comment : This is what people should be seeing and it's what I see on my local machine. I have Windows 10 1909 installed (build 18363.719).,
+Comment : This is what people should be seeing and it's what I see on my local machine. I have Windows 10 1909 installed (build 18363.719)., 
 Date : 02/11/2020 09:26:55
-Comment : I also cannot reproduce it in build 18363.720.,
+Comment : I also cannot reproduce it in build 18363.720., 

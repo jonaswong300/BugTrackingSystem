@@ -14,4 +14,4 @@ Date : 22/10/2020 12:57:49
 Comment : Screenshot with OS dialog when you have only the account linked to a Microsoft account: Screenshot
 Note: Every time when I log into the account linked to the email, the Microsoft account window that asks me to create a PIN.
 Screenshot with OS dialog when you have the account linked to a Microsoft account + a PIN code set: Screenshot
-I have tested with Firefox 76.0.1 release and the latest Nightly 78.0a1 build and I have encountered the same behaviors on both Firefox versions.,
+I have tested with Firefox 76.0.1 release and the latest Nightly 78.0a1 build and I have encountered the same behaviors on both Firefox versions., 
