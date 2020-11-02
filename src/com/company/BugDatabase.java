@@ -101,10 +101,9 @@ class BugDatabase {
     }
 
     public void createBugObject(String bugFileName, int idCounter){
-        String title, ID, description, assignDeveloper;
+        String title, ID, assignDeveloper, solved;
+        StringBuilder description;
         ArrayList<String> keywords_AL = new ArrayList<>();
-        String solved;
-
         String [] split, keywordsTemp;
 
         try{
@@ -134,14 +133,14 @@ class BugDatabase {
                 solved = split[1];
 
                 split = fileInput.nextLine().split(" : ");
-                description = split[1];
+                description = new StringBuilder(split[1]);
                 
                 while(fileInput.hasNextLine())
                 {
-                    description = description + "\n" + fileInput.nextLine();
+                    description.append("\n").append(fileInput.nextLine());
                 }
 
-                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description, assignDeveloper, solved));
+                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description.toString().toString(), assignDeveloper, solved));
 
             }else{
                 System.out.println(bugFileName + "  is empty.");

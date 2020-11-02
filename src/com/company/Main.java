@@ -31,7 +31,7 @@ public class Main {
         //YES, we will do login then point to the UI via if else
         //BugReporterUI bugUI = new BugReporterUI();
 
-        TriagerUI tUI = new TriagerUI();
+        //TriagerUI tUI = new TriagerUI();
 
         //BugDeveloperUI bdUI = new BugDeveloperUI();
 
@@ -41,6 +41,8 @@ public class Main {
         //searchUI search = new searchUI();
         //BugDatabase bd = new BugDatabase();
         //bd.writeNewFileToDatabase("02/03/2019");
+
+        CommentDatabase cdb = new CommentDatabase();
 
     }
 }

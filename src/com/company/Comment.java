@@ -9,44 +9,77 @@ import java.util.HashMap;
 
 class Comment 
 {
-    HashMap<Integer, String> commentMap = new HashMap<>();
-    LinkedList <String> linkedComments = new LinkedList<>();
+    String ID;
+    String fileName;
+    String date;
+    String time;
+    String description;
 
-    String filename;
+
+
     public Comment()
     {
-    }   
-    public Comment(String filename, String comment)
-    {
-        //enter into a hashmap
-        commentMap.put(getCommentID(), comment);
-        this.filename = filename;
     }
 
-    public int getCommentID()
-    {
-        int id = 0;
-        try{
-            File bugF = new File(filename + ".txt");
-            FileReader fr = new FileReader(bugF);
-            Scanner input = new Scanner(fr);
-
-            while(input.hasNextLine())
-            {
-                id++;
-            }
-
-            fr.close();
-            input.close();
-        }catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        return id;
+    public Comment (String fileName,String ID, String date, String time, String description){
+        this.ID = ID;
+        this.fileName = fileName;
+        this.date = date;
+        this.time = time;
+        this.description = description;
     }
 
-    public HashMap<Integer, String> getCommentHash()
-    {
-        return commentMap;
+    public Comment(String date, String time, String description){
+        this.date = date;
+        this.time = time;
+        this.description = description;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString(){
+        return  "===================================" + "\n" +
+                "Comment ID: " + ID + "\n" +
+                "Date: " + date + "\t" + time + "\n" +
+                "Comments: " +  description + "\n";
     }
 }
