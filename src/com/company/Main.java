@@ -19,7 +19,7 @@ public class Main {
         System.out.println(re.toString());
          */
 
-        UserAccessDatabase uad = new UserAccessDatabase();
+        //UserAccessDatabase uad = new UserAccessDatabase();
         //LoginUI loginUI = new LoginUI();
 
         //BugDatabase bd = new BugDatabase();
@@ -29,16 +29,14 @@ public class Main {
         //when user is bug reporter
         //how we know when its bug reporter, do we auto launch from the user class?
         //YES, we will do login then point to the UI via if else
+
         //BugReporterUI bugUI = new BugReporterUI();
-
         //TriagerUI tUI = new TriagerUI();
-
         //BugDeveloperUI bdUI = new BugDeveloperUI();
-
         //BugReviewerUI brUI = new BugReviewerUI();
 
         //searchUI test
-        //searchUI search = new searchUI();
+        SearchUI search = new SearchUI();
         //BugDatabase bd = new BugDatabase();
         //bd.writeNewFileToDatabase("02/03/2019");
 

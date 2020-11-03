@@ -87,6 +87,8 @@ class getBug implements ActionListener
     JPanel bugPanel = new JPanel(); 
     JLabel bugLabel = new JLabel("Bug Descriptions : ");
     JTextArea bug = new JTextArea();
+    JLabel commentLabel = new JLabel("Comments : ");
+    JTextArea comments = new JTextArea();
     JButton flag = new JButton("Flag as duplicate bug");
 
     public getBug()
@@ -108,20 +110,42 @@ class getBug implements ActionListener
         bugLabel.setBounds(10, 10, 150, 20);
         bugPanel.add(bugLabel);
 
-        bug.setBounds(130,10,1250,620);
+        bug.setBounds(130,10,1250,400);
         bugPanel.add(bug);
+
+        commentLabel.setBounds(10, 500, 150, 20);
+        bugPanel.add(commentLabel);
+
+        comments.setBounds(130,500,1250,200);
+        bugPanel.add(comments);
+        comments.setVisible(true);
 
         bugFile = e.getActionCommand();
         System.out.println(bugFile);
 
         SearchController sc = new SearchController(bugFile);
         String specificBugFile = sc.searchByTitle();
-        
-        specificBugFile = "Bugs/" + specificBugFile;
+
+        CommentDatabase cd = new CommentDatabase();
+        HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
+        HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
+
+        String bugFileName = "Bugs/" + specificBugFile;
         try 
         {
-            FileReader fr = new FileReader(specificBugFile);
-            bug.read(fr, specificBugFile);
+            FileReader fr = new FileReader(bugFileName);
+            bug.read(fr, bugFileName);
+
+            if(bugCommentFileNameMap.containsKey(specificBugFile)){
+                String tempCommentFileName = bugCommentFileNameMap.get(specificBugFile);
+
+                if(commentLinkMap.containsKey(tempCommentFileName)){
+                    String commentString = String.valueOf(commentLinkMap.get(tempCommentFileName));
+                    System.out.println(commentString);
+                    comments.append(commentString);
+                }
+            }
+
             fr.close();
         }
         catch (IOException except) 
@@ -129,7 +153,7 @@ class getBug implements ActionListener
             except.printStackTrace();
         }
         flag.setBounds(130,650,200,50);
-        flag.addActionListener(new flagDuplicate(specificBugFile, bugThread));
+        flag.addActionListener(new flagDuplicate(bugFileName, bugThread));
         bugPanel.add(flag);
     }
     

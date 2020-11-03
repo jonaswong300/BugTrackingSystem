@@ -15,11 +15,10 @@ class Comment
     String time;
     String description;
 
-
-
     public Comment()
     {
     }
+
 
     public Comment (String fileName,String ID, String date, String time, String description){
         this.ID = ID;
@@ -74,6 +73,7 @@ class Comment
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     @Override
     public String toString(){
