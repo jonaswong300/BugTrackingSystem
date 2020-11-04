@@ -96,4 +96,8 @@ class UserAccessDatabase {
         return userAccountMap;
     }
 
+    public HashMap<String, String> getUserRoleMap(){
+        return userRoleMap;
+    }
+
 }

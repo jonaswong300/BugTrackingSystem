@@ -6,27 +6,20 @@ import java.awt.event.ActionListener;
 
 class LoginUI implements ActionListener {
 
-    final static int width = 350, height = 200;
+    final static int width = 500, height = 500;
 
-    private JFrame frame = new JFrame();
-    private JPanel panel = new JPanel();
-    private JLabel userLabel, passwordLabel, successLabel;
+    private final JFrame frame = new JFrame();
+    private final JPanel panel = new JPanel();
+    private JLabel welcomeLabel, userLabel, passwordLabel, successLabel;
     private JTextField userText;
     private JPasswordField passwordField;
     private JButton loginButton;
-
-    private LoginController loginController = new LoginController();
-    private UserAccessDatabase uad;
 
     public LoginUI()
     {
         prepareGUI();
     }
 
-    public LoginUI(UserAccessDatabase uad){
-       prepareGUI();
-       this.uad = uad;
-    }
 
     private void prepareGUI(){
 
@@ -35,6 +28,10 @@ class LoginUI implements ActionListener {
         frame.setTitle("Bug Tracking System");
         frame.add(panel);
         panel.setLayout(null);
+
+        //welcomeLabel = new JLabel("Welcome to 007's Bug Tracking System");
+        //welcomeLabel.setBounds(10, 5, 80, 25);
+        panel.add(welcomeLabel);
 
         userLabel = new JLabel("Username:");
         userLabel.setBounds(20, 20, 80, 25);
@@ -54,8 +51,8 @@ class LoginUI implements ActionListener {
 
         successLabel = new JLabel("");
         successLabel.setBounds(20, 110, 300, 25);
+        successLabel.setToolTipText("Success");
         panel.add(successLabel);
-        panel.setToolTipText("Success");
 
         showLoginButton();
 
@@ -64,18 +61,20 @@ class LoginUI implements ActionListener {
 
     private void showLoginButton(){
 
+        LoginController lc = new LoginController();
+
         loginButton = new JButton("Login");
         loginButton.setBounds(10, 80, 80, 25);
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Hello");
                 String userName = userText.getText();
                 String password = passwordField.getText();
 
-                boolean authenticate = loginController.accountCheck(userName, password);
+                boolean authenticate = lc.authenticateUser(userName, password);
                 if(authenticate){
-                    successLabel.setText("Login Successful");
+                    successLabel.setText("Login Successful for " + userName);
+                    lc.userRoleGUI(userName);
                 }else{
                     successLabel.setText("Error. Username/password cannot be found.");
                 }

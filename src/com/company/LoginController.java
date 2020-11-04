@@ -4,13 +4,15 @@ import java.util.HashMap;
 
 class LoginController {
 
+    private final UserAccessDatabase uad = new UserAccessDatabase();
+    private final HashMap<String, String> userAccountMap = uad.getUserAccountMap();
+    private final HashMap<String, String> userRoleMap = uad.getUserRoleMap();
+
     public LoginController(){
 
     }
 
-    public boolean authenticUser(UserAccessDatabase uad, String userName, String password){
-
-        HashMap<String, String> userAccountMap = uad.getUserAccountMap();
+    public boolean authenticateUser(String userName, String password){
 
         if(userAccountMap.containsKey(userName)){
             return userAccountMap.get(userName).equals(password);
@@ -19,12 +21,31 @@ class LoginController {
         return false;
     }
 
-    public boolean accountCheck(String username, String password)
-    {
-        boolean check = false;
-        User u = new User();
-        check = u.checkUser(username, password);
+    public void userRoleGUI(String userName){
 
-        return check;
+        String userRole;
+
+        if(userRoleMap.containsKey(userName)){
+            userRole = userRoleMap.get(userName);
+
+            switch (userRole) {
+                case "Reporter":
+                    BugReporterUI brUI = new BugReporterUI();
+                    break;
+                case "Developer":
+                    BugDeveloperUI bdUI = new BugDeveloperUI();
+                    break;
+                case "Triager":
+                    TriagerUI tUI = new TriagerUI();
+                    break;
+                case "Reviewer":
+                    BugReviewerUI brvUI = new BugReviewerUI();
+                    break;
+                default:
+                    break;
+            }
+        }else{
+            System.out.println("User account: " + userName + " cannot be found. Please try again");
+        }
     }
 }

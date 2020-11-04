@@ -5,6 +5,9 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
+
+        MainController mc = new MainController();
+
         /*
         User u = new User("A", "password");
         Reporter r = new Reporter("A", "password");
@@ -17,7 +20,7 @@ public class Main {
         System.out.println(t.toString());
         System.out.println(d.toString());
         System.out.println(re.toString());
-         */
+
 
         //UserAccessDatabase uad = new UserAccessDatabase();
         //LoginUI loginUI = new LoginUI();
@@ -36,11 +39,13 @@ public class Main {
         //BugReviewerUI brUI = new BugReviewerUI();
 
         //searchUI test
-        SearchUI search = new SearchUI();
+        //SearchUI search = new SearchUI();
         //BugDatabase bd = new BugDatabase();
         //bd.writeNewFileToDatabase("02/03/2019");
 
-        CommentDatabase cdb = new CommentDatabase();
+        //CommentDatabase cdb = new CommentDatabase();
+
+         */
 
     }
 }
