@@ -1,0 +1,4 @@
+Date : 02/11/2020 11:29:42
+Comment : Right, this is the same as other browsers. It's meant to make it harder for casual snooping.,
+Date : 02/11/2020 13:22:22
+Comment : Not really, they are always "encrypted" but if you don't have a master password set they are trivial to decrypt. Once a user has local access there are so many ways to extract this data.,

@@ -1,0 +1,17 @@
+Title : The early blank window should use the about:home background color
+Keywords : early,blank,window,background,color,
+Assigned Developer : 
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G935P Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36
+Build ID: 20180401220058
+
+Step to reproduce:
+Start Firefox.
+
+Actual results:
+Black screen for 1-2 seconds.
+
+
+Expected results:
+Display Firefox window without BLACK screen.

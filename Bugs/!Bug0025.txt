@@ -1,0 +1,20 @@
+Title : Twitch does not enter fullscreen when the browser is smaller than fullscreen
+Keywords : twitch,fullscreen,browser,
+Assigned Developer : 
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G935P Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36
+Build ID: 20180401220058
+
+
+Step to reproduce:
+Reach h ttp s : / /w w w.t wit ch.tv /.
+Make sure the browser is smaller than fullscreen.
+Notice the videos displayed in a carousel order.
+Click on the fullscreen button for one of the videos in the carousel.
+
+Actual results:
+The browser enters fullscreen mode hangs for a second then it exits fullscreen and the video stops.
+
+Expected results:
+The video is displayed correctly in fullscreen.

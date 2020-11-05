@@ -1,0 +1,7 @@
+Date : 30/10/2020 13:29:42
+Comment : Please don't remove this as the OS authentication feature doesn't add any meaningful amount of security. 
+It prevents you from extracting the password from about:logins, but you can still extract the password by going to the site, auto-filling the 
+password, and read it from the DOM (eg. document.querySelector("input[type=password]").value). 
+Better yet, you can go to the profile folder and copy out logins.json and key4.db, which gets you all the passwords in 
+unencrypted format. Maybe users want this feature for peace of mind, but I find it a hassle.,
+

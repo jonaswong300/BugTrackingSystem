@@ -22,3 +22,5 @@ Bug0020.txt,Comment0020.txt
 Bug0021.txt,Comment0021.txt
 Bug0022.txt,Comment0022.txt
 Bug0023.txt,Comment0023.txt
+!Bug0024.txt,Comment0024.txt
+!Bug0025.txt,Comment0025.txt

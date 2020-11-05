@@ -22,9 +22,3 @@ Step to reproduce:
 
 Actual results:
 Firefox removes the existing files
-
-
-
-
-Expected results:
-Existing file should remain
