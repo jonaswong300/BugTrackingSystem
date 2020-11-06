@@ -1,8 +1,8 @@
-Title :  Twitch does not enter fullscreen when the browser is smaller than fullscreen
-Keywords :  twitch,fullscreen,browser,
+Title :   Twitch does not enter fullscreen when the browser is smaller than fullscreen
+Keywords : twitch,fullscreen,browser,
 Assigned Developer :  
 
-Solved status :  open
+Solved status :   open
 Bug : User Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G935P Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36
 Build ID: 20180401220058
 

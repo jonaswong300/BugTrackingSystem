@@ -1,0 +1,17 @@
+Title :  Awesomebar should not auto-complete "about
+Keywords : auto-complete,awesomebar,
+Assigned Developer :  
+
+Solved status :  open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
+Awesomebar is doing auto-complete of “about:blank” to “about:blank/”. This causes the user to be directed to an error page instead of a blank page.
+
+Step to reproduce:
+Step 1: Open a blank page
+Step 2: Type in “about:blank” and press enter
+
+Actual results:
+Auto-complete adds an additional “/” at the back of the URL, causing an error page.
+
+Expected results:
+Auto-complete should not add the additional “/”.

@@ -31,7 +31,7 @@ class LoginUI implements ActionListener {
 
         //welcomeLabel = new JLabel("Welcome to 007's Bug Tracking System");
         //welcomeLabel.setBounds(10, 5, 80, 25);
-        panel.add(welcomeLabel);
+        //panel.add(welcomeLabel);
 
         userLabel = new JLabel("Username:");
         userLabel.setBounds(20, 20, 80, 25);

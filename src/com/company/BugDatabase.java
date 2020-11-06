@@ -180,11 +180,26 @@ class BugDatabase {
 
     public void writeNewFileToDatabase(String date)
     {
-        String fileName = "!Bug" + getNewBugID() + ".txt";
+        String newID = getNewBugID();
+        String fileName = "!Bug" + newID + ".txt";
         try
         {
             FileWriter fw = new FileWriter("BugFileDatabase.txt", true);
             String toWrite = fileName + ", " + date + "\n";
+            fw.write(toWrite);
+
+            fw.close();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        String commentFile = "Comment" + newID + ".txt";
+        try
+        {
+            FileWriter fw = new FileWriter("CommentFileDatabase.txt", true);
+            String toWrite = fileName + "," + commentFile + "\n";
             fw.write(toWrite);
 
             fw.close();
@@ -212,7 +227,7 @@ class BugDatabase {
             
             String fileContents = holdAll.toString();
             fileContents = fileContents.replace(toChange, fileName);
-            System.out.println(fileContents);
+            //System.out.println(fileContents);
             FileWriter writer = new FileWriter("BugFileDatabase.txt");
             writer.append(fileContents);
             writer.close();

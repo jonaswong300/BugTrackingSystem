@@ -1,0 +1,17 @@
+Title :  For a new profile, second character is lost when typing into the URL bar
+Keywords : second,url,profile,new,
+Assigned Developer :  
+
+Solved status :  open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
+New profile users lose the second character when typing into the URL bar.
+
+Step to reproduce:
+1) Create a brand spankin' new profile and start the browser
+2) Select the URL bar and start typing "cbc.ca" (that's what I typed, anyways)
+
+Actual results:
+cbc.ca should show up in the URL bar
+
+Expected results:
+I got cc.ca. After the first character went in, the AwesomeBar panel started to open and do stuff, and something swallowed my second character.

@@ -85,6 +85,22 @@ class Bug {
         this.solved = solved;
     }
 
+    public void writeEmptyCommentFile()
+    {
+        String fileName = "Comments/Comment" + getID() + ".txt";
+        try
+        {
+            FileWriter fw = new FileWriter(fileName, true);
+            String empty = "";
+            fw.write(empty);
+            fw.close();
+        }
+        catch(IOException e )
+        {
+            e.printStackTrace();
+        }
+    }
+
     public void writeBugToFile()
     {
         String fileName = "Bug" + getID() + ".txt";

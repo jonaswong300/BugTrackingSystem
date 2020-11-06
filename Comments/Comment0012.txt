@@ -3,3 +3,7 @@ Comment : https://wiki.mozilla.org/Bug_Triage#Intermittent_Test_Failure_Cleanup
 For more information, please visit auto_nag documentation., 
 Date : 19/10/2020 18:34:21
 Comment : https://treeherder.mozilla.org/logviewer.html#/jobs?job_id=270527694&repo=autoland&lineNumber=5178, 
+Date : 06/11/2020 17:05:45
+Comment : Comment system to be working,
+Date : 18/10/2020 04:17:52Comment : https://wiki.mozilla.org/Bug_Triage#Intermittent_Test_Failure_CleanupFor more information, please visit auto_nag documentation., Date : 19/10/2020 18:34:21Comment : https://treeherder.mozilla.org/logviewer.html#/jobs?job_id=270527694&repo=autoland&lineNumber=5178, Date : 18/10/2020 04:17:52Comment : https://wiki.mozilla.org/Bug_Triage#Intermittent_Test_Failure_CleanupFor more information, please visit auto_nag documentation., Date : 19/10/2020 18:34:21Comment : https://treeherder.mozilla.org/logviewer.html#/jobs?job_id=270527694&repo=autoland&lineNumber=5178, Date : 06/11/2020 17:05:45Comment : Comment system to be working,Date : 06/11/2020 17:08:05
+Comment : test,

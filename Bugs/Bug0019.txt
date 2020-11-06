@@ -6,8 +6,6 @@ Solved status : open
 Bug : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36
 
 
-
-
 Step to reproduce:
 Download a file that will take some time to complete
 Download four more files

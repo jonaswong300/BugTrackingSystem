@@ -1,0 +1,26 @@
+Title : Mouse clicking over autoscroll marker opens link if the marker overlaps the link
+Keywords :mouse,click,autoscroll,marker,link,overlap
+Assigned Developer : 
+
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G935P Build/NRD90M) 
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36
+Build ID: 20180401220058
+
+
+Step to reproduce:
+1. Open attached
+2. Middle mouse click on lightgray area to start autoscroll
+3. move mouse pointer downward
+4. When the autoscroll marker is positioned over the image, Move the mouse pointer over the marker.
+5. Mouse left/middle click on the marker to leave autoscroll
+
+
+Actual results:
+Autoscroll finishes as expected.
+Link is opened --- this is unexpected, I think this is a bug.
+
+
+Expected results:
+Autoscroll finishes as expected.
+No link should be opened.

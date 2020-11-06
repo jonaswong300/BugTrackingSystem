@@ -24,3 +24,7 @@ Bug0022.txt,Comment0022.txt
 Bug0023.txt,Comment0023.txt
 !Bug0024.txt,Comment0024.txt
 !Bug0025.txt,Comment0025.txt
+!Bug0026.txt,Comment0026.txt
+!Bug0027.txt,Comment0027.txt
+!Bug0028.txt,Comment0028.txt
+!Bug0029.txt,Comment0029.txt

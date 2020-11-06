@@ -159,7 +159,7 @@ class SearchUI implements ActionListener
                     //String title = titlesMap.get(devFilesList.get(i));
                     bugButtons[i] = new JButton(title);
                     bugButtons[i].setSize(300, 50);
-                    bugButtons[i].addActionListener(new getSpecificBug());
+                    bugButtons[i].addActionListener(new getSpecificBug("e", title));
                     bugPanel.add(bugButtons[i]);
                     
                 }
@@ -202,7 +202,7 @@ class SearchUI implements ActionListener
                     //String title = titlesMap.get(devFilesList.get(i));
                     bugButtons[i] = new JButton(title);
                     bugButtons[i].setSize(300, 50);
-                    bugButtons[i].addActionListener(new getSpecificBug());
+                    bugButtons[i].addActionListener(new getSpecificBug("e", title));
                     bugPanel.add(bugButtons[i]);
                     
                 }
@@ -223,25 +223,36 @@ class SearchUI implements ActionListener
 // FOR THE BUTTONS OF BUGS LISTED
 class getSpecificBug implements ActionListener
 {
+    String whichAction;
     String bugFile;
     JFrame bugThread = new JFrame();
+    JFrame frame = new JFrame();
     JPanel bugPanel = new JPanel(); 
+    JPanel panel = new JPanel();
     JLabel bugLabel = new JLabel("Bug Descriptions : ");
     JTextArea bug = new JTextArea();
     JLabel commentLabel = new JLabel("Comments : ");
     JTextArea comments = new JTextArea();
+    JScrollPane scrollB = new JScrollPane (bug);
+    JScrollPane scrollC = new JScrollPane (comments);
+    JTextArea commentArea = new JTextArea(5, 20);
+    JScrollPane scrollPane = new JScrollPane(commentArea); 
+    JButton addC = new JButton("Submit Comment");
+    String tempCommentFileName = "";
+    HashMap<String, String> bugCommentFileNameMap;
+    HashMap<String, Comment> commentLinkMap;
 
-    public getSpecificBug()
+    public getSpecificBug(String whichAction, String title)
     {
-
+        this.whichAction = whichAction;
+        bugFile = title;
+        //System.out.println("Hitting : " + title);
     }
 
-
-    @Override
-    public void actionPerformed(ActionEvent e) 
+    public void getForm()
     {
-
-        bugThread.setSize(1330,750); 
+        
+        bugThread.setSize(15000,900); 
         bugThread.setVisible(true);
 
         bugThread.add(bugPanel);
@@ -250,24 +261,34 @@ class getSpecificBug implements ActionListener
         bugLabel.setBounds(10, 10, 150, 20);
         bugPanel.add(bugLabel);
 
-        bug.setBounds(130,10,1250,400);
+        bug.setBounds(130,10,1250,450);
+        bug.setSize(1250,450);
+        bug.setLineWrap(true);
+        bug.setEditable(false);
+        scrollB.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         bugPanel.add(bug);
+        bugPanel.add(scrollB);
 
         commentLabel.setBounds(10, 500, 150, 20);
         bugPanel.add(commentLabel);
 
-        comments.setBounds(130,500,1250,200);
+        comments.setBounds(130,500,1250,400);
+        comments.setSize(1250,200);
+        comments.setLineWrap(true);
+        comments.setEditable(false);
+        scrollC.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         bugPanel.add(comments);
+        bugPanel.add(scrollC);
         comments.setVisible(true);
 
-        bugFile = e.getActionCommand();
 
         SearchController sc = new SearchController(bugFile);
         String specificBugFile = sc.searchByTitle();
 
         CommentDatabase cd = new CommentDatabase();
-        HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
-        HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
+        bugCommentFileNameMap = cd.getBugCommentFileNameMap();
+        commentLinkMap = cd.getCommentLinkMap();
+        
 
         String bugFileName = "Bugs/" + specificBugFile;
         try
@@ -276,11 +297,11 @@ class getSpecificBug implements ActionListener
             bug.read(fr, bugFileName);
 
             if(bugCommentFileNameMap.containsKey(specificBugFile)){
-                String tempCommentFileName = bugCommentFileNameMap.get(specificBugFile);
+                tempCommentFileName = bugCommentFileNameMap.get(specificBugFile);
 
                 if(commentLinkMap.containsKey(tempCommentFileName)){
                     String commentString = String.valueOf(commentLinkMap.get(tempCommentFileName));
-                    System.out.println(commentString);
+                    //System.out.println(commentString);
                     comments.append(commentString);
                 }
             }
@@ -291,6 +312,67 @@ class getSpecificBug implements ActionListener
         {
             except.printStackTrace();
         }
+
+        JButton comment = new JButton("Add Comment Here");
+        comment.setBounds(130,720,200,20);
+        
+        comment.addActionListener(this);
+        bugPanel.add(comment);
+    }
+
+    public void addComment()
+    {
+        frame.setSize(1100, 600);
+        frame.add(panel);
+        panel.setLayout(null);
+
+        JLabel addCommentL = new JLabel("Add your comment in the text field : ");
+        addCommentL.setBounds(10, 10, 350, 20);
+        panel.add(addCommentL);
+
+
+        commentArea.setEditable(true);
+        commentArea.setBounds(10,50,850,200);
+        panel.add(commentArea);
+
+        addC.setBounds(710,280,150,20);
+        addC.addActionListener(this);
+        panel.add(addC);
+
+        frame.setVisible(true);
+    }
+
+    public void callCommentController()
+    {
+        AddCommentController acc = new AddCommentController(commentArea.getText());
+
+
+        acc.writeCommentToFile(tempCommentFileName);
+    }
+    @Override
+    public void actionPerformed(ActionEvent evt) 
+    {
+        
+        if(!evt.getActionCommand().equals("Add Comment Here") && !evt.getActionCommand().equals("Submit Comment"))
+        {
+            getForm();
+        }
+        else if (evt.getActionCommand().equals("Submit Comment"))
+        {
+            
+            //write to files
+            callCommentController();
+            JOptionPane.showMessageDialog(frame, "Close and open bug thread again for your comment to be shown.", 
+                                        "Comment Added", JOptionPane.INFORMATION_MESSAGE);
+            //close comment frame
+            frame.dispose();
+        }
+        else
+        {
+            //open comment frame
+            addComment();
+        }
     }
     
 }
+

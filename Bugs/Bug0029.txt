@@ -1,0 +1,23 @@
+Title :  Loading search suggestions causes jank on low-bandwidth high-latency connections
+Keywords :  loading,search,suggestions,jank,low-bandwidth,high-latency,connections,
+Assigned Developer :  
+
+Solved status :  open
+Bug : Firefox 66.0b5, Windows 10.0.17134.523, American Airlines 
+WiFi (ViaSat, 5.5 Mbps, 597ms latency)
+
+
+Step to reproduce:
+Type (e.g., foo) in AwesomeBar
+
+
+
+Actual results:
+History and current tab results show instantly. Search suggestions take > 1s to 
+load and cause a five result row jank when the load. The jank may result in users 
+clicking on the incorrect search results
+
+
+Expected results:
+No jank. Approaches like content placeholders or changes in ordering
+ (i.e. search results below history results) would be preferable

@@ -74,7 +74,7 @@ class UserAccessDatabase {
     private void readUserAccountFromFile(){
         String [] temp;
         try{
-            System.out.println("\nStoring user accounts from file userAccount.txt");
+            //System.out.println("\nStoring user accounts from file userAccount.txt");
             FileReader fw = new FileReader("userAccount.txt");
 
             Scanner input = new Scanner(fw);
