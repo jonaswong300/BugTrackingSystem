@@ -32,7 +32,7 @@ class TriagerAssignDevUI implements ActionListener
     {
         TriagerAssignDevController tadc = new TriagerAssignDevController();
 
-        devFrame.setSize(1000,200);
+        devFrame.setSize(1000,500);
         devFrame.add(devPanel);
         devPanel.setLayout(null);
 

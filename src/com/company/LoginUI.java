@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -29,28 +30,28 @@ class LoginUI implements ActionListener {
         frame.add(panel);
         panel.setLayout(null);
 
-        //welcomeLabel = new JLabel("Welcome to 007's Bug Tracking System");
-        //welcomeLabel.setBounds(10, 5, 80, 25);
-        //panel.add(welcomeLabel);
+        welcomeLabel = new JLabel("Welcome to 007's Bug Tracking System");
+        welcomeLabel.setBounds(10, 5, 300, 25);
+        panel.add(welcomeLabel);
 
         userLabel = new JLabel("Username:");
-        userLabel.setBounds(20, 20, 80, 25);
+        userLabel.setBounds(20, 50, 80, 25);
         panel.add(userLabel);
 
         userText = new JTextField(20);
-        userText.setBounds(110, 20, 165,25);
+        userText.setBounds(110, 50, 165,25);
         panel.add(userText);
 
         passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(20, 50, 80, 25);
+        passwordLabel.setBounds(20, 100, 80, 25);
         panel.add(passwordLabel);
 
         passwordField = new JPasswordField(20);
-        passwordField.setBounds(110, 50, 165,25);
+        passwordField.setBounds(110, 100, 165,25);
         panel.add(passwordField);
 
         successLabel = new JLabel("");
-        successLabel.setBounds(20, 110, 300, 25);
+        successLabel.setBounds(20, 140, 300, 25);
         successLabel.setToolTipText("Success");
         panel.add(successLabel);
 
@@ -64,7 +65,7 @@ class LoginUI implements ActionListener {
         LoginController lc = new LoginController();
 
         loginButton = new JButton("Login");
-        loginButton.setBounds(10, 80, 80, 25);
+        loginButton.setBounds(20, 180, 80, 25);
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

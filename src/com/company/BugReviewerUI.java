@@ -25,12 +25,12 @@ class BugReviewerUI {
         panel.add(user);
 
         JButton checkUnresolvedBugs = new JButton("Check Unresolved Bugs");
-        checkUnresolvedBugs.setBounds(60, 80, 200, 100);
+        checkUnresolvedBugs.setBounds(180, 80, 200, 100);
         checkUnresolvedBugs.addActionListener(new FixBugReport());
         panel.add(checkUnresolvedBugs);
 
         JButton testProposedSolution = new JButton("Test proposed solution");
-        testProposedSolution.setBounds(300, 80, 200, 100);
+        testProposedSolution.setBounds(400, 80, 200, 100);
         testProposedSolution.addActionListener(new checkUnresolvedBugs());
         panel.add(testProposedSolution);
 
