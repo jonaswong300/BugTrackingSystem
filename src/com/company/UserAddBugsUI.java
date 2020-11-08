@@ -68,11 +68,11 @@ class UserAddBugsUI implements ActionListener
         panel.add(descriptionArea);
 
         JLabel submitLabel = new JLabel("Submit your bug report : ");
-        submitLabel.setBounds(20, 430, 400, 100);
+        submitLabel.setBounds(20, 440, 400, 100);
         panel.add(submitLabel);
 
         submit = new JButton("Submit");
-        submit.setBounds(200, 460, 100,50);
+        submit.setBounds(200, 480, 100,50);
         submit.addActionListener(this);
         panel.add(submit);
 

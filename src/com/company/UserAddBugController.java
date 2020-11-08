@@ -45,7 +45,7 @@ class UserAddBugController
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());
 
-        Bug report = new Bug(bugID,title, new ArrayList<String>(Arrays.asList(keywords.split(" "))), description, emptyDev, level, solved);
+        Bug report = new Bug(bugID,title, new ArrayList<>(Arrays.asList(keywords.split(" "))), description, emptyDev, level, solved);
         report.writeBugToFile();
         report.writeEmptyCommentFile();
     }
