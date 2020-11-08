@@ -1,7 +1,7 @@
 Title :  Unresolvable www subdomain unexpectedly redirects to domain without www
 Keywords : domain,redirect,unresolvable,www,
 Assigned Developer :  
-
+Severity Level : 1
 Solved status :  open
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751

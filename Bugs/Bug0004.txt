@@ -1,7 +1,7 @@
 Title :  "% text" doesn't find text in urls after switching containers
 Keywords : containers,switch,url,
 Assigned Developer :  
-
+Severity Level : 1
 Solved status :  open
 Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
 % text” does not find text when switching from container to container, when it should.

@@ -5,6 +5,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 
+//LOW, MEDIUM, HIGH, CRITICAL
+//0  , 1,    , 2,  , 3
+enum SeverityLevel {
+    LOW, MEDIUM, HIGH, CRITICAL
+}
+
 class Bug {
     private String title;
     private String ID;
@@ -14,6 +20,8 @@ class Bug {
     private String assignDeveloper;
     private String solved;
     private String filename;
+    private SeverityLevel level;
+
 
     public Bug()
     {
@@ -32,6 +40,17 @@ class Bug {
         this.description = description;
         this.solved = solved;
     }
+
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, SeverityLevel level, String solved){
+        this.ID = ID;
+        this.title = title;
+        this.keywords_AL = keywords;
+        this.assignDeveloper = assignDeveloper;
+        this.description = description;
+        this.solved = solved;
+        this.level = level;
+    }
+
 
     public String getTitle() {
         return title;
@@ -123,8 +142,9 @@ class Bug {
             }
 
             toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
-            toWrite.append("\nSolved status : ").append(solved);
-            toWrite.append("\nBug : ").append(description);
+            toWrite.append("Severity Level : ").append(level).append("\n");
+            toWrite.append("Solved status : ").append(solved).append("\n");
+            toWrite.append("Bug : ").append(description);
             fw.write(toWrite.toString());
 
             fw.close();

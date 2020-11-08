@@ -10,21 +10,14 @@ class UserAddBugController
     String title;
     String keywords;
     String description;
-
+    SeverityLevel level;
     BugDatabase bd;
 
-    public UserAddBugController()
-    {
-
-    }
-
-    public UserAddBugController(String title, String keywords, String description)
-    {
-        
+    public UserAddBugController(String title, String keywords, String description, SeverityLevel level) {
         this.title = title;
         this.keywords = keywords;
         this.description = description;
-        //addBugsDetails();
+        this.level = level;
     }
 
     public boolean checkEmpty()
@@ -52,8 +45,7 @@ class UserAddBugController
         String bugID = bd.getNewBugID();
         bd.writeNewFileToDatabase(getDate());
 
-        Bug report = new Bug(bugID,title, new ArrayList<String>(Arrays.asList(keywords.split(" "))), description, emptyDev, solved);
-
+        Bug report = new Bug(bugID,title, new ArrayList<String>(Arrays.asList(keywords.split(" "))), description, emptyDev, level, solved);
         report.writeBugToFile();
         report.writeEmptyCommentFile();
     }

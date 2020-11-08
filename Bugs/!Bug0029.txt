@@ -1,7 +1,7 @@
 Title : Loading search suggestions causes jank on low-bandwidth high-latency connections
 Keywords : loading,search,suggestions,jank,low-bandwidth,high-latency,connections,
 Assigned Developer : 
-
+Severity Level : 2
 Solved status : open
 Bug : Firefox 66.0b5, Windows 10.0.17134.523, American Airlines 
 WiFi (ViaSat, 5.5 Mbps, 597ms latency)

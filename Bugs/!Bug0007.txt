@@ -1,7 +1,7 @@
 Title : For a new profile, second character is lost when typing into the URL bar
 Keywords :second,url,profile,new,
 Assigned Developer : 
-
+Severity Level : 1
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
 New profile users lose the second character when typing into the URL bar.

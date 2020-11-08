@@ -9,13 +9,15 @@ class UserAddBugsUI implements ActionListener
 
     JFrame form = new JFrame();
     JPanel panel = new JPanel();
-    JTextField titleText;
-    JTextField keywordsField;
+    JTextField titleText, keywordsField;
     JTextArea descriptionArea;
-    String title;
-    String keywords;
-    String description;
+    String title, keywords, description;
     JButton submit;
+
+    String[] terms = {"0", "1", "2", "3"};
+    final JComboBox<String> severity = new JComboBox<String>(terms);
+
+    SeverityLevel level;
    
     public UserAddBugsUI()
     {
@@ -49,12 +51,20 @@ class UserAddBugsUI implements ActionListener
         keywordsField.setBounds(200, 60, 400, 25);
         panel.add(keywordsField);
 
+        JLabel severityLabel = new JLabel("Severity Level: ");
+        severityLabel.setBounds(20, 130, 160, 25);
+        panel.add(severityLabel);
+
+        severity.setFont(severity.getFont().deriveFont(18.0f));
+        severity.setBounds(200,130,400,25);
+        panel.add(severity);
+
         JLabel descriptLabel = new JLabel("Description : ");
-        descriptLabel.setBounds(20, 120, 200, 25);
+        descriptLabel.setBounds(20, 170, 200, 25);
         panel.add(descriptLabel);
 
         descriptionArea = new JTextArea();
-        descriptionArea.setBounds(200, 125, 600, 300);
+        descriptionArea.setBounds(200, 170, 600, 300);
         panel.add(descriptionArea);
 
         JLabel submitLabel = new JLabel("Submit your bug report : ");
@@ -71,9 +81,9 @@ class UserAddBugsUI implements ActionListener
 
     }
 
-    public void sendBugRequest(String title, String keywords, String description)
+    public void sendBugRequest(String title, String keywords, String description, SeverityLevel level)
     {
-        UserAddBugController addBugController = new UserAddBugController(title, keywords, description);
+        UserAddBugController addBugController = new UserAddBugController(title, keywords, description, level);
         if(addBugController.checkEmpty())
         {
             JOptionPane.showMessageDialog(form, "Ensure that you have filled in the bug report and did not leave any empty text fields.", 
@@ -91,7 +101,20 @@ class UserAddBugsUI implements ActionListener
         title = titleText.getText();
         keywords = keywordsField.getText();
         description = descriptionArea.getText();
-        sendBugRequest(title, keywords, description);
+
+        Object selectedItem = severity.getSelectedItem();
+        if ("0".equals(selectedItem)) {
+            level = SeverityLevel.LOW;
+        } else if ("1".equals(selectedItem)) {
+            level = SeverityLevel.MEDIUM;
+        } else if ("2".equals(selectedItem)) {
+            level = SeverityLevel.HIGH;
+        } else if ("3".equals(selectedItem)) {
+            level = SeverityLevel.CRITICAL;
+        } else {
+            level = null;
+        }
+        sendBugRequest(title, keywords, description, level);
 		form.dispose();		
 		System.out.println("Frame Closed.");		
     }

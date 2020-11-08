@@ -1,7 +1,7 @@
 Title : Downloads manager shows wrong source when handling 30x redirect on drop
 Keywords :download,manager,wrong,source,redirect,drop,
 Assigned Developer : randomDev2
-
+Severity Level : 1
 Solved status : open
 Bug : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
 

@@ -23,6 +23,10 @@ class BugDatabase {
     //eg. <Bug0001.txt, devName> 
     private final HashMap<String, String> devMap = new HashMap<>();
 
+    //Holds severity level of bug
+    //Eg. <Bug0001.txt, level>
+    private final HashMap<String, SeverityLevel> severeMap = new HashMap<>();
+
     //Holds all the Bug objects
     //instead of integer, just the filename is easier to manipulate
     //eg. <Integer, Bug> <1, Bug> --> <Bugs/Bug0001.txt, Bug>
@@ -43,7 +47,8 @@ class BugDatabase {
             Scanner in;
 
             int idCounter = 0;
-            String [] temp, split, keySplit, keywords, devSplit;
+            String [] temp, split, keySplit, keywords, devSplit, severitySplit;
+            SeverityLevel level;
 
             while(input.hasNextLine()){
                 temp = input.nextLine().split(",");
@@ -88,11 +93,32 @@ class BugDatabase {
                 }
 
                 //DEVELOPER
-                if(temp[0].charAt(0) != '!')
-                {
-                    devSplit = in.nextLine().split(" : ");
+                devSplit = in.nextLine().split(" : ");
+                if(temp[0].charAt(0) != '!') {
                     devMap.put(temp[0], devSplit[1]);
+                }else{
+                    devMap.put(temp[0], "");
                 }
+
+                severitySplit = in.nextLine().split(" : ");
+                switch (severitySplit[1]) {
+                    case "0":
+                        level = SeverityLevel.LOW;
+                        break;
+                    case "1":
+                        level = SeverityLevel.MEDIUM;
+                        break;
+                    case "2":
+                        level = SeverityLevel.HIGH;
+                        break;
+                    case "3":
+                        level = SeverityLevel.CRITICAL;
+                        break;
+                    default:
+                        level = null;
+                        break;
+                }
+                severeMap.put(temp[0], level);
             }
 
         }catch (IOException e){
@@ -102,6 +128,7 @@ class BugDatabase {
 
     public void createBugObject(String bugFileName, int idCounter){
         String title, ID, assignDeveloper, solved;
+        SeverityLevel level;
         StringBuilder description;
         ArrayList<String> keywords_AL = new ArrayList<>();
         String [] split, keywordsTemp;
@@ -126,7 +153,26 @@ class BugDatabase {
                 //Split Assigned developer
                 assignDeveloper = fileInput.nextLine().split(":")[1];
 
-                fileInput.nextLine();
+                //Split severity level
+                split = fileInput.nextLine().split(" : ");
+
+                switch (split[1]) {
+                    case "0":
+                        level = SeverityLevel.LOW;
+                        break;
+                    case "1":
+                        level = SeverityLevel.MEDIUM;
+                        break;
+                    case "2":
+                        level = SeverityLevel.HIGH;
+                        break;
+                    case "3":
+                        level = SeverityLevel.CRITICAL;
+                        break;
+                    default:
+                        level = null;
+                        break;
+                }
 
                 //Split solved
                 split = fileInput.nextLine().split(":");
@@ -140,7 +186,7 @@ class BugDatabase {
                     description.append("\n").append(fileInput.nextLine());
                 }
 
-                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description.toString().toString(), assignDeveloper, solved));
+                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description.toString(), assignDeveloper, level, solved));
 
             }else{
                 System.out.println(bugFileName + "  is empty.");

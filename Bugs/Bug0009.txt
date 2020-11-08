@@ -1,7 +1,7 @@
 Title : When I drag & drop text to address bar it's giving other result than entering text and pressing enter
 Keywords :enter,text,drap,drop,address,
 Assigned Developer : user19
-
+Severity Level : 1
 Solved status : closed
 Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0
 

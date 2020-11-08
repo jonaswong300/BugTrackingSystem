@@ -159,7 +159,7 @@ class SearchUI implements ActionListener
                     //String title = titlesMap.get(devFilesList.get(i));
                     bugButtons[i] = new JButton(title);
                     bugButtons[i].setSize(300, 50);
-                    bugButtons[i].addActionListener(new getSpecificBug("e", title));
+                    bugButtons[i].addActionListener(new GetSpecificBugUI("e", title));
                     bugPanel.add(bugButtons[i]);
                     
                 }
@@ -202,7 +202,7 @@ class SearchUI implements ActionListener
                     //String title = titlesMap.get(devFilesList.get(i));
                     bugButtons[i] = new JButton(title);
                     bugButtons[i].setSize(300, 50);
-                    bugButtons[i].addActionListener(new getSpecificBug("e", title));
+                    bugButtons[i].addActionListener(new GetSpecificBugUI("e", title));
                     bugPanel.add(bugButtons[i]);
                     
                 }
@@ -221,7 +221,7 @@ class SearchUI implements ActionListener
 
 // USED FOR SEARCHBYDEV AND SEARCHBYKEYWORDS
 // FOR THE BUTTONS OF BUGS LISTED
-class getSpecificBug implements ActionListener
+class GetSpecificBugUI implements ActionListener
 {
     String whichAction;
     String bugFile;
@@ -242,7 +242,7 @@ class getSpecificBug implements ActionListener
     HashMap<String, String> bugCommentFileNameMap;
     HashMap<String, Comment> commentLinkMap;
 
-    public getSpecificBug(String whichAction, String title)
+    public GetSpecificBugUI(String whichAction, String title)
     {
         this.whichAction = whichAction;
         bugFile = title;
