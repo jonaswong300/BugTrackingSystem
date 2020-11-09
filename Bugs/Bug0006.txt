@@ -1,9 +1,9 @@
-Title : Escaped backslashes replaced with backslashes (leading to forward slashes when hitting enter again)
-Keywords :escape,backslash,replace,
-Reporter : user1
-Assigned Developer : 
-Severity Level : 2
-Solved status : open
+Title :  Escaped backslashes replaced with backslashes (leading to forward slashes when hitting enter again)
+Keywords : escape,backslash,replace,
+Reporter :  user1
+Assigned Developer : N/A due to duplicate bug
+Severity Level : HIGH
+Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751
 

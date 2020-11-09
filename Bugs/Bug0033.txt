@@ -1,0 +1,22 @@
+Title :  Firefox sometimes doesn't start with cursor focused on address bar
+Keywords :  firefox,cursor,addressbar,
+Reporter :  user33
+Assigned Developer : N/A due to duplicate bug
+Severity Level : null
+Solved status : closed (FLAGGED AS DUPLICATE)
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36
+
+Step to reproduce:
+* 1: a single click in the taskbar icon;
+* 2: right click in the taskbar icon, select "Open new tab", and;
+* 3: right click in the taskbar icon, select "Open new private window".
+
+Actual results:
+* 1: opens "Normal Mode" with cursor focused on address bar;
+* 2: doesn't open "Normal Mode" with cursor focused on address bar, and;
+* 3: doesn't open "Private Mode" with cursor focused on address bar.
+
+
+Expected results:
+1, 2 and 3 should open "Normal" or "Private Mode" with cursor focused on address bar.

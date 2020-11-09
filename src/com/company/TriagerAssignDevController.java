@@ -114,8 +114,8 @@ class TriagerAssignDevController
                     BugDatabase bd = new BugDatabase();
                     CommentDatabase cd = new CommentDatabase();
                     String newFileName = fileName.replace("!", "");
-                    bd.setFileName(newFileName);
-                    cd.setFileName(newFileName);
+                    bd.setFileName(fileName);
+                    cd.setFileName(fileName);
 
                     //now read the specific bugfile contents into a stringbuffer
                     //replace the empty assigned developer with the dev name

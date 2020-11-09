@@ -142,14 +142,14 @@ class Bug {
         try
         {
             FileWriter fw = new FileWriter(fileName, true);
-            StringBuilder toWrite = new StringBuilder("Title : " + title + "\n"
-                    + "Keywords : ");
+            StringBuilder toWrite = new StringBuilder("Title :" + title + "\n"
+                    + "Keywords :");
             for(String s : keywords_AL)
             {
                 toWrite.append(s).append(",");
             }
 
-            toWrite.append("\nReporter : ").append(reporter);
+            toWrite.append("\nReporter :").append(reporter);
             toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
             toWrite.append("Severity Level : ").append(level).append("\n");
             toWrite.append("Solved status : ").append(solved).append("\n");

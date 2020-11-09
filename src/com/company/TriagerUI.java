@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class TriagerUI 
+class TriagerUI implements ActionListener
 {
     final static int width = 1040, height = 500;
 
@@ -26,63 +26,45 @@ class TriagerUI
 
         JButton viewBugReport = new JButton("View All Bugs");
         viewBugReport.setBounds(60, 80, 200, 100);
-        viewBugReport.addActionListener(new viewAllBugReport());
+        viewBugReport.addActionListener(this);
         panel.add(viewBugReport);
 
         JButton assignBugToDeveloper = new JButton("Assign bug to developer");
         assignBugToDeveloper.setBounds(300, 80, 200, 100);
-        assignBugToDeveloper.addActionListener(new AssignBugToDeveloper());
+        assignBugToDeveloper.addActionListener(this);
         panel.add(assignBugToDeveloper);
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new T_searchForBugs());
+        searchBugs.addActionListener(this);
         panel.add(searchBugs);
 
         JButton generateReports = new JButton("Generate System Reports");
         generateReports.setBounds(780, 80, 200, 100);
-        generateReports.addActionListener(new generateReports());
+        generateReports.addActionListener(this);
         panel.add(generateReports);
 
         frame.setVisible(true);
     }
-}
-
-class viewAllBugReport implements ActionListener{
-    @Override
-    public void actionPerformed(ActionEvent e)
-    {
-        TriagerViewAllBugsUI viewUI = new TriagerViewAllBugsUI();
-    }
-}
-
-class AssignBugToDeveloper implements ActionListener
-{
-    @Override
-    public void actionPerformed(ActionEvent e)
-    {
-        TriagerAssignDevUI assignUI = new TriagerAssignDevUI();
-    }
-}
-
-class generateReports implements ActionListener
-{
 
     @Override
     public void actionPerformed(ActionEvent e) 
     {
-        TriagerGenerateReportUI reportUI = new TriagerGenerateReportUI();
+        if(e.getActionCommand().equals("View All Bugs"))
+        {
+            TriagerViewAllBugsUI viewUI = new TriagerViewAllBugsUI();
+        }
+        else if(e.getActionCommand().equals("Assign bug to developer"))
+        {
+            TriagerAssignDevUI assignUI = new TriagerAssignDevUI();
+        }
+        else if(e.getActionCommand().equals("Search for Bugs"))
+        {
+            SearchUI s = new SearchUI();
+        }
+        else if(e.getActionCommand().equals("Generate System Reports"))
+        {
+            TriagerGenerateReportUI reportUI = new TriagerGenerateReportUI();
+        }
     }
-    
-}
-
-class T_searchForBugs implements ActionListener
-{
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        SearchUI s = new SearchUI();
-
-    }
-
 }

@@ -273,20 +273,23 @@ class BugDatabase {
             FileReader fr = new FileReader("BugFileDatabase.txt");
             Scanner input = new Scanner(fr);
             StringBuilder holdAll = new StringBuilder();
-            String toChange = "";
+            String toChange = fileName.replace("!", "");
+
             while(input.hasNextLine())
             {
-                toChange = "!" + fileName;
                 holdAll.append(input.nextLine()).append(System.lineSeparator());
-                
             }
             
             String fileContents = holdAll.toString();
-            fileContents = fileContents.replace(toChange, fileName);
+            fileContents = fileContents.replace(fileName, toChange);
+            
+
             //System.out.println(fileContents);
             FileWriter writer = new FileWriter("BugFileDatabase.txt");
+            //System.out.println(fileContents);
             writer.append(fileContents);
             writer.close();
+            
 
             fr.close();
             input.close();
@@ -295,6 +298,7 @@ class BugDatabase {
         {
             e.printStackTrace();
         }
+
     }
 
     //Rewrote this function to combine to initializeMap

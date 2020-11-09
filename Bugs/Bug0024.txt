@@ -1,7 +1,7 @@
 Title : The early blank window should use the about:home background color
 Keywords :early,blank,window,background,color,
 Reporter : user17
-Assigned Developer : 
+Assigned Developer : user29
 Severity Level : 1
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G935P Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36

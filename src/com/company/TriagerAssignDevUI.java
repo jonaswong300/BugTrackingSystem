@@ -58,7 +58,7 @@ class TriagerAssignDevUI implements ActionListener
         devPanel.add(devBox);
 
         checkButton.setBounds(20,140,100,20);
-        checkButton.addActionListener(new checkButton(bugsBox.getSelectedItem()));
+        checkButton.addActionListener(this);
         devPanel.add(checkButton);
 
         assignButton.setBounds(200,140,100,20);
@@ -73,65 +73,51 @@ class TriagerAssignDevUI implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) 
     {
-        bugSelect = String.valueOf(bugsBox.getSelectedItem());
-        devName = String.valueOf(devBox.getSelectedItem());
-
-        TriagerAssignDevController tadc = new TriagerAssignDevController();
-        tadc.setDev(bugSelect, devName);
-
-        JOptionPane.showMessageDialog(devFrame, "You have assigned '" + bugSelect + "' to '" + devName + "'"
-                                             , "Assigned Bug", JOptionPane.INFORMATION_MESSAGE);
-                                   
-        devFrame.dispose();
-
-    }
-    
-}
-
-class checkButton implements ActionListener
-{
-    String bugFile;
-    JFrame bugThread = new JFrame();
-    JPanel bugPanel = new JPanel(); 
-    JLabel bugLabel = new JLabel("Bug Descriptions : ");
-    JTextArea bug = new JTextArea();
-
-    public checkButton()
-    {
-    }
-
-    public checkButton(Object bugFile)
-    {
-        this.bugFile = bugFile.toString();
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent e) 
-    {
-        bugThread.setSize(1330,750); 
-        bugThread.setVisible(true);
-
-        bugThread.add(bugPanel);
-        bugPanel.setLayout(null);
-
-        bugLabel.setBounds(10, 10, 150, 20);
-        bugPanel.add(bugLabel);
-
-        bug.setBounds(130,10,1250,750);
-        bugPanel.add(bug);
-        
-        String specificBugFile = "Bugs/" + bugFile;
-        try 
+        if(e.getActionCommand().equals("Assign Bug"))
         {
-            FileReader fr = new FileReader(specificBugFile);
-            bug.read(fr, specificBugFile);
-            fr.close();
+            bugSelect = String.valueOf(bugsBox.getSelectedItem());
+            devName = String.valueOf(devBox.getSelectedItem());
+    
+            TriagerAssignDevController tadc = new TriagerAssignDevController();
+            tadc.setDev(bugSelect, devName);
+    
+            JOptionPane.showMessageDialog(devFrame, "You have assigned '" + bugSelect + "' to '" + devName + "'"
+                                                 , "Assigned Bug", JOptionPane.INFORMATION_MESSAGE);
+                                       
+            devFrame.dispose();
         }
-        catch (IOException except) 
+        else if(e.getActionCommand().equals("Check Bug"))
         {
-            except.printStackTrace();
-        }
+            JFrame bugThread = new JFrame();
+            JPanel bugPanel = new JPanel(); 
+            JLabel bugLabel = new JLabel("Bug Descriptions : ");
+            JTextArea bug = new JTextArea();
 
+            bugThread.setSize(1330,750); 
+            bugThread.setVisible(true);
+    
+            bugThread.add(bugPanel);
+            bugPanel.setLayout(null);
+    
+            bugLabel.setBounds(10, 10, 150, 20);
+            bugPanel.add(bugLabel);
+    
+            bug.setBounds(130,10,1250,750);
+            bugPanel.add(bug);
+            
+            String specificBugFile = "Bugs/" + bugsBox.getSelectedItem();
+            try 
+            {
+                FileReader fr = new FileReader(specificBugFile);
+                bug.read(fr, specificBugFile);
+                fr.close();
+            }
+            catch (IOException except) 
+            {
+                except.printStackTrace();
+            }
+    
+        }
     }
     
 }

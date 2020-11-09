@@ -66,7 +66,7 @@ class TriagerViewAllBugsUI implements ActionListener
             }
             bugButtons[i] = new JButton(title);
             bugButtons[i].setSize(300, 50);
-            bugButtons[i].addActionListener(new getBug());
+            bugButtons[i].addActionListener(this);
             viewPanel.add(bugButtons[i]);
             
         }
@@ -75,104 +75,8 @@ class TriagerViewAllBugsUI implements ActionListener
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-
-    }
-}
-class getBug implements ActionListener
-{
-    String bugFile;
-    JFrame bugThread = new JFrame();
-    JPanel bugPanel = new JPanel(); 
-    JLabel bugLabel = new JLabel("Bug Descriptions : ");
-    JTextArea bug = new JTextArea();
-    JLabel commentLabel = new JLabel("Comments : ");
-    JTextArea comments = new JTextArea();
-    JButton flag = new JButton("Flag as duplicate bug");
-
-    public getBug()
-    {
-
-    }
-
-
-    @Override
     public void actionPerformed(ActionEvent e) 
     {
-
-        bugThread.setSize(1400,750); 
-        bugThread.setVisible(true);
-
-        bugThread.add(bugPanel);
-        bugPanel.setLayout(null);
-
-        bugLabel.setBounds(10, 10, 150, 20);
-        bugPanel.add(bugLabel);
-
-        bug.setBounds(130,10,1250,400);
-        bugPanel.add(bug);
-
-        commentLabel.setBounds(10, 500, 150, 20);
-        bugPanel.add(commentLabel);
-
-        comments.setBounds(130,500,1250,200);
-        bugPanel.add(comments);
-        comments.setVisible(true);
-
-        bugFile = e.getActionCommand();
-        System.out.println(bugFile);
-
-        SearchController sc = new SearchController(bugFile);
-        String specificBugFile = sc.searchByTitle();
-
-        CommentDatabase cd = new CommentDatabase();
-        HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
-        HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
-
-        String bugFileName = "Bugs/" + specificBugFile;
-        try 
-        {
-            FileReader fr = new FileReader(bugFileName);
-            bug.read(fr, bugFileName);
-
-            if(bugCommentFileNameMap.containsKey(specificBugFile)){
-                String tempCommentFileName = bugCommentFileNameMap.get(specificBugFile);
-
-                if(commentLinkMap.containsKey(tempCommentFileName)){
-                    String commentString = String.valueOf(commentLinkMap.get(tempCommentFileName));
-                    System.out.println(commentString);
-                    comments.append(commentString);
-                }
-            }
-
-            fr.close();
-        }
-        catch (IOException except) 
-        {
-            except.printStackTrace();
-        }
-        flag.setBounds(130,650,200,50);
-        flag.addActionListener(new flagDuplicate(bugFileName, bugThread));
-        bugPanel.add(flag);
+        IndividualBugUI i = new IndividualBugUI(e.getActionCommand());
     }
-    
-}
-
-class flagDuplicate implements ActionListener
-{
-    String bugFile;
-    JFrame frame = new JFrame();
-    public flagDuplicate(String bugFile, JFrame frame)
-    {
-        this.bugFile = bugFile;
-        this.frame = frame;
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) 
-    {
-        TriagerViewAllBugsController flagControl = new TriagerViewAllBugsController(bugFile);
-        frame.dispose();
-    }
-    
 }

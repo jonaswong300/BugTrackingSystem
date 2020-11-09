@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class BugDeveloperUI extends JFrame{
+class BugDeveloperUI extends JFrame implements ActionListener{
 
     final static int width = 800, height = 500;
 
@@ -26,35 +26,28 @@ class BugDeveloperUI extends JFrame{
 
         JButton fixBugReport = new JButton("Fix Bug");
         fixBugReport.setBounds(60, 80, 300, 100);
-        fixBugReport.addActionListener(new FixBugReport());
+        fixBugReport.addActionListener(this);
         panel.add(fixBugReport);
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(400, 80, 300, 100);
-        searchBugs.addActionListener(new searchForBugs());
+        searchBugs.addActionListener(this);
         panel.add(searchBugs);
 
         frame.setVisible(true);
     }
 
-}
-
-class FixBugReport implements ActionListener
-{
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent e) 
     {
-        BugDeveloperFixBugReportUI fixBugUI = new BugDeveloperFixBugReportUI();
-    }
-}
-
-class searchForBugs implements ActionListener
-{
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        SearchUI s = new SearchUI();
-
+        if(e.getActionCommand().equals("Search for Bugs"))
+        {
+            SearchUI searchUI = new SearchUI();
+        }
+        else if(e.getActionCommand().equals("Fix Bug"))
+        {
+            BugDeveloperFixBugReportUI fixBugUI = new BugDeveloperFixBugReportUI();
+        }
     }
 
 }

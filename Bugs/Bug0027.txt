@@ -1,9 +1,9 @@
 Title : Pointer Lock Notification showing after close tab (Ctrl+W) and hover this notification before disappears.
 Keywords : pointer,lock,notification,tab,hover,disappears,
 Reporter : user17
-Assigned Developer : 
-Severity Level : 2
-Solved status : open
+Assigned Developer : N/A due to duplicate bug
+Severity Level : HIGH
+Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0
 Build ID: 20170809145938
 

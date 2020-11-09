@@ -1,0 +1,21 @@
+Title :  Suggestions popup not closed after quickly opening a new tab
+Keywords :  suggestions,popup,closed,newtab,
+Reporter :  user33
+Assigned Developer : N/A due to duplicate bug
+Severity Level : MEDIUM
+Solved status : closed (FLAGGED AS DUPLICATE)
+Bug : User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0
+
+Step to reproduce:
+1. Press CTRL+t to open a new tab
+2. Very quickly, preferably on a slower machine, type in the first letter of a 
+frequently visited website and press enter
+
+
+
+Actual results:
+The suggestions popup isn't closed and stays open until you press a mouse 
+button, while the address bar isn't focused anymore.
+
+Expected results:
+The suggestions popup should disappear once the address bar loses focus.

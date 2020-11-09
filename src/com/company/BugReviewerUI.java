@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class BugReviewerUI {
+class BugReviewerUI implements ActionListener{
     final static int width = 800, height = 500;
 
     private final JFrame frame = new JFrame();
@@ -26,46 +26,38 @@ class BugReviewerUI {
 
         JButton checkUnresolvedBugs = new JButton("Check Unresolved Bugs");
         checkUnresolvedBugs.setBounds(180, 80, 200, 100);
-        checkUnresolvedBugs.addActionListener(new FixBugReport());
+        checkUnresolvedBugs.addActionListener(this);
         panel.add(checkUnresolvedBugs);
 
         JButton testProposedSolution = new JButton("Test proposed solution");
         testProposedSolution.setBounds(400, 80, 200, 100);
-        testProposedSolution.addActionListener(new checkUnresolvedBugs());
+        testProposedSolution.addActionListener(this);
         panel.add(testProposedSolution);
 
         JButton closeBugReport = new JButton("Close Bug Report");
         closeBugReport.setBounds(700, 80, 200, 100);
-        closeBugReport.addActionListener(new CloseBugReport());
+        closeBugReport.addActionListener(this);
         panel.add(closeBugReport);
 
 
         frame.setVisible(true);
     }
-}
-
-class checkUnresolvedBugs implements ActionListener{
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        BugReviewerCheckUnresolvedBugUI brcubUI = new BugReviewerCheckUnresolvedBugUI();
+    public void actionPerformed(ActionEvent e) 
+    {
+        if(e.getActionCommand().equals("Check Unresolved Bugs"))
+        {
+            BugReviewerCheckUnresolvedBugUI brcubUI = new BugReviewerCheckUnresolvedBugUI();
+        }
+        else if(e.getActionCommand().equals("Test proposed solution"))
+        {
+            BugReviewerTestIntendedSolutionUI brtisUI = new BugReviewerTestIntendedSolutionUI();
+        }
+        else if(e.getActionCommand().equals("Close Bug Report"))
+        {
+            BugReviewerCloseBugReportUI closeBugUI = new BugReviewerCloseBugReportUI();
+        }
     }
-}
-
-class testIntendedSolution implements ActionListener{
-
-    @Override
-    public void actionPerformed(ActionEvent e){
-        BugReviewerTestIntendedSolutionUI brtisUI = new BugReviewerTestIntendedSolutionUI();
-    }
-}
-
-class CloseBugReport implements ActionListener
-{
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        BugReviewerCloseBugReportUI closeBugUI = new BugReviewerCloseBugReportUI();
-    }
-
 }
 

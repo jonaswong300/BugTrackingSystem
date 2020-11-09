@@ -1,9 +1,9 @@
-Title : Browser disappears during a flash download/install on tablets 
-Keywords : browser,disappears,flash,download,install,tablet,
-Reporter : user1
-Assigned Developer : 
-Severity Level : 2
-Solved status : open
+Title :  Browser disappears during a flash download/install on tablets 
+Keywords :  browser,disappears,flash,download,install,tablet,
+Reporter :  user1
+Assigned Developer : N/A due to duplicate bug
+Severity Level : HIGH
+Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0
 Build ID: 20170809145938
 
