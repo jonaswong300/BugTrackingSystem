@@ -81,9 +81,8 @@ class GetSpecificBugUI implements ActionListener
         SearchController sc = new SearchController(bugFile);
         String specificBugFile = sc.searchByTitle();
 
-        CommentDatabase cd = new CommentDatabase();
-        bugCommentFileNameMap = cd.getBugCommentFileNameMap();
-        commentLinkMap = cd.getCommentLinkMap();
+        bugCommentFileNameMap = sc.getComDatabaseBCFNM();
+        commentLinkMap = sc.getComDatabaseCLM();
         
 
         String bugFileName = "Bugs/" + specificBugFile;

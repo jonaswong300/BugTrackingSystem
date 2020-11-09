@@ -132,9 +132,8 @@ class SearchUI implements ActionListener
             boolean valid = sc.checkValidKeyword();
             if(valid)
             {
-                BugDatabase bd = new BugDatabase();
                 ArrayList<String> keywordFiles = sc.searchByKeywords();
-                HashMap<String, String> titlesMap = bd.getTitleMap();
+                HashMap<String, String> titlesMap = sc.accessTitleMap();
                 
                 bugThread.setSize(1200,750); 
                 bugThread.setVisible(true);
@@ -175,9 +174,8 @@ class SearchUI implements ActionListener
         {
             if(sc.checkDevExists())
             {
-                BugDatabase bd = new BugDatabase();
                 ArrayList<String> devFilesList = sc.searchByDev();
-                HashMap<String, String> titlesMap = bd.getTitleMap();
+                HashMap<String, String> titlesMap = sc.accessTitleMap();
                 //System.out.println(titlesMap.get("Bug0001.txt"));
 
 

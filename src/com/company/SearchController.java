@@ -17,6 +17,18 @@ class SearchController
     {
         this.searchTerms =searchTerms;
     }
+    
+    public HashMap<String, String> getComDatabaseBCFNM()
+    {
+        CommentDatabase cd = new CommentDatabase();
+        return cd.getBugCommentFileNameMap();
+    }
+
+    public HashMap<String, Comment> getComDatabaseCLM()
+    {
+        CommentDatabase cd = new CommentDatabase();
+        return cd.getCommentLinkMap();
+    }
 
     public String searchByTitle()
     {
@@ -111,5 +123,11 @@ class SearchController
         }
         return devFilesList;
 
+    }
+
+    public HashMap<String, String> accessTitleMap()
+    {
+        BugDatabase bd = new BugDatabase();
+        return bd.getTitleMap();
     }
 }

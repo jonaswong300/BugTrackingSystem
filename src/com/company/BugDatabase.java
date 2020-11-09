@@ -67,7 +67,8 @@ class BugDatabase {
 
                 in = new Scanner(reader);
                 split = in.nextLine().split(" : ");
-                titleMap.put(temp[0], split[1]);
+                System.out.println("test : " + temp[0]);
+                titleMap.put(temp[0], split[1].trim());
 
                 idCounter++;
 
