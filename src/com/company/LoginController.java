@@ -30,7 +30,7 @@ class LoginController {
 
             switch (userRole) {
                 case "Reporter":
-                    BugReporterUI brUI = new BugReporterUI();
+                    BugReporterUI brUI = new BugReporterUI(userName);
                     break;
                 case "Developer":
                     BugDeveloperUI bdUI = new BugDeveloperUI();

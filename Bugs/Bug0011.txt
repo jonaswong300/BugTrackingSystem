@@ -1,5 +1,6 @@
 Title : Firefox Library downloads view shows non-private downloads in a private window
 Keywords :download,private,window,firefox,library,
+Reporter : user1
 Assigned Developer : user3
 Severity Level : 1
 Solved status : closed

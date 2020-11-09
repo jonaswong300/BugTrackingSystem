@@ -34,6 +34,12 @@ class BugReviewerUI {
         testProposedSolution.addActionListener(new checkUnresolvedBugs());
         panel.add(testProposedSolution);
 
+        JButton closeBugReport = new JButton("Close Bug Report");
+        closeBugReport.setBounds(700, 80, 200, 100);
+        closeBugReport.addActionListener(new CloseBugReport());
+        panel.add(closeBugReport);
+
+
         frame.setVisible(true);
     }
 }
@@ -53,3 +59,13 @@ class testIntendedSolution implements ActionListener{
         BugReviewerTestIntendedSolutionUI brtisUI = new BugReviewerTestIntendedSolutionUI();
     }
 }
+
+class CloseBugReport implements ActionListener
+{
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        BugReviewerCloseBugReportUI closeBugUI = new BugReviewerCloseBugReportUI();
+    }
+
+}
+

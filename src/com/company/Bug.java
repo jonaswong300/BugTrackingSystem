@@ -18,6 +18,7 @@ class Bug {
     private ArrayList<String> keywords_AL = new ArrayList<>();
     private String description;
     private String assignDeveloper;
+    private String reporter;
     private String solved;
     private String filename;
     private SeverityLevel level;
@@ -32,19 +33,21 @@ class Bug {
         filename = fileName;   
     }
 
-    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, String solved){
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String reporter, String assignDeveloper, String solved){
         this.ID = ID;
         this.title = title;
         this.keywords_AL = keywords;
+        this.reporter = reporter;
         this.assignDeveloper = assignDeveloper;
         this.description = description;
         this.solved = solved;
     }
 
-    public Bug(String ID, String title, ArrayList<String> keywords, String description, String assignDeveloper, SeverityLevel level, String solved){
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String reporter, String assignDeveloper, SeverityLevel level, String solved){
         this.ID = ID;
         this.title = title;
         this.keywords_AL = keywords;
+        this.reporter = reporter;
         this.assignDeveloper = assignDeveloper;
         this.description = description;
         this.solved = solved;
@@ -85,6 +88,11 @@ class Bug {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getReporter()
+    {
+        return reporter;
     }
 
     public String getAssignDeveloper() {
@@ -141,6 +149,7 @@ class Bug {
                 toWrite.append(s).append(",");
             }
 
+            toWrite.append("\nReporter : ").append(reporter).append("\n");
             toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
             toWrite.append("Severity Level : ").append(level).append("\n");
             toWrite.append("Solved status : ").append(solved).append("\n");
@@ -162,6 +171,7 @@ class Bug {
                 "Bug Title: " + title + "\n" +
                 "Keywords: " +  keywords_AL + "\n" +
                 "Description: " + description + "\n" +
+                "Reporter : " + reporter + "\n" +
                 "Assigned Developer: " + assignDeveloper + "\n" +
                 "Solved: " + solved + "\n";
     }

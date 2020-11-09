@@ -4,3 +4,5 @@ Seems like Mather has found a cause. I don't remember it working like that on my
 Date : 30/11/2020 12:27:15
 Comment : can you please test this build and let me know if you now get a PIN prompt?
 https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/B1u4NJwMRF2aX_P2KnBs1A/runs/0/artifacts/public/build/target.zip, 
+Date : 09/11/2020 18:24:46
+Comment : Testing new comment,

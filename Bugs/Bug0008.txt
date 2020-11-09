@@ -1,5 +1,6 @@
 Title :  When scrolled to the right of a long URL, the end is faded away
 Keywords :scroll,url,end,fade,right,
+Reporter : user1
 Assigned Developer : N/A due to duplicate bug
 Severity Level : 1
 Solved status : closed (FLAGGED AS DUPLICATE)

@@ -1,5 +1,6 @@
 Title : The early blank window should use the about:home background color
 Keywords :early,blank,window,background,color,
+Reporter : user17
 Assigned Developer : 
 Severity Level : 1
 Solved status : open

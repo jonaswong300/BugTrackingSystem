@@ -1,5 +1,6 @@
 Title : Selection of Address Bar is collapsed randomly when switching tab
 Keywords :select,tab,address,collapse,random,
+Reporter : user1
 Assigned Developer : 
 Severity Level : 1
 Solved status : open

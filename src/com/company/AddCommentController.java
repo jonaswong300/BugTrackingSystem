@@ -43,6 +43,10 @@ class AddCommentController implements ActionListener
 
     public void writeCommentToFile(String id)
     {
+        if(id.trim().isEmpty())
+        {
+            id = "Comment0000.txt";
+        }
         String fileName = "Comments/" + id;
         String current_Comments = "";
         try

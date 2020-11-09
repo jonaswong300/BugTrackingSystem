@@ -23,6 +23,10 @@ class BugDatabase {
     //eg. <Bug0001.txt, devName> 
     private final HashMap<String, String> devMap = new HashMap<>();
 
+    //holds the reporter of all files
+    //eg.<Bug0001.txt, user1>
+    private final HashMap<String, String> repMap = new HashMap<>();
+
     //Holds severity level of bug
     //Eg. <Bug0001.txt, level>
     private final HashMap<String, SeverityLevel> severeMap = new HashMap<>();
@@ -47,7 +51,7 @@ class BugDatabase {
             Scanner in;
 
             int idCounter = 0;
-            String [] temp, split, keySplit, keywords, devSplit, severitySplit;
+            String [] temp, split, keySplit, keywords, repSplit, devSplit, severitySplit;
             SeverityLevel level;
 
             while(input.hasNextLine()){
@@ -92,6 +96,10 @@ class BugDatabase {
                     }
                 }
 
+                //REPORTER
+                repSplit = in.nextLine().split(" : ");
+                repMap.put(temp[0], repSplit[1]);
+
                 //DEVELOPER
                 devSplit = in.nextLine().split(" : ");
                 if(temp[0].charAt(0) != '!') {
@@ -127,7 +135,7 @@ class BugDatabase {
     }
 
     public void createBugObject(String bugFileName, int idCounter){
-        String title, ID, assignDeveloper, solved;
+        String title, ID, reporter, assignDeveloper, solved;
         SeverityLevel level;
         StringBuilder description;
         ArrayList<String> keywords_AL = new ArrayList<>();
@@ -149,6 +157,8 @@ class BugDatabase {
                 split = fileInput.nextLine().split(":");
                 keywordsTemp = split[1].split(",");
                 Collections.addAll(keywords_AL, keywordsTemp);
+
+                reporter = fileInput.nextLine().split(":")[1];
 
                 //Split Assigned developer
                 assignDeveloper = fileInput.nextLine().split(":")[1];
@@ -186,7 +196,7 @@ class BugDatabase {
                     description.append("\n").append(fileInput.nextLine());
                 }
 
-                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description.toString(), assignDeveloper, level, solved));
+                bugMap.put(bugFileName, new Bug(ID, title, keywords_AL, description.toString(), reporter, assignDeveloper, level, solved));
 
             }else{
                 System.out.println(bugFileName + "  is empty.");
@@ -295,6 +305,11 @@ class BugDatabase {
 
     public HashMap<Integer, String> getFileMap() {
         return fileMap;
+    }
+
+    public HashMap<String, String> getRepMap()
+    {
+        return repMap;
     }
 
     public HashMap<String, String> getDevMap()

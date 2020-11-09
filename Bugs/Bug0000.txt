@@ -1,8 +1,9 @@
 Title : Malicious website can hijack Google search initiated from search bar
 Keywords :search,malicious,
-Assigned Developer : user3
+Reporter : user33
+Assigned Developer : user42
 Severity Level : 3
-Solved status : open
+Solved status : closed
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751
 Malicious websites can listen for the keyup event, and perform a redirect when the user types a search term in the search bar and presses enter.

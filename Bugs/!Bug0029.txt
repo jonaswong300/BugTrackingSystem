@@ -1,5 +1,6 @@
 Title : Loading search suggestions causes jank on low-bandwidth high-latency connections
 Keywords : loading,search,suggestions,jank,low-bandwidth,high-latency,connections,
+Reporter : user50
 Assigned Developer : 
 Severity Level : 2
 Solved status : open

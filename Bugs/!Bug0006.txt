@@ -1,5 +1,6 @@
 Title : Escaped backslashes replaced with backslashes (leading to forward slashes when hitting enter again)
 Keywords :escape,backslash,replace,
+Reporter : user1
 Assigned Developer : 
 Severity Level : 2
 Solved status : open

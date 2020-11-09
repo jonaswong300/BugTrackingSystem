@@ -10,7 +10,7 @@ class TriagerGenerateReportUI implements ActionListener
 
     private final JFrame frame = new JFrame();
     private final JPanel panel = new JPanel();
-    String [] reportsDropdown = {"No. of Bugs reported in a month", "No. of bugs resolved in the last 7 days", "Best performing developer"};
+    String [] reportsDropdown = {"No. of Bugs reported in a month", "No. of bugs resolved in the last 7 days", "Best performing developer", "Best performing reporter"};
     String [] months = {"Jan","Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     JComboBox<String> reportsBox = new JComboBox<String>(reportsDropdown);
     JComboBox<String> monthBox = new JComboBox<String>(months);
@@ -72,13 +72,20 @@ class TriagerGenerateReportUI implements ActionListener
             JOptionPane.showMessageDialog(frame, "For the last 7 days, " + count + 
                                             " bugs have been resolved. ", "No. of Bugs resolved in the last week", JOptionPane.INFORMATION_MESSAGE);
         }
-        else
+        else if(reportsBox.getSelectedIndex() == 2)
         {
             //best performing developer (the developer with the most closed bug reports)
             String dev = tgrc.getBestDeveloper();
+            int no = tgrc.getDevNum();
             JOptionPane.showMessageDialog(frame, "The developer that performed the best is '" + dev + 
-                                            "' for resolving the most bugs. ", "Best developer", JOptionPane.INFORMATION_MESSAGE);
+                                            "' for resolving " + no +" bugs. ", "Best developer", JOptionPane.INFORMATION_MESSAGE);
         }
-
+        else
+        {
+            String rep = tgrc.getBestReporter();
+            int no = tgrc.getRepNum();
+            JOptionPane.showMessageDialog(frame, "The reporter that performed the best is '" + rep + 
+                                            "' for reporting " + no + " bugs. ", "Best reporter", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 }

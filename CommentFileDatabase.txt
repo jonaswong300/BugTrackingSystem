@@ -1,8 +1,8 @@
-!Bug0000.txt,Comment0000.txt
+Bug0000.txt,Comment0000.txt
 !Bug0001.txt,Comment0001.txt
 !Bug0002.txt,Comment0002.txt
 !Bug0003.txt,Comment0003.txt
-!Bug0004.txt,Comment0004.txt
+Bug0004.txt,Comment0004.txt
 !Bug0005.txt,Comment0005.txt
 !Bug0006.txt,Comment0006.txt
 !Bug0007.txt,Comment0007.txt
@@ -28,3 +28,4 @@ Bug0023.txt,Comment0023.txt
 !Bug0027.txt,Comment0027.txt
 !Bug0028.txt,Comment0028.txt
 !Bug0029.txt,Comment0029.txt
+!Bug0030.txt,Comment0030.txt

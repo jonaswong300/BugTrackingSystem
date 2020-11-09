@@ -1,5 +1,6 @@
 Title :  Download panel don't respond when click frequently
 Keywords :download,click,respond,
+Reporter : user18
 Assigned Developer : user22
 Severity Level : 1
 Solved status : closed

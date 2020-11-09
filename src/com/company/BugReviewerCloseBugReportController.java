@@ -3,9 +3,9 @@ package com.company;
 import java.util.HashMap;
 import java.io.File;
 
-class BugDeveloperCloseBugReportController {
+class BugReviewerCloseBugReportController {
 
-    public BugDeveloperCloseBugReportController(){
+    public BugReviewerCloseBugReportController(){
 
     }
 

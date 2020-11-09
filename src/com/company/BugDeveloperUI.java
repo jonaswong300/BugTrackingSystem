@@ -25,18 +25,13 @@ class BugDeveloperUI extends JFrame{
         panel.add(user);
 
         JButton fixBugReport = new JButton("Fix Bug");
-        fixBugReport.setBounds(60, 80, 200, 100);
+        fixBugReport.setBounds(60, 80, 300, 100);
         fixBugReport.addActionListener(new FixBugReport());
         panel.add(fixBugReport);
 
-        JButton closeBugReport = new JButton("Close Bug Report");
-        closeBugReport.setBounds(300, 80, 200, 100);
-        closeBugReport.addActionListener(new CloseBugReport());
-        panel.add(closeBugReport);
-
         JButton searchBugs = new JButton("Search for Bugs");
-        searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new SearchForBugs());
+        searchBugs.setBounds(400, 80, 300, 100);
+        searchBugs.addActionListener(new searchForBugs());
         panel.add(searchBugs);
 
         frame.setVisible(true);
@@ -53,12 +48,13 @@ class FixBugReport implements ActionListener
     }
 }
 
-class CloseBugReport implements ActionListener
+class searchForBugs implements ActionListener
 {
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        BugDeveloperCloseBugReportUI closeBugUI = new BugDeveloperCloseBugReportUI();
+        SearchUI s = new SearchUI();
+
     }
 
 }
-

@@ -1,5 +1,6 @@
 Title :  'File moved or missing' status is not kept after downloading again the same file
 Keywords :status,download,file,missing,
+Reporter : user1
 Assigned Developer : N/A due to duplicate bug
 Severity Level : 1
 Solved status : closed (FLAGGED AS DUPLICATE)

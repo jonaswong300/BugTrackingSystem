@@ -1,5 +1,6 @@
 Title : Browser disappears during a flash download/install on tablets 
 Keywords : browser,disappears,flash,download,install,tablet,
+Reporter : user1
 Assigned Developer : 
 Severity Level : 2
 Solved status : open

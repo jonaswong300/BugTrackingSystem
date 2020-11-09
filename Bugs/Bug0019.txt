@@ -1,8 +1,9 @@
 Title : Download List Dropdown Shows Incorrect Total of Pending Downloads
 Keywords :download,list,dropdown,pending,incorrect,total,
+Reporter : user2
 Assigned Developer : user19
 Severity Level : 1
-Solved status : open
+Solved status : closed
 Bug : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36
 
 

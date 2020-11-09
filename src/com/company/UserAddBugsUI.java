@@ -11,7 +11,7 @@ class UserAddBugsUI implements ActionListener
     JPanel panel = new JPanel();
     JTextField titleText, keywordsField;
     JTextArea descriptionArea;
-    String title, keywords, description;
+    String title, keywords, description, reporter;
     JButton submit;
 
     String[] terms = {"0", "1", "2", "3"};
@@ -19,9 +19,11 @@ class UserAddBugsUI implements ActionListener
 
     SeverityLevel level;
    
-    public UserAddBugsUI()
+    public UserAddBugsUI(String reporter)
     {
         System.out.println("At add bugs UI");
+        this.reporter = reporter;
+        System.out.println("useraddbugUI : " + reporter);
         showForm();
     }
 
@@ -81,9 +83,9 @@ class UserAddBugsUI implements ActionListener
 
     }
 
-    public void sendBugRequest(String title, String keywords, String description, SeverityLevel level)
+    public void sendBugRequest(String title, String keywords, String description, String reporter, SeverityLevel level)
     {
-        UserAddBugController addBugController = new UserAddBugController(title, keywords, description, level);
+        UserAddBugController addBugController = new UserAddBugController(title, keywords, description, reporter, level);
         if(addBugController.checkEmpty())
         {
             JOptionPane.showMessageDialog(form, "Ensure that you have filled in the bug report and did not leave any empty text fields.", 
@@ -114,7 +116,7 @@ class UserAddBugsUI implements ActionListener
         } else {
             level = null;
         }
-        sendBugRequest(title, keywords, description, level);
+        sendBugRequest(title, keywords, description, reporter, level);
 		form.dispose();		
 		System.out.println("Frame Closed.");		
     }

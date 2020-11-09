@@ -10,10 +10,17 @@ class BugReporterUI
 
     private final JFrame frame = new JFrame();
     private final JPanel panel = new JPanel();
+    private String reporter;
 
-    public BugReporterUI()
+    public BugReporterUI(String reporter)
     {
+        this.reporter = reporter;
         showForm();
+    }
+
+    public String getReporter()
+    {
+        return reporter;
     }
 
     public void showForm(){
@@ -30,7 +37,7 @@ class BugReporterUI
 
         JButton addBugReport = new JButton("Add Bug Report");
         addBugReport.setBounds(60, 80, 200, 100);
-        addBugReport.addActionListener(new AddBugReport());
+        addBugReport.addActionListener(new AddBugReport(reporter));
         panel.add(addBugReport);
 
         JButton trackBug = new JButton("Track Reported Bugs");
@@ -40,7 +47,7 @@ class BugReporterUI
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new SearchForBugs());
+        searchBugs.addActionListener(new R_SearchForBugs());
         panel.add(searchBugs);
 
         frame.setVisible(true);
@@ -49,10 +56,16 @@ class BugReporterUI
 
 class AddBugReport implements ActionListener
 {
+    String reporter;
+
+    public AddBugReport(String reporter)
+    {
+        this.reporter = reporter;
+    }
     @Override
     public void actionPerformed(ActionEvent e) 
     {   
-        UserAddBugsUI addbugUI = new UserAddBugsUI();
+        UserAddBugsUI addbugUI = new UserAddBugsUI(reporter);
     }
 }
 
@@ -66,7 +79,7 @@ class TrackBugReport implements ActionListener
     
 }
 
-class SearchForBugs implements ActionListener
+class R_SearchForBugs implements ActionListener
 {
 
     @Override

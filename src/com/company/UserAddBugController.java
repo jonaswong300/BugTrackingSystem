@@ -10,13 +10,15 @@ class UserAddBugController
     String title;
     String keywords;
     String description;
+    String reporter;
     SeverityLevel level;
     BugDatabase bd;
 
-    public UserAddBugController(String title, String keywords, String description, SeverityLevel level) {
+    public UserAddBugController(String title, String keywords, String description, String reporter, SeverityLevel level) {
         this.title = title;
         this.keywords = keywords;
         this.description = description;
+        this.reporter = reporter;
         this.level = level;
     }
 
@@ -43,9 +45,10 @@ class UserAddBugController
         String solved = "open";
         bd = new BugDatabase();
         String bugID = bd.getNewBugID();
+
         bd.writeNewFileToDatabase(getDate());
 
-        Bug report = new Bug(bugID,title, new ArrayList<>(Arrays.asList(keywords.split(" "))), description, emptyDev, level, solved);
+        Bug report = new Bug(bugID,title, new ArrayList<>(Arrays.asList(keywords.split(" "))), description, reporter, emptyDev, level, solved);
         report.writeBugToFile();
         report.writeEmptyCommentFile();
     }

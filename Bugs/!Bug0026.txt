@@ -1,5 +1,6 @@
 Title : Mouse clicking over autoscroll marker opens link if the marker overlaps the link
 Keywords :mouse,click,autoscroll,marker,link,overlap
+Reporter : user18
 Assigned Developer : 
 Severity Level : 1
 Solved status : open

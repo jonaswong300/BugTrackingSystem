@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class BugDeveloperCloseBugReportUI implements ActionListener {
+class BugReviewerCloseBugReportUI implements ActionListener {
 
     JFrame form = new JFrame();
     JPanel panel = new JPanel();
@@ -15,7 +15,7 @@ class BugDeveloperCloseBugReportUI implements ActionListener {
 
     String bugID, title, remarks;
 
-    public BugDeveloperCloseBugReportUI(){
+    public BugReviewerCloseBugReportUI(){
         System.out.println("At close bug UI");
         showForm();
     }
@@ -62,7 +62,7 @@ class BugDeveloperCloseBugReportUI implements ActionListener {
         form.setVisible(true);
     }
     public void closeBugRequest(String bugID, String title, String remarks){
-        BugDeveloperCloseBugReportController bdcbrc = new BugDeveloperCloseBugReportController();
+        BugReviewerCloseBugReportController bdcbrc = new BugReviewerCloseBugReportController();
         bdcbrc.closeReport(bugID, title, remarks);
     }
 

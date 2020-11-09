@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -80,6 +81,37 @@ class CommentDatabase {
             }
 
         }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void setFileName(String fileName)
+    {
+        try
+        {
+            FileReader fr = new FileReader("CommentFileDatabase.txt");
+            Scanner input = new Scanner(fr);
+            StringBuilder holdAll = new StringBuilder();
+            String toChange = "";
+            while(input.hasNextLine())
+            {
+                toChange = "!" + fileName;
+                holdAll.append(input.nextLine()).append(System.lineSeparator());
+                
+            }
+            
+            String fileContents = holdAll.toString();
+            fileContents = fileContents.replace(toChange, fileName);
+            //System.out.println(fileContents);
+            FileWriter writer = new FileWriter("CommentFileDatabase.txt");
+            writer.append(fileContents);
+            writer.close();
+
+            fr.close();
+            input.close();
+        }
+        catch(IOException e)
+        {
             e.printStackTrace();
         }
     }

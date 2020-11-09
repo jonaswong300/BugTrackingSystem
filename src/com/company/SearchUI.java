@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.GridLayout;
 import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
@@ -233,14 +234,14 @@ class GetSpecificBugUI implements ActionListener
     JTextArea bug = new JTextArea();
     JLabel commentLabel = new JLabel("Comments : ");
     JTextArea comments = new JTextArea();
-    JScrollPane scrollB = new JScrollPane (bug);
-    JScrollPane scrollC = new JScrollPane (comments);
     JTextArea commentArea = new JTextArea(5, 20);
-    JScrollPane scrollPane = new JScrollPane(commentArea); 
     JButton addC = new JButton("Submit Comment");
     String tempCommentFileName = "";
     HashMap<String, String> bugCommentFileNameMap;
     HashMap<String, Comment> commentLinkMap;
+
+    JScrollPane jsp = new JScrollPane(bug);
+    JScrollPane scrollC = new JScrollPane(comments);
 
     public GetSpecificBugUI(String whichAction, String title)
     {
@@ -252,33 +253,40 @@ class GetSpecificBugUI implements ActionListener
     public void getForm()
     {
         
-        bugThread.setSize(15000,900); 
+        bugThread.setSize(1500,900); 
         bugThread.setVisible(true);
 
         bugThread.add(bugPanel);
+        //bugPanel.setLayout(new GridLayout(1,0));
         bugPanel.setLayout(null);
 
         bugLabel.setBounds(10, 10, 150, 20);
         bugPanel.add(bugLabel);
 
-        bug.setBounds(130,10,1250,450);
-        bug.setSize(1250,450);
+        jsp.setBounds(130,10,1250,400);
+        //bug.setSize(1250,450);
         bug.setLineWrap(true);
         bug.setEditable(false);
-        scrollB.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        bugPanel.add(bug);
-        bugPanel.add(scrollB);
+
+        jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        //bugPanel.add(bug);
+        bugPanel.add(jsp);
 
         commentLabel.setBounds(10, 500, 150, 20);
         bugPanel.add(commentLabel);
 
-        comments.setBounds(130,500,1250,400);
-        comments.setSize(1250,200);
+
+        scrollC.setBounds(130,500,1250,200);
+        //comments.setSize(1250,200);
         comments.setLineWrap(true);
         comments.setEditable(false);
+
         scrollC.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        bugPanel.add(comments);
+
+        //bugPanel.add(comments);
         bugPanel.add(scrollC);
+
         comments.setVisible(true);
 
 
@@ -291,21 +299,24 @@ class GetSpecificBugUI implements ActionListener
         
 
         String bugFileName = "Bugs/" + specificBugFile;
+        String allComments = "";
+
+
         try
         {
             FileReader fr = new FileReader(bugFileName);
             bug.read(fr, bugFileName);
-
             if(bugCommentFileNameMap.containsKey(specificBugFile)){
                 tempCommentFileName = bugCommentFileNameMap.get(specificBugFile);
+                System.out.println("new check : " + tempCommentFileName);
 
                 if(commentLinkMap.containsKey(tempCommentFileName)){
                     String commentString = String.valueOf(commentLinkMap.get(tempCommentFileName));
-                    //System.out.println(commentString);
-                    comments.append(commentString);
+                    allComments = allComments + commentString;
                 }
             }
 
+            comments.setText(allComments);
             fr.close();
         }
         catch (IOException except)
@@ -345,7 +356,6 @@ class GetSpecificBugUI implements ActionListener
     public void callCommentController()
     {
         AddCommentController acc = new AddCommentController(commentArea.getText());
-
 
         acc.writeCommentToFile(tempCommentFileName);
     }

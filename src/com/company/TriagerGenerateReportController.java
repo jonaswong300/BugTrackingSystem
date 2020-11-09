@@ -19,6 +19,7 @@ class TriagerGenerateReportController {
 
     ArrayList<String> fileList = new ArrayList<>();
     ArrayList<Date> dateList = new ArrayList<>();
+    int Rnum, Dnum;
 
     public TriagerGenerateReportController() {
         readBugFileDatabase();
@@ -141,20 +142,97 @@ class TriagerGenerateReportController {
             }
         }
 
+        String devs = "";
         int highest = devSolved.get(0);
         int index = 0;
         //check who has highest count
         for(int i = 0; i < devSolved.size(); i++)
         {
-            if(highest <= devSolved.get(i))
+            if(highest < devSolved.get(i))
             {
                 highest = devSolved.get(i);
+                devs = allDevs.get(i);
                 index = i;
+            }
+            else if (highest == devSolved.get(i) && devs != allDevs.get(i))
+            {
+                devs = devs + " | " + allDevs.get(i) + " | "; 
             }
         }
 
-        dev = allDevs.get(index);
+        
+        Dnum = highest;
 
-        return dev;
+        return devs;
+    }
+
+    public String getBestReporter()
+    {
+        String rep = "";
+        //get all bugs
+        BugDatabase bd = new BugDatabase();
+        HashMap<String, Bug> bugMap = bd.getBugMap();
+        HashMap<String, String> repMap = bd.getRepMap();
+        ArrayList<String> allReps = new ArrayList<>();
+        ArrayList<Integer> rePorted= new ArrayList<>();
+
+        //initialise to check all the devs later
+        for(Map.Entry me : repMap.entrySet())
+        {
+            if(!allReps.contains(me.getValue().toString()))
+            {
+                allReps.add(me.getValue().toString());
+                rePorted.add(0);
+            }
+        }
+        
+        //loop through all the bugs to check for solved status
+        for(Map.Entry lel : bugMap.entrySet())
+        {
+            Bug k = (Bug) lel.getValue();
+            //check solved status, if solved, add number.
+            //im sure there's a better way to do this but my brain not working.
+            //loop through to check which dev
+            for(int i = 0; i < allReps.size(); i++)
+            {
+                //add count
+                if(k.getReporter().trim().equals(allReps.get(i)))
+                {
+                    rePorted.set(i, (rePorted.get(i)+1));
+                }
+            }
+            
+        }
+
+        String reps = "";
+        int highest = rePorted.get(0);
+        
+        //check who has highest count
+        for(int i = 0; i < rePorted.size(); i++)
+        {
+            if(highest < rePorted.get(i))
+            {
+                highest = rePorted.get(i);
+                reps = allReps.get(i);
+            }
+            else if (highest == rePorted.get(i) && reps != allReps.get(i))
+            {
+                reps = reps + " | " + allReps.get(i) + " | "; 
+            }
+        }
+
+        Rnum = highest;
+
+        return reps;
+    }
+
+    public int getRepNum()
+    {
+        return Rnum;
+    }
+
+    public int getDevNum()
+    {
+        return Dnum;
     }
 }

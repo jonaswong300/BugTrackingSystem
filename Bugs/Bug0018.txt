@@ -1,5 +1,6 @@
 Title :  Warn when downloading executable files over HTTP
 Keywords :warn,download,executable,file,http,
+Reporter : user1
 Assigned Developer : user19
 Severity Level : 2
 Solved status : closed

@@ -36,7 +36,7 @@ class TriagerUI
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);
-        searchBugs.addActionListener(new SearchForBugs());
+        searchBugs.addActionListener(new T_searchForBugs());
         panel.add(searchBugs);
 
         JButton generateReports = new JButton("Generate System Reports");
@@ -74,4 +74,15 @@ class generateReports implements ActionListener
         TriagerGenerateReportUI reportUI = new TriagerGenerateReportUI();
     }
     
+}
+
+class T_searchForBugs implements ActionListener
+{
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        SearchUI s = new SearchUI();
+
+    }
+
 }

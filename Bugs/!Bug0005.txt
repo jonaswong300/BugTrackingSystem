@@ -1,5 +1,6 @@
 Title : Unresolvable www subdomain unexpectedly redirects to domain without www
 Keywords :domain,redirect,unresolvable,www,
+Reporter : user6
 Assigned Developer : 
 Severity Level : 1
 Solved status : open

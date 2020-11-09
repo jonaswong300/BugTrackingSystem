@@ -112,8 +112,10 @@ class TriagerAssignDevController
                 {
                     //get rid of ! in bugfiledatabase.txt
                     BugDatabase bd = new BugDatabase();
+                    CommentDatabase cd = new CommentDatabase();
                     String newFileName = fileName.replace("!", "");
                     bd.setFileName(newFileName);
+                    cd.setFileName(newFileName);
 
                     //now read the specific bugfile contents into a stringbuffer
                     //replace the empty assigned developer with the dev name
