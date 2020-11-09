@@ -355,7 +355,8 @@ class GetSpecificBugUI implements ActionListener
 
     public void callCommentController()
     {
-        AddCommentController acc = new AddCommentController(commentArea.getText());
+        String comm = commentArea.getText();
+        AddCommentController acc = new AddCommentController(comm);
 
         acc.writeCommentToFile(tempCommentFileName);
     }
@@ -376,6 +377,7 @@ class GetSpecificBugUI implements ActionListener
                                         "Comment Added", JOptionPane.INFORMATION_MESSAGE);
             //close comment frame
             frame.dispose();
+            bugThread.dispose();
         }
         else
         {
