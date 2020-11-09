@@ -43,9 +43,9 @@ class SearchController
         for(String s : keywords)
         {
             String [] split = s.split(" : ");
-            if(split[0].equals(searchTerms))
-            {
+            if (split[0].equals(searchTerms)) {
                 valid = true;
+                break;
             }
         }
         return valid;
@@ -111,5 +111,46 @@ class SearchController
         }
         return devFilesList;
 
+    }
+
+    public boolean checkSeverityLevel(){
+        int tempLevel = Integer.parseInt(searchTerms);
+
+        return tempLevel >= 0 && tempLevel < 4;
+    }
+
+    public ArrayList<String> searchBySeverityLevel (){
+        BugDatabase bd = new BugDatabase();
+        HashMap<String, SeverityLevel> severityMap = bd.getSevereMap();
+
+        ArrayList<String> severeFilesList = new ArrayList<>();
+
+        SeverityLevel level;
+
+        switch(searchTerms){
+            case "0":
+                level = SeverityLevel.LOW;
+                break;
+            case "1":
+                level = SeverityLevel.MEDIUM;
+                break;
+            case "2":
+                level = SeverityLevel.HIGH;
+                break;
+            case "3":
+                level = SeverityLevel.CRITICAL;
+                break;
+            default:
+                level = SeverityLevel.LOW;
+                break;
+        }
+
+        for(String s : severityMap.keySet()){
+            if(severityMap.get(s).equals(level)){
+                severeFilesList.add(s);
+            }
+        }
+
+        return severeFilesList;
     }
 }

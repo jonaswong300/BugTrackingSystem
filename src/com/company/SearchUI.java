@@ -18,7 +18,7 @@ class SearchUI implements ActionListener
     private JFrame frame = new JFrame();
     private JPanel panel = new JPanel();
     JTextField search = new JTextField(600);
-    String[] terms = { "Title","Keywords", "Assigned Developer"};
+    String[] terms = { "Title","Keywords", "Assigned Developer", "Severity Level"};
     final JComboBox<String> options = new JComboBox<String>(terms);
     JButton submit = new JButton("Search");
 
@@ -76,11 +76,8 @@ class SearchUI implements ActionListener
                 JOptionPane.showMessageDialog(frame, "You have entered a title for a bug report that does not exist, please check for spelling errors. "
                                             + "If you want to create a bug report with this title, please go back to the main menu and add a bug report. "
                                             , "Invalid Bug Title Search", JOptionPane.ERROR_MESSAGE);
-            }
-            else
-            {
+            } else {
                 //open thread in new frame
-               
                 bugThread.setSize(1330,750); 
                 bugThread.setVisible(true);
 
@@ -104,8 +101,7 @@ class SearchUI implements ActionListener
                 HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
                 HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
 
-                try 
-                {
+                try {
                     FileReader fr = new FileReader("Bugs/" + bugFile);
                     bug.read(fr, bugFile);
 
@@ -120,18 +116,13 @@ class SearchUI implements ActionListener
                     }
 
                     fr.close();
-                }
-                catch (IOException except) 
-                {
+                }catch (IOException except) {
                     except.printStackTrace();
                 }
             }
         }
-        else if(options.getSelectedItem().equals("Keywords"))
-        {
-            boolean valid = sc.checkValidKeyword();
-            if(valid)
-            {
+        else if(options.getSelectedItem().equals("Keywords")) {
+            if(sc.checkValidKeyword()) {
                 BugDatabase bd = new BugDatabase();
                 ArrayList<String> keywordFiles = sc.searchByKeywords();
                 HashMap<String, String> titlesMap = bd.getTitleMap();
@@ -171,8 +162,7 @@ class SearchUI implements ActionListener
                                             , "Invalid Keyword Search", JOptionPane.ERROR_MESSAGE);
             }
         }
-        else
-        {
+        else if(options.getSelectedItem().equals("Assigned Developer")) {
             if(sc.checkDevExists())
             {
                 BugDatabase bd = new BugDatabase();
@@ -211,6 +201,43 @@ class SearchUI implements ActionListener
             {
                 JOptionPane.showMessageDialog(frame, "You have entered an invalid developer username. Please check for spelling errors. "
                                             , "Invalid Developer Search", JOptionPane.ERROR_MESSAGE);
+            }
+        }else if (options.getSelectedItem().equals("Severity Level")){
+
+            if(sc.checkSeverityLevel()){
+
+
+                BugDatabase bd = new BugDatabase();
+                ArrayList<String> severeFileList = sc.searchBySeverityLevel();
+                HashMap<String, String> titlesMap = bd.getTitleMap();
+
+                bugThread.setSize(1200,750);
+                bugThread.setVisible(true);
+
+                bugThread.add(bugPanel);
+                bugPanel.setLayout(new FlowLayout());
+
+                String title = "";
+                JButton [] bugButtons = new JButton[severeFileList.size()];
+
+                for(int i = 0; i < severeFileList.size(); i++)
+                {
+                    for(Map.Entry<String,String> me : titlesMap.entrySet())
+                    {
+                        if(me.getKey().equals(severeFileList.get(i)))
+                        {
+                            title = me.getValue();
+                        }
+                    }
+                    //String title = titlesMap.get(devFilesList.get(i));
+                    bugButtons[i] = new JButton(title);
+                    bugButtons[i].setSize(300, 50);
+                    bugButtons[i].addActionListener(new GetSpecificBugUI("e", title));
+                    bugPanel.add(bugButtons[i]);
+                }
+            }else{
+                JOptionPane.showMessageDialog(frame, "You have entered an invalid severity level. Please enter a valid level from 0 to 4. "
+                        , "Invalid Severity Level", JOptionPane.ERROR_MESSAGE);
             }
         }
 
