@@ -1,0 +1,21 @@
+Title : Searching for a single word string in the Firefox Awesomebar displays confusing notification (due to ISP search hijacking)
+Keywords : search,word,string,firefox,awesomebar,display,notification,ISP,hijacking,
+Reporter : user33
+Assigned Developer : 
+Severity Level : MEDIUM
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0
+Build ID: 20150511122605
+
+Step to reproduce:
+- In Awesomebar type the word 'toe' or any other one word string (no spaces)
+- hit enter
+
+
+Actual results:
+I see a notification (see attachment) asking me if i want to go to 'toe', clicking yes
+takes me to my ISP's search UI and I can no longer search for toe through the awesomebar 
+without being redirected.
+
+Expected results:
+I see a search results page with no notification.

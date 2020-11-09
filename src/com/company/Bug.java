@@ -149,7 +149,7 @@ class Bug {
                 toWrite.append(s).append(",");
             }
 
-            toWrite.append("\nReporter : ").append(reporter).append("\n");
+            toWrite.append("\nReporter : ").append(reporter);
             toWrite.append("\nAssigned Developer : ").append(assignDeveloper).append("\n");
             toWrite.append("Severity Level : ").append(level).append("\n");
             toWrite.append("Solved status : ").append(solved).append("\n");
