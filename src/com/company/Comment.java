@@ -79,7 +79,7 @@ class Comment
     public String toString(){
         return  "===================================" + "\n" +
                 "Comment ID: " + ID + "\n" +
-                "Date: " + date + "\t" + time + "\n" +
+                "Date: " + date + " " + time + "\n" +
                 "Comments: " +  description + "\n";
     }
 }
