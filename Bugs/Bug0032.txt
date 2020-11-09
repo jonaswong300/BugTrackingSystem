@@ -2,7 +2,7 @@ Title :  Suggestions popup not closed after quickly opening a new tab
 Keywords :  suggestions,popup,closed,newtab,
 Reporter :  user33
 Assigned Developer : N/A due to duplicate bug
-Severity Level : MEDIUM
+Severity Level : 2
 Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0
 

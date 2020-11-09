@@ -11,10 +11,10 @@ class UserAddBugController
     String keywords;
     String description;
     String reporter;
-    SeverityLevel level;
+    String level;
     BugDatabase bd;
 
-    public UserAddBugController(String title, String keywords, String description, String reporter, SeverityLevel level) {
+    public UserAddBugController(String title, String keywords, String description, String reporter, String level) {
         this.title = title;
         this.keywords = keywords;
         this.description = description;

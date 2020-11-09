@@ -2,7 +2,7 @@ Title :  Firefox sometimes doesn't start with cursor focused on address bar
 Keywords :  firefox,cursor,addressbar,
 Reporter :  user33
 Assigned Developer : N/A due to duplicate bug
-Severity Level : null
+Severity Level : 1
 Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 
 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36

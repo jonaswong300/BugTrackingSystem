@@ -21,7 +21,8 @@ class Bug {
     private String reporter;
     private String solved;
     private String filename;
-    private SeverityLevel level;
+    //private SeverityLevel level;
+    private String level;
 
 
     public Bug()
@@ -43,7 +44,7 @@ class Bug {
         this.solved = solved;
     }
 
-    public Bug(String ID, String title, ArrayList<String> keywords, String description, String reporter, String assignDeveloper, SeverityLevel level, String solved){
+    public Bug(String ID, String title, ArrayList<String> keywords, String description, String reporter, String assignDeveloper, String level, String solved){
         this.ID = ID;
         this.title = title;
         this.keywords_AL = keywords;

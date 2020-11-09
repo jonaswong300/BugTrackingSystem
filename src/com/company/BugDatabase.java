@@ -136,7 +136,7 @@ class BugDatabase {
 
     public void createBugObject(String bugFileName, int idCounter){
         String title, ID, reporter, assignDeveloper, solved;
-        SeverityLevel level;
+        String level;
         StringBuilder description;
         ArrayList<String> keywords_AL = new ArrayList<>();
         String [] split, keywordsTemp;
@@ -165,24 +165,7 @@ class BugDatabase {
 
                 //Split severity level
                 split = fileInput.nextLine().split(" : ");
-
-                switch (split[1]) {
-                    case "0":
-                        level = SeverityLevel.LOW;
-                        break;
-                    case "1":
-                        level = SeverityLevel.MEDIUM;
-                        break;
-                    case "2":
-                        level = SeverityLevel.HIGH;
-                        break;
-                    case "3":
-                        level = SeverityLevel.CRITICAL;
-                        break;
-                    default:
-                        level = null;
-                        break;
-                }
+                level = split[1];
 
                 //Split solved
                 split = fileInput.nextLine().split(":");
@@ -325,10 +308,14 @@ class BugDatabase {
         return bugMap;
     }
 
+    public HashMap<String, SeverityLevel> getSevereMap(){return severeMap;}
+
     public ArrayList<String> getKeywordsList()
     {
         return keywordsList;
     }
+
+
 
     public String returnAddBugResponse()
     {

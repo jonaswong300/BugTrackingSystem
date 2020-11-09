@@ -17,7 +17,7 @@ class UserAddBugsUI implements ActionListener
     String[] terms = {"0", "1", "2", "3"};
     final JComboBox<String> severity = new JComboBox<String>(terms);
 
-    SeverityLevel level;
+    String level;
    
     public UserAddBugsUI(String reporter)
     {
@@ -83,7 +83,7 @@ class UserAddBugsUI implements ActionListener
 
     }
 
-    public void sendBugRequest(String title, String keywords, String description, String reporter, SeverityLevel level)
+    public void sendBugRequest(String title, String keywords, String description, String reporter, String level)
     {
         UserAddBugController addBugController = new UserAddBugController(title, keywords, description, reporter, level);
         if(addBugController.checkEmpty())
@@ -106,13 +106,13 @@ class UserAddBugsUI implements ActionListener
 
         Object selectedItem = severity.getSelectedItem();
         if ("0".equals(selectedItem)) {
-            level = SeverityLevel.LOW;
+            level = "0";
         } else if ("1".equals(selectedItem)) {
-            level = SeverityLevel.MEDIUM;
+            level = "1";
         } else if ("2".equals(selectedItem)) {
-            level = SeverityLevel.HIGH;
+            level = "2";
         } else if ("3".equals(selectedItem)) {
-            level = SeverityLevel.CRITICAL;
+            level = "3";
         } else {
             level = null;
         }
