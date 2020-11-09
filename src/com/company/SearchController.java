@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
@@ -62,10 +63,7 @@ class SearchController
             String [] split = s.split(" : ");
             if(split[0].equals(searchTerms))
             {
-                for(int i = 1; i < split.length; i++)
-                {
-                    keywordsFilesList.add(split[i]);
-                }
+                keywordsFilesList.addAll(Arrays.asList(split).subList(1, split.length));
             }
         }
 

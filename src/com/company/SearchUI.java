@@ -65,6 +65,8 @@ class SearchUI implements ActionListener
         JTextArea bug = new JTextArea();
         JLabel commentLabel = new JLabel("Comments : ");
         JTextArea comments = new JTextArea();
+        BugDatabase bd = new BugDatabase();
+        HashMap<String, String> titlesMap = bd.getTitleMap();
 
         SearchController sc = new SearchController(search.getText());
         if(options.getSelectedItem().equals("Title"))
@@ -123,10 +125,9 @@ class SearchUI implements ActionListener
         }
         else if(options.getSelectedItem().equals("Keywords")) {
             if(sc.checkValidKeyword()) {
-                BugDatabase bd = new BugDatabase();
+
                 ArrayList<String> keywordFiles = sc.searchByKeywords();
-                HashMap<String, String> titlesMap = bd.getTitleMap();
-                
+
                 bugThread.setSize(1200,750); 
                 bugThread.setVisible(true);
     
@@ -165,11 +166,7 @@ class SearchUI implements ActionListener
         else if(options.getSelectedItem().equals("Assigned Developer")) {
             if(sc.checkDevExists())
             {
-                BugDatabase bd = new BugDatabase();
                 ArrayList<String> devFilesList = sc.searchByDev();
-                HashMap<String, String> titlesMap = bd.getTitleMap();
-                //System.out.println(titlesMap.get("Bug0001.txt"));
-
 
                 bugThread.setSize(1200,750); 
                 bugThread.setVisible(true);
@@ -206,10 +203,7 @@ class SearchUI implements ActionListener
 
             if(sc.checkSeverityLevel()){
 
-
-                BugDatabase bd = new BugDatabase();
                 ArrayList<String> severeFileList = sc.searchBySeverityLevel();
-                HashMap<String, String> titlesMap = bd.getTitleMap();
 
                 bugThread.setSize(1200,750);
                 bugThread.setVisible(true);
