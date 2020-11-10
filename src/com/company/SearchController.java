@@ -129,7 +129,7 @@ class SearchController
         return tempLevel >= 0 && tempLevel < 4;
     }
 
-    public ArrayList<String> searchBySeverityLevel (){
+    public ArrayList<String> searchBySeverityLevel () {
         BugDatabase bd = new BugDatabase();
         HashMap<String, SeverityLevel> severityMap = bd.getSevereMap();
 
@@ -137,7 +137,7 @@ class SearchController
 
         SeverityLevel level;
 
-        switch(searchTerms){
+        switch (searchTerms) {
             case "0":
                 level = SeverityLevel.LOW;
                 break;
@@ -151,20 +151,16 @@ class SearchController
                 level = SeverityLevel.CRITICAL;
                 break;
             default:
-                level = SeverityLevel.LOW;
+                level = SeverityLevel.valueOf("NULL");
                 break;
         }
 
-        for(String s : severityMap.keySet()){
-            if(severityMap.get(s).equals(level)){
+        for (String s : severityMap.keySet()) {
+            if (severityMap.get(s).equals(level)) {
                 severeFilesList.add(s);
             }
         }
 
         return severeFilesList;
-    public HashMap<String, String> accessTitleMap()
-    {
-        BugDatabase bd = new BugDatabase();
-        return bd.getTitleMap();
     }
 }

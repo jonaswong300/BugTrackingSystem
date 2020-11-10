@@ -64,29 +64,6 @@ class TriagerAssignDevController
         {
             e.printStackTrace();
         }
-        //get userAccount.txt and split by whitespace to get all devs
-        try
-        {
-            FileReader fr = new FileReader("userAccount.txt");
-            Scanner input = new Scanner(fr);
-            while(input.hasNextLine())
-            {
-                String [] split = input.nextLine().split("\t");
-                String name = split[0];
-                String dev = split[2];
-                if(!allDevelopers.contains(dev) && dev.equals("Developer"))
-                {
-                    allDevelopers.add(name.trim());
-                }
-            }
-            fr.close();
-            input.close();
-        }
-        catch(IOException e )
-        {
-            e.printStackTrace();
-        }
-        
     }
 
     public ArrayList<String> getAllUnassigned()

@@ -40,10 +40,14 @@ class BugReporterUI implements ActionListener
         addBugReport.addActionListener(this);
         panel.add(addBugReport);
 
-        JButton trackBug = new JButton("Track Reported Bugs");
-        trackBug.setBounds(300, 80, 200, 100);
-        trackBug.addActionListener(this);
-        panel.add(trackBug);
+        //I never delete, i comment away first, we can technically just add to show additional functions
+        //If not u wasted effort, lets not do that
+
+
+        //JButton trackBug = new JButton("Track Reported Bugs");
+        //trackBug.setBounds(300, 80, 200, 100);
+        //trackBug.addActionListener(this);
+        //panel.add(trackBug);
 
         JButton searchBugs = new JButton("Search for Bugs");
         searchBugs.setBounds(540, 80, 200, 100);

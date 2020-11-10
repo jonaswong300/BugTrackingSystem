@@ -13,8 +13,8 @@ class UserTrackBugController {
     public void searchByBugTitle(String bugTitle){
         HashMap<String, String> titleMap = bd.getTitleMap();
 
-        for(String s : titleMap.keySet())
-            System.out.println(s + " " + titleMap.get(s));
+        //for(String s : titleMap.keySet())
+            //System.out.println(s + " " + titleMap.get(s));
 
         if(titleMap.containsKey(bugTitle)){
             System.out.println(bugTitle + " " + titleMap.get(bugTitle));
@@ -27,8 +27,8 @@ class UserTrackBugController {
     public void searchByBugId(String bugID){
         HashMap<Integer, String> fileMap = bd.getFileMap();
 
-        for(Integer i : fileMap.keySet())
-            System.out.println(i + " " + fileMap.get(i));
+        //for(Integer i : fileMap.keySet())
+            //System.out.println(i + " " + fileMap.get(i));
 
         if(fileMap.containsKey(Integer.parseInt(bugID))){
             System.out.println(bugID + " " + fileMap.get(Integer.parseInt(bugID)));

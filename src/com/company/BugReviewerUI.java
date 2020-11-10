@@ -25,17 +25,17 @@ class BugReviewerUI implements ActionListener{
         panel.add(user);
 
         JButton checkUnresolvedBugs = new JButton("Check Unresolved Bugs");
-        checkUnresolvedBugs.setBounds(180, 80, 200, 100);
+        checkUnresolvedBugs.setBounds(100, 80, 200, 100);
         checkUnresolvedBugs.addActionListener(this);
         panel.add(checkUnresolvedBugs);
 
         JButton testProposedSolution = new JButton("Test proposed solution");
-        testProposedSolution.setBounds(400, 80, 200, 100);
+        testProposedSolution.setBounds(320, 80, 200, 100);
         testProposedSolution.addActionListener(this);
         panel.add(testProposedSolution);
 
         JButton closeBugReport = new JButton("Close Bug Report");
-        closeBugReport.setBounds(700, 80, 200, 100);
+        closeBugReport.setBounds(540, 80, 200, 100);
         closeBugReport.addActionListener(this);
         panel.add(closeBugReport);
 

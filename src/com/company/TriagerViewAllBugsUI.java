@@ -51,7 +51,6 @@ class TriagerViewAllBugsUI implements ActionListener
         viewPanel.setLayout(new FlowLayout());
 
         JButton [] bugButtons = new JButton[filesMap.size()];
-
         String title = "";
         
         for(int i = 0; i < filesMap.size(); i++)
@@ -68,7 +67,6 @@ class TriagerViewAllBugsUI implements ActionListener
             bugButtons[i].setSize(300, 50);
             bugButtons[i].addActionListener(this);
             viewPanel.add(bugButtons[i]);
-            
         }
 
         viewFrame.setVisible(true);
