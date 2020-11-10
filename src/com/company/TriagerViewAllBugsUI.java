@@ -39,9 +39,9 @@ class TriagerViewAllBugsUI implements ActionListener
         viewFrame.add(viewPanel);
         viewPanel.setLayout(null);
 
-        BugDatabase bd = new BugDatabase();
-        HashMap<Integer, String> filesMap = bd.getFileMap();
-        HashMap<String, String> titlesMap = bd.getTitleMap();
+        TriagerViewAllBugsController tvabc = new TriagerViewAllBugsController();
+        HashMap<Integer, String> filesMap = tvabc.getFilesMap();
+        HashMap<String, String> titlesMap = tvabc.getTitlesMap();
         //System.out.println(titlesMap.get("Bug0001.txt"));
 
 

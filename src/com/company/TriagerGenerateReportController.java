@@ -26,6 +26,8 @@ class TriagerGenerateReportController {
     }
 
     public void readBugFileDatabase() {
+        BugDatabase bd = new BugDatabase();
+        HashMap<String, Bug> bMap = bd.getBugMap();
         try {
             FileReader fr = new FileReader("BugFileDatabase.txt");
             Scanner in = new Scanner(fr);

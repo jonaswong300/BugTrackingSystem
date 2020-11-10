@@ -22,6 +22,16 @@ class TriagerViewAllBugsController
         flagDup();
     }
 
+    public HashMap<Integer, String> getFilesMap()
+    {
+        BugDatabase bd = new BugDatabase();
+        return bd.getFileMap();
+    } 
+    public HashMap<String, String> getTitlesMap()
+    {
+        BugDatabase bd = new BugDatabase();
+        return bd.getTitleMap();
+    }
     public void flagDup()
     {
         //get the bugfile
