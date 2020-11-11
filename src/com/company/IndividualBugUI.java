@@ -17,7 +17,8 @@ class IndividualBugUI implements ActionListener
     JTextArea bug = new JTextArea();
     JLabel commentLabel = new JLabel("Comments : ");
     JTextArea comments = new JTextArea();
-    JButton flag = new JButton("Flag as duplicate bug");
+    JButton flagD = new JButton("Flag as duplicate bug");
+    JButton flagI = new JButton("Flag as invalid bug");
 
     public IndividualBugUI(String bug)
     {
@@ -77,19 +78,60 @@ class IndividualBugUI implements ActionListener
         {
             except.printStackTrace();
         }
-        flag.setBounds(130,660,200,50);
-        flag.addActionListener(this);
-        bugPanel.add(flag);
+        flagD.setBounds(130,660,200,50);
+        flagD.addActionListener(this);
+        bugPanel.add(flagD);
+
+        flagI.setBounds(400,660,200,50);
+        flagI.addActionListener(this);
+        bugPanel.add(flagI);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) 
     {
-        
         TriagerViewAllBugsController flagControl = new TriagerViewAllBugsController(bugFile);
-        JOptionPane.showMessageDialog(bugThread, "System rewriting to adjust for duplicated bug report. Please exit back to main menu.", 
-                                        "Flagged Duplicate", JOptionPane.INFORMATION_MESSAGE);
-        bugThread.dispose();
+        
+        if(e.getActionCommand().equals("Flag as duplicate bug"))
+        {
+            String check = flagControl.flagDup();
+            if(check.equals("true"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "System rewriting to adjust for duplicated bug report. Please exit back to main menu.", 
+                                                "Flagged Duplicate", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else if(check.equals("false"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "Bug has already been flagged as duplicate.", 
+                                                "Flagged Duplicate", JOptionPane.ERROR_MESSAGE);
+            }
+            else if(check.equals("dev"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "Bug has already been checked and assigned a developer.", 
+                                            "Flagged Duplicate", JOptionPane.ERROR_MESSAGE);
+            }
+            bugThread.dispose();
+        }
+        else if(e.getActionCommand().equals("Flag as invalid bug"))
+        {
+            String check = flagControl.flagInv();
+            if(check.equals("true"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "System rewriting to adjust for invalid bug report. Please exit back to main menu.", 
+                                                "Flagged Invalid", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else if(check.equals("false"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "Bug has already been flagged as invalid.", 
+                                                "Flagged Invalid", JOptionPane.ERROR_MESSAGE);
+            }
+            else if(check.equals("dev"))
+            {
+                JOptionPane.showMessageDialog(bugThread, "Bug has already been checked and assigned a developer.", 
+                                            "Flagged Invalid", JOptionPane.ERROR_MESSAGE);
+            }
+            bugThread.dispose();
+        }
     }
     
 }

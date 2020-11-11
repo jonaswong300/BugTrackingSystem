@@ -1,9 +1,9 @@
-Title : Overflow panel in toolbar breaks if I increase window's width to display all buttons on the toolbar
-Keywords : overflow,panel,toolbar,breaks,increase,window,width,display,buttons,toolbar,
-Reporter : user33
-Assigned Developer : 
+Title :  Overflow panel in toolbar breaks if I increase window's width to display all buttons on the toolbar
+Keywords :  overflow,panel,toolbar,breaks,increase,window,width,display,buttons,toolbar,
+Reporter :  user33
+Assigned Developer : N/A due to duplicate bug
 Severity Level : 3
-Solved status : open
+Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User-Agent:       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18)
  Gecko/2010021720 Iceweasel/3.0.6 (Debian-3.0.6-3)
 Build Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18) 

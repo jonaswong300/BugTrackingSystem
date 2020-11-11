@@ -48,14 +48,14 @@ Bug0033.txt,Comment0033.txt
 !Bug0047.txt,Comment0047.txt
 !Bug0048.txt,Comment0048.txt
 !Bug0049.txt,Comment0049.txt
-!Bug0050.txt,Comment0050.txt
+Bug0050.txt,Comment0050.txt
 !Bug0051.txt,Comment0051.txt
 !Bug0052.txt,Comment0052.txt
 !Bug0053.txt,Comment0053.txt
 !Bug0054.txt,Comment0054.txt
 !Bug0055.txt,Comment0055.txt
-!Bug0056.txt,Comment0056.txt
-!Bug0057.txt,Comment0057.txt
+Bug0056.txt,Comment0056.txt
+Bug0057.txt,Comment0057.txt
 !Bug0058.txt,Comment0058.txt
 !Bug0059.txt,Comment0059.txt
 !Bug0060.txt,Comment0060.txt

@@ -3,9 +3,7 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileReader;
-import java.io.IOException;
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +18,7 @@ class TriagerViewAllBugsUI implements ActionListener
 
     JFrame viewFrame = new JFrame();
     JPanel viewPanel = new JPanel();
+    JScrollPane scrollPane = new JScrollPane(viewPanel);
 
     final static int width = 1050, height = 600;
 
@@ -36,9 +35,9 @@ class TriagerViewAllBugsUI implements ActionListener
     public void showAllBugs()
     {
         viewFrame.setSize(width, height);
-        viewFrame.add(viewPanel);
         viewFrame.setTitle("Triager view all bugs UI");
         viewPanel.setLayout(null);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         TriagerViewAllBugsController tvabc = new TriagerViewAllBugsController();
         HashMap<Integer, String> filesMap = tvabc.getFilesMap();
@@ -48,8 +47,8 @@ class TriagerViewAllBugsUI implements ActionListener
 
         viewFrame.setSize(1200,750);
 
-        viewFrame.add(viewPanel);
-        viewPanel.setLayout(new FlowLayout());
+        viewPanel.setLayout(new GridLayout(0,1));
+        viewFrame.add(scrollPane);
 
         JButton [] bugButtons = new JButton[filesMap.size()];
         String title = "";

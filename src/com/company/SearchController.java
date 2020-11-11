@@ -40,7 +40,8 @@ class SearchController
 
 
         for (Map.Entry<String, String> entry : tMap.entrySet()) {
-            if(entry.getValue().equals(searchTerms))
+            //System.out.println("K : " + entry.getKey() + "\tV : " + entry.getValue());
+            if(entry.getValue().trim().equals(searchTerms.trim()))
             {
                 fileReturn = entry.getKey();
             }

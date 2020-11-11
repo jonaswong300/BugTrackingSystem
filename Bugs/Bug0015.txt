@@ -1,9 +1,9 @@
-Title : Download Panel doesn't show progress bar in high contrast
-Keywords :download,panel,progress,bar,contrast,
-Reporter : user33
-Assigned Developer : user3
+Title :   Download Panel doesn't show progress bar in high contrast
+Keywords :  download,panel,progress,bar,contrast,
+Reporter :   user33
+Assigned Developer :   user3
 Severity Level : 1
-Solved status : open
+Solved status : closed
 Bug : Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
 
 
@@ -22,3 +22,4 @@ I tried to do a MozRegression but went as far back as version 66 (December 2018)
 
 Expected results:
 The progress bar should be in another colour.
+CLOSED REMARKS : close remarks here

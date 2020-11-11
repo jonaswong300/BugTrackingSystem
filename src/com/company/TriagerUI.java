@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 class TriagerUI implements ActionListener
 {
-    final static int width = 1400, height = 500;
+    final static int width = 1500, height = 500;
 
     private final JFrame frame = new JFrame();
     private final JPanel panel = new JPanel();

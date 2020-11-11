@@ -11,6 +11,7 @@ class BugReviewerCloseBugReportController {
 
     public void closeReport(String bugID, String title, String remarks){
         BugFileAccess bd = new BugFileAccess();
+        Bug b = null;
 
         HashMap<String, Bug> bugMap = bd.getBugMap();
         String pad = "0000";
@@ -18,7 +19,8 @@ class BugReviewerCloseBugReportController {
         bugID = "Bugs/Bug" + bugID + ".txt";
 
         if(bugMap.containsKey(bugID)){
-            bugMap.get(bugID).setSolved("closed");
+            b = bugMap.get(bugID);
+            b.setSolved("closed");
             System.out.println("Bug ID: " + bugID);
             if(title.equals("")){
                title = bugMap.get(bugID).getTitle();
@@ -27,7 +29,8 @@ class BugReviewerCloseBugReportController {
 
             File f = new File(bugID);
             f.delete();
-            bugMap.get(bugID).writeBugToFile();
+            b.setDescription((b.getDescription() + "\n\nCLOSED REMARKS : " + remarks));
+            b.writeBugToFile();
             
             System.out.println("Bug Title:" + title);
 
@@ -42,5 +45,3 @@ class BugReviewerCloseBugReportController {
     }
 
 }
-
-//Remarks dont seem to go anywhere...

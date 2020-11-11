@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.GridLayout;
 import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,8 @@ class SearchUI implements ActionListener
 
     private JFrame frame = new JFrame();
     private JPanel panel = new JPanel();
+    JScrollPane scrollPane = new JScrollPane(panel);
+
     JTextField search = new JTextField(600);
     String[] terms = { "Title","Keywords", "Assigned Developer", "Severity Level"};
     final JComboBox<String> options = new JComboBox<String>(terms);
@@ -29,9 +32,9 @@ class SearchUI implements ActionListener
 
     public void showForm(){
         frame.setSize(width, height);
-        frame.add(panel);
         frame.setTitle("Search UI");
         panel.setLayout(null);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         JLabel searchL = new JLabel("Search Terms : ");
         searchL.setFont(searchL.getFont().deriveFont(32.0f));
@@ -52,7 +55,7 @@ class SearchUI implements ActionListener
         submit.addActionListener(this);
         panel.add(submit);
 
-
+        frame.add(scrollPane);
         frame.setVisible(true);
     }
 
@@ -80,7 +83,7 @@ class SearchUI implements ActionListener
                                             , "Invalid Bug Title Search", JOptionPane.ERROR_MESSAGE);
             } else {
                 //open thread in new frame
-                bugThread.setSize(1330,750); 
+                /*bugThread.setSize(1330,750); 
                 bugThread.setVisible(true);
 
                 bugThread.add(bugPanel);
@@ -120,7 +123,10 @@ class SearchUI implements ActionListener
                     fr.close();
                 }catch (IOException except) {
                     except.printStackTrace();
-                }
+                }*/
+                GetSpecificBugUI gsbu = new GetSpecificBugUI("t", bugFile);
+                gsbu.getForm_T();
+
             }
         }
         else if(options.getSelectedItem().equals("Keywords")) {
@@ -132,7 +138,7 @@ class SearchUI implements ActionListener
                 bugThread.setVisible(true);
     
                 bugThread.add(bugPanel);
-                bugPanel.setLayout(new FlowLayout());
+                bugPanel.setLayout(new GridLayout(0,1));
     
                 String title = "";
                 JButton [] bugButtons = new JButton[keywordFiles.size()];
@@ -172,7 +178,7 @@ class SearchUI implements ActionListener
                 bugThread.setVisible(true);
     
                 bugThread.add(bugPanel);
-                bugPanel.setLayout(new FlowLayout());
+                bugPanel.setLayout(new GridLayout(0,1));
     
                 String title = "";
                 JButton [] bugButtons = new JButton[devFilesList.size()];
@@ -210,7 +216,7 @@ class SearchUI implements ActionListener
                 bugThread.setVisible(true);
 
                 bugThread.add(bugPanel);
-                bugPanel.setLayout(new FlowLayout());
+                bugPanel.setLayout(new GridLayout(0,1));
 
                 String title = "";
                 JButton [] bugButtons = new JButton[severeFileList.size()];

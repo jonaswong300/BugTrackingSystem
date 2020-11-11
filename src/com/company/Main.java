@@ -6,7 +6,7 @@ public class Main {
         //MainController mc = new MainController();
         //BugReporterUI b = new BugReporterUI("user33");
         //BugDeveloperUI bd = new BugDeveloperUI();
-        TriagerUI t = new TriagerUI();
-        //BugReviewerUI br = new BugReviewerUI();
+        //TriagerUI t = new TriagerUI();
+        BugReviewerUI br = new BugReviewerUI();
     }
 }

@@ -1,2 +1,4 @@
 Date : 14/10/2020 15:49:42
 Comment : The CSV code will also have errors that don't apply to a specific login e.g. missing columns, can't read the file, etc., 
+Date : 11/11/2020 23:53:16
+Comment : test,
