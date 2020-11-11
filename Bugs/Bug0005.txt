@@ -2,7 +2,7 @@ Title :  Unresolvable www subdomain unexpectedly redirects to domain without www
 Keywords : domain,redirect,unresolvable,www,
 Reporter :  user6
 Assigned Developer : N/A due to duplicate bug
-Severity Level : 2
+Severity Level : 3
 Solved status : closed (FLAGGED AS DUPLICATE)
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751
@@ -12,7 +12,7 @@ Step to reproduce:
 Access gesetze-im-internet.de
 
 Actual results:
-Firefox loads http://www.gesetze-im-internet.de/. 
+Firefox loads http://www.gesetze-im-internet.de/.
 However in the console no request to "http://gesetze-im-internet.de/" is shown as if I have never accessed/tried to access gesetze-im-internet.de.
 
 Expected results:

@@ -20,9 +20,9 @@ class TriagerAssignDevController
     //check is like extra but if dont have then a bit strange
 
     //hold all the bugfile names eg. [Bug0001.txt, Bug0002.txt, etc]
-    ArrayList<String> allUnassignedFiles = new ArrayList<>();
+    private final ArrayList<String> allUnassignedFiles = new ArrayList<>();
     //get all developers
-    ArrayList<String> allDevelopers = new ArrayList<>();
+    private final ArrayList<String> allDevelopers = new ArrayList<>();
 
     public TriagerAssignDevController()
     {
@@ -32,7 +32,7 @@ class TriagerAssignDevController
     public void initialiseMaps()
     {
         //initialise allUnassignedFiles
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         for(Map.Entry entry : bd.getFileMap().entrySet())
         {
             String check =  String.valueOf(entry.getValue());
@@ -88,8 +88,8 @@ class TriagerAssignDevController
                 try
                 {
                     //get rid of ! in bugfiledatabase.txt
-                    BugDatabase bd = new BugDatabase();
-                    CommentDatabase cd = new CommentDatabase();
+                    BugFileAccess bd = new BugFileAccess();
+                    CommentAccess cd = new CommentAccess();
                     String newFileName = fileName.replace("!", "");
                     bd.setFileName(fileName);
                     cd.setFileName(fileName);
@@ -101,11 +101,11 @@ class TriagerAssignDevController
                     FileReader fr = new FileReader("Bugs/" + fileName);
                     FileWriter fw  = new FileWriter("Bugs/" + newFileName);
                     Scanner input = new Scanner (fr);
-                    StringBuffer buffer = new StringBuffer();
+                    StringBuilder buffer = new StringBuilder();
 
                     while (input.hasNextLine()) 
                     {
-                        buffer.append(input.nextLine()+System.lineSeparator());
+                        buffer.append(input.nextLine()).append(System.lineSeparator());
                     }
                     String fileContents = buffer.toString();
                     String emptyDev = "Assigned Developer : ";

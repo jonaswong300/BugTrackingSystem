@@ -24,12 +24,12 @@ class TriagerViewAllBugsController
 
     public HashMap<Integer, String> getFilesMap()
     {
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         return bd.getFileMap();
     } 
     public HashMap<String, String> getTitlesMap()
     {
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         return bd.getTitleMap();
     }
     public void flagDup()
@@ -37,7 +37,7 @@ class TriagerViewAllBugsController
         //get the bugfile
         //match to the corresponding bug in the bugmap 
         //set the solved status
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, Bug> bugMap = bd.getBugMap();
         SearchController sc = new SearchController(bugFile);
         bugFile = sc.searchByTitle();
@@ -60,7 +60,7 @@ class TriagerViewAllBugsController
         }
         
         //get rid of ! in bugfiledatabase.txt
-        CommentDatabase cd = new CommentDatabase();
+        CommentAccess cd = new CommentAccess();
         bd.setFileName(bugFile);
         cd.setFileName(bugFile);
 

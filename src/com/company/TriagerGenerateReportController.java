@@ -26,7 +26,7 @@ class TriagerGenerateReportController {
     }
 
     public void readBugFileDatabase() {
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, Bug> bMap = bd.getBugMap();
         try {
             FileReader fr = new FileReader("BugFileDatabase.txt");
@@ -75,7 +75,7 @@ class TriagerGenerateReportController {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -7);
         Date lastDay = cal.getTime();
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         
         //check for time range
         for(int i = 0; i < dateList.size(); i++)
@@ -108,7 +108,7 @@ class TriagerGenerateReportController {
     {
         String dev = "";
         //get all bugs
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, Bug> bugMap = bd.getBugMap();
         HashMap<String, String> devMap = bd.getDevMap();
         ArrayList<String> allDevs = new ArrayList<>();
@@ -172,7 +172,7 @@ class TriagerGenerateReportController {
     {
         String rep = "";
         //get all bugs
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, Bug> bugMap = bd.getBugMap();
         HashMap<String, String> repMap = bd.getRepMap();
         ArrayList<String> allReps = new ArrayList<>();

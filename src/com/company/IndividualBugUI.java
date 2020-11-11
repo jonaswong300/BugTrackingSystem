@@ -27,6 +27,7 @@ class IndividualBugUI implements ActionListener
 
     public void showBugsPanels(String bugName)
     {
+        bugThread.setTitle("Individual Bug UI");
         bugThread.setSize(1500,750); 
         bugThread.setVisible(true);
 
@@ -51,7 +52,7 @@ class IndividualBugUI implements ActionListener
         SearchController sc = new SearchController(bugFile);
         String specificBugFile = sc.searchByTitle();
 
-        CommentDatabase cd = new CommentDatabase();
+        CommentAccess cd = new CommentAccess();
         HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
         HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
 

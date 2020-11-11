@@ -34,6 +34,7 @@ class UserAddBugsUI implements ActionListener
 
         form.setSize(1000,590);
         form.add(panel);
+        form.setTitle("Add bug report UI");
         panel.setLayout(null);
         
         JLabel titleLabel = new JLabel("Title : " );

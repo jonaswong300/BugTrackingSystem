@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 class TriagerUI implements ActionListener
 {
-    final static int width = 1040, height = 500;
+    final static int width = 1400, height = 500;
 
     private final JFrame frame = new JFrame();
     private final JPanel panel = new JPanel();
@@ -18,10 +18,11 @@ class TriagerUI implements ActionListener
     public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
+        frame.setTitle("Triager UI");
         panel.setLayout(null);
 
         JLabel user = new JLabel("Welcome Triager");
-        user.setBounds(470, 10, 200, 100);
+        user.setBounds(590, 10, 200, 100);
         panel.add(user);
 
         JButton viewBugReport = new JButton("View All Bugs");
@@ -34,13 +35,18 @@ class TriagerUI implements ActionListener
         assignBugToDeveloper.addActionListener(this);
         panel.add(assignBugToDeveloper);
 
+        JButton setBugSeverityLevel = new JButton("Set severity level of Bug");
+        setBugSeverityLevel.setBounds(540, 80, 200, 100);
+        setBugSeverityLevel.addActionListener(this);
+        panel.add(setBugSeverityLevel);
+
         JButton searchBugs = new JButton("Search for Bugs");
-        searchBugs.setBounds(540, 80, 200, 100);
+        searchBugs.setBounds(780, 80, 200, 100);
         searchBugs.addActionListener(this);
         panel.add(searchBugs);
 
         JButton generateReports = new JButton("Generate System Reports");
-        generateReports.setBounds(780, 80, 200, 100);
+        generateReports.setBounds(1020, 80, 200, 100);
         generateReports.addActionListener(this);
         panel.add(generateReports);
 
@@ -50,20 +56,15 @@ class TriagerUI implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) 
     {
-        if(e.getActionCommand().equals("View All Bugs"))
-        {
+        if(e.getActionCommand().equals("View All Bugs")){
             TriagerViewAllBugsUI viewUI = new TriagerViewAllBugsUI();
-        }
-        else if(e.getActionCommand().equals("Assign bug to developer"))
-        {
+        }else if(e.getActionCommand().equals("Assign bug to developer")){
             TriagerAssignDevUI assignUI = new TriagerAssignDevUI();
-        }
-        else if(e.getActionCommand().equals("Search for Bugs"))
-        {
+        }else if (e.getActionCommand().equals("Set severity level of Bug")){
+            TriagerSetBugSeverityUI setUI = new TriagerSetBugSeverityUI();
+        }else if(e.getActionCommand().equals("Search for Bugs")){
             SearchUI s = new SearchUI();
-        }
-        else if(e.getActionCommand().equals("Generate System Reports"))
-        {
+        }else if(e.getActionCommand().equals("Generate System Reports")){
             TriagerGenerateReportUI reportUI = new TriagerGenerateReportUI();
         }
     }

@@ -23,6 +23,7 @@ class UserTrackBugUI implements ActionListener {
     public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
+        frame.setTitle("Track Bug UI");
         panel.setLayout(null);
 
         JLabel trackLabel = new JLabel("Track Bugs: ");

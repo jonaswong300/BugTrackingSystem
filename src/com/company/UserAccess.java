@@ -7,12 +7,12 @@ import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Scanner;
 
-class UserAccessDatabase {
+class UserAccess {
 
     private HashMap<String, String> userAccountMap = new HashMap<>();
     private HashMap<String, String> userRoleMap = new HashMap<>();
 
-    public UserAccessDatabase(){
+    public UserAccess(){
         readUserAccountFromFile();
         //viewUserAccountMap();
     }

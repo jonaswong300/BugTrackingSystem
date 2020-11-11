@@ -37,6 +37,7 @@ class TriagerViewAllBugsUI implements ActionListener
     {
         viewFrame.setSize(width, height);
         viewFrame.add(viewPanel);
+        viewFrame.setTitle("Triager view all bugs UI");
         viewPanel.setLayout(null);
 
         TriagerViewAllBugsController tvabc = new TriagerViewAllBugsController();

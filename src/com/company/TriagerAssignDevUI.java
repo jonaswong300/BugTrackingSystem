@@ -9,19 +9,26 @@ import java.io.IOException;
 
 class TriagerAssignDevUI implements ActionListener
 {
+    final int WIDTH = 1000, HEIGHT = 500;
+
     JFrame devFrame = new JFrame();
-    JPanel devPanel = new JPanel(); 
+
+    JPanel devPanel = new JPanel();
+
     JLabel uiLabel = new JLabel("Assign developer to unassigned bugs : ");
     JLabel bugL = new JLabel("Unassigned Bugs : ");
     JLabel devL = new JLabel("Developers : ");
+
     JButton checkButton = new JButton("Check Bug");
     JButton assignButton = new JButton("Assign Bug");
+
     Object [] devDropDown;
     Object [] bugsDropDown;
+
     JComboBox<Object>bugsBox;
     JComboBox<Object>devBox;
-    String bugSelect;
-    String devName;
+
+    String bugSelect, devName;
 
     public TriagerAssignDevUI()
     {
@@ -32,7 +39,8 @@ class TriagerAssignDevUI implements ActionListener
     {
         TriagerAssignDevController tadc = new TriagerAssignDevController();
 
-        devFrame.setSize(1000,500);
+        devFrame.setSize(WIDTH,HEIGHT);
+        devFrame.setTitle("Assigner bug to developer UI");
         devFrame.add(devPanel);
         devPanel.setLayout(null);
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 class UserTrackBugController {
 
-    private BugDatabase bd = new BugDatabase();
+    private BugFileAccess bd = new BugFileAccess();
 
     public UserTrackBugController(){
 

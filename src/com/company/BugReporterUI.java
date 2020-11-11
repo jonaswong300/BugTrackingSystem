@@ -25,6 +25,7 @@ class BugReporterUI implements ActionListener
 
     public void showForm(){
         frame.setSize(width, height);
+        frame.setTitle("Bug Reporter UI");
         frame.add(panel);
         panel.setLayout(null);
 

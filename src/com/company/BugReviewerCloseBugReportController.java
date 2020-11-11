@@ -10,7 +10,7 @@ class BugReviewerCloseBugReportController {
     }
 
     public void closeReport(String bugID, String title, String remarks){
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
 
         HashMap<String, Bug> bugMap = bd.getBugMap();
         String pad = "0000";

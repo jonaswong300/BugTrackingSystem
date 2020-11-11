@@ -18,6 +18,7 @@ class BugDeveloperUI extends JFrame implements ActionListener{
     public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
+        frame.setTitle("Bug Developer UI");
         panel.setLayout(null);
 
         JLabel user = new JLabel("Welcome Bug Developer");

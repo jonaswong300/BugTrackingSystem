@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 class LoginController {
 
-    private final UserAccessDatabase uad = new UserAccessDatabase();
+    private final UserAccess uad = new UserAccess();
     private final HashMap<String, String> userAccountMap = uad.getUserAccountMap();
     private final HashMap<String, String> userRoleMap = uad.getUserRoleMap();
 

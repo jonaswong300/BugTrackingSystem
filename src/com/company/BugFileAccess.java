@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-class BugDatabase {
+class BugFileAccess {
 
     //private String bugReporterName = "";
 
@@ -39,7 +39,7 @@ class BugDatabase {
     //holds all keywords
     private final ArrayList<String> keywordsList = new ArrayList<>();
 
-    public BugDatabase()
+    public BugFileAccess()
     {
         initializeMaps();
     }

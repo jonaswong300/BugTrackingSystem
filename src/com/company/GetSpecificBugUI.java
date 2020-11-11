@@ -40,7 +40,7 @@ class GetSpecificBugUI implements ActionListener
 
     public void getForm()
     {
-        
+        frame.setTitle("Get Specific Bug UI");
         bugThread.setSize(1500,900); 
         bugThread.setVisible(true);
 

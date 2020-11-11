@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
-class CommentDatabase {
+class CommentAccess {
 
     //Holds all the title of all files
     //Bug id, comment file name
@@ -20,7 +20,7 @@ class CommentDatabase {
     //Comment id, linklist of comments
     private final HashMap<String, Comment> commentLinkMap = new HashMap<>();
 
-    public CommentDatabase(){
+    public CommentAccess(){
         initializeMaps();
     }
 

@@ -21,20 +21,20 @@ class SearchController
     
     public HashMap<String, String> getComDatabaseBCFNM()
     {
-        CommentDatabase cd = new CommentDatabase();
+        CommentAccess cd = new CommentAccess();
         return cd.getBugCommentFileNameMap();
     }
 
     public HashMap<String, Comment> getComDatabaseCLM()
     {
-        CommentDatabase cd = new CommentDatabase();
+        CommentAccess cd = new CommentAccess();
         return cd.getCommentLinkMap();
     }
 
     public String searchByTitle()
     {
         String fileReturn = "";
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, String> tMap = new HashMap<>();
         tMap = bd.getTitleMap();
 
@@ -50,7 +50,7 @@ class SearchController
     public boolean checkValidKeyword()
     {
         boolean valid = false;
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         ArrayList<String> keywords = bd.getKeywordsList();
 
         for(String s : keywords)
@@ -66,7 +66,7 @@ class SearchController
 
     public ArrayList<String> searchByKeywords()
     {
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         ArrayList<String> keywords = bd.getKeywordsList();
         ArrayList<String> keywordsFilesList = new ArrayList<String>();
 
@@ -86,7 +86,7 @@ class SearchController
     public boolean checkDevExists()
     {
         boolean exists = false;
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, String> devMap = new HashMap<>();
         devMap = bd.getDevMap();
         
@@ -109,7 +109,7 @@ class SearchController
         //then using the search term, if devname is correct, add the file to the arraylist.
         //display gui of buttons with the bug file title name, then, if the button gets clicked on, show the bug.
         ArrayList<String> devFilesList = new ArrayList<>();
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, String> devMap = new HashMap<>();
         devMap = bd.getDevMap();
         for(Map.Entry<String, String> entry : devMap.entrySet())
@@ -130,7 +130,7 @@ class SearchController
     }
 
     public ArrayList<String> searchBySeverityLevel () {
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, SeverityLevel> severityMap = bd.getSevereMap();
 
         ArrayList<String> severeFilesList = new ArrayList<>();

@@ -30,6 +30,7 @@ class SearchUI implements ActionListener
     public void showForm(){
         frame.setSize(width, height);
         frame.add(panel);
+        frame.setTitle("Search UI");
         panel.setLayout(null);
 
         JLabel searchL = new JLabel("Search Terms : ");
@@ -57,15 +58,14 @@ class SearchUI implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) 
-    {   
-
+    {
         JFrame bugThread = new JFrame();
         JPanel bugPanel = new JPanel(); 
         JLabel bugLabel = new JLabel("Bug Descriptions : ");
         JTextArea bug = new JTextArea();
         JLabel commentLabel = new JLabel("Comments : ");
         JTextArea comments = new JTextArea();
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         HashMap<String, String> titlesMap = bd.getTitleMap();
 
         SearchController sc = new SearchController(search.getText());
@@ -99,7 +99,7 @@ class SearchUI implements ActionListener
                 bugPanel.add(comments);
                 comments.setVisible(true);
 
-                CommentDatabase cd = new CommentDatabase();
+                CommentAccess cd = new CommentAccess();
                 HashMap<String, String> bugCommentFileNameMap = cd.getBugCommentFileNameMap();
                 HashMap<String, Comment> commentLinkMap = cd.getCommentLinkMap();
 
@@ -199,7 +199,8 @@ class SearchUI implements ActionListener
                 JOptionPane.showMessageDialog(frame, "You have entered an invalid developer username. Please check for spelling errors. "
                                             , "Invalid Developer Search", JOptionPane.ERROR_MESSAGE);
             }
-        }else if (options.getSelectedItem().equals("Severity Level")){
+        }
+        else if (options.getSelectedItem().equals("Severity Level")){
 
             if(sc.checkSeverityLevel()){
 
@@ -230,7 +231,7 @@ class SearchUI implements ActionListener
                     bugPanel.add(bugButtons[i]);
                 }
             }else{
-                JOptionPane.showMessageDialog(frame, "You have entered an invalid severity level. Please enter a valid level from 0 to 4. "
+                JOptionPane.showMessageDialog(frame, "You have entered an invalid severity level. Please enter a valid level from 0 to 3 (inclusive). "
                         , "Invalid Severity Level", JOptionPane.ERROR_MESSAGE);
             }
         }

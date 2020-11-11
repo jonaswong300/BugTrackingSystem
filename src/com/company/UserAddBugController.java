@@ -42,7 +42,7 @@ class UserAddBugController
     {
         String emptyDev = "";
         String solved = "open";
-        BugDatabase bd = new BugDatabase();
+        BugFileAccess bd = new BugFileAccess();
         String bugID = bd.getNewBugID();
 
         bd.writeNewFileToDatabase(getDate());

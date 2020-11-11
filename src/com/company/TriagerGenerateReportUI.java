@@ -25,6 +25,7 @@ class TriagerGenerateReportUI implements ActionListener
     {
         frame.setSize(850, 400);
         frame.add(panel);
+        frame.setTitle("Triager generate report UI");
         panel.setLayout(null);
 
         JLabel l = new JLabel("System Report Generation : ");

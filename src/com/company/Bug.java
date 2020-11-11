@@ -25,6 +25,7 @@ class Bug {
     private String level;
 
 
+
     public Bug()
     {
     }
@@ -163,7 +164,14 @@ class Bug {
         {
             e.printStackTrace();
         }
+    }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     @Override
