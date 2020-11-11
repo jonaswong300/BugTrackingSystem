@@ -1,0 +1,22 @@
+Title : Alt+Enter in address bar when a "switch to tab" result is selected doesnt switch to tab.
+Keywords : alt,enter,switch,tab,result,selected,address,bar,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101
+ Firefox/81.0
+
+Steps to reproduce:
+1: open https://en.wikipedia.org/wiki/Firefox in a tab.
+2: open another, new tab to a different page, like the google frontpage.
+3: type wiki firefox into the address bar and down arrow to the "switch to tab" result for
+ the tab in step 1.
+4: press alt+enter
+
+Actual results:
+it didn't switch to the wiki firefox tab, instead it loaded the wiki firefox page in the currently 
+active tab, which goes contrary to the usual behavior for alt-enter in the address bar.
+
+Expected results:
+It should have switched to the tab

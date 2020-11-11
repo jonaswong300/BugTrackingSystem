@@ -1,0 +1,20 @@
+Title : Missing Firefox account user switching inside browser as is available in Chrome
+Keywords : missing,firefox,account,user,switch,browser,inside,chrome,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
+
+Steps to reproduce:
+While the Firefox browser is open (private account), I wanted to launch a seperate 
+Firefox window with a different Firefox account (work account) as is possible with Chrome.
+
+Actual results:
+Not currently possible.
+
+Expected results:
+Clicking on the Firefox account user icon in the top left of the browser window it should be 
+possible to switch and choose a different Firefox account user to open a new window 
+with. I would expect a similar experience as is currently possible with Chrome.

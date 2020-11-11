@@ -1,0 +1,24 @@
+Title : When I enter my password for my Yahoo mail account on the Yahoo website, firefox crashes
+Keywords : enter,password,yahoo,email,account,website,firefox,crashes,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : I logged into my Yahoo account today and I could not reproduce this issue anymore. My only explanation for that is that yahoo fixed the problem with the code on their website. Maybe someone had already complained to yahoo.
+By the way: After several crashes before I filed this bug report, I let Firefox report the crash through the inbuilt reporting tool. I also added a remark.
+
+
+Step to reproduce:
+
+Important: This error applies to Firefox for Linux, language German, German yahoo website, only. I am using the current Q4OS distribution with Trinity desktop. With Chrome, this error is not present.
+With current Firefox on Windows 10 and Windows 7, this error is not present.
+On the Yahoo website I click on mail, then enter the first part of my email address, then I click on OK.
+
+
+Actual results: 
+
+When I enter my password, Firefox often crashes. When I fully delete my password for correction, firefox also crashes, though I tried this only once.
+
+Expected results:
+
+I should see the yahoo mail web interface.

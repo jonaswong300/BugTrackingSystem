@@ -1,0 +1,31 @@
+Title : E-mails are deleted on the POP server if an attachment is deleted or detached (creating a new copy of the message and deleting the old)
+Keywords : email,deleted,pop,server,attachment,deleted,detached,copy,message,deleting,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : This is ugly. Deleting/detaching an attachment will delete the message internally and 
+create a new one without the attachment(s), but that shouldn't lead to deletion on the 
+server. Ouch.
+
+Step to reproduce: 
+
+The server is a POP server.
+The option is "Leave a message on server" for 14 days or until they are suppressed locally
+Receive from the server a mail with attachments
+Locally, delete or detach attachments, but DO NOT delete the message itself
+
+Actual results:
+
+At the next connection to the server, the message is fully deleted from the server, while
+it shouldn't
+
+Expected results: 
+
+The message should remain on the server. No matter it remains with its attachment, or 
+without them, but the message itself shouldn't be deleted on the server since
+less than 14 days from receiving
+message NOT deleted locally
+A candidate cause of this erroneous behavior is the fact that every time attachments 
+are detached or deleted from a message, the corresponding message Id in popsate.dat is 
+prefixed with a 'd' rather than the original 'k'

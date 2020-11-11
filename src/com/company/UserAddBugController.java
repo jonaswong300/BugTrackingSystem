@@ -12,7 +12,6 @@ class UserAddBugController
     String description;
     String reporter;
     String level;
-    BugDatabase bd;
 
     public UserAddBugController(String title, String keywords, String description, String reporter, String level) {
         this.title = title;
@@ -43,7 +42,7 @@ class UserAddBugController
     {
         String emptyDev = "";
         String solved = "open";
-        bd = new BugDatabase();
+        BugDatabase bd = new BugDatabase();
         String bugID = bd.getNewBugID();
 
         bd.writeNewFileToDatabase(getDate());

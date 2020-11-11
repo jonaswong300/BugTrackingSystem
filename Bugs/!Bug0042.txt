@@ -1,0 +1,20 @@
+Title : Firefox stores and never consumes a keyFetchToken on FxA password change.
+Keywords : firefox,stores,consumes,keyfetchtoken,fxa,password,change,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 
+(KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
+
+Steps to reproduce:
+* Sign in to Sync and have it complete once.
+* Change the account password on that device.
+* Look at the FxA credentials stored in the password manager.
+
+
+Actual results:
+* It has kA, kB, keyFetchToken and unwrapBKey.
+
+Expected results:
+* It should have *either* kA/kB *or* keyFetchToken/unwrapBKey, but not both.

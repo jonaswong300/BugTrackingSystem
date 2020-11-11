@@ -1,0 +1,20 @@
+Title : appMenu-multiView will be closed suddenly clicking zoom in button several times in about:newtab
+Keywords : appMenu,multiView,closed,click,zoom,button,newtab,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 
+Firefox/78.0
+
+Steps to reproduce:
+1. Start Nightly
+2. Go to about:newtab
+3. Open humberger menu
+4. Click zoom in [+] button until 300%
+
+Actual results:
+appMenu-multiView will be closed suddenly clicking zoom in button several times.
+
+Expected results:
+appMenu-multiView should not be closed clicking zoom in button.

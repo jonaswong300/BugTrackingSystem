@@ -1,0 +1,21 @@
+Title : Right-click menus do not display text
+Keywords : right-click,menu,display,text,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.13) 
+Gecko/20101203 Firefox/3.6.13
+Build Identifier: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.13)
+Gecko/20101203 Firefox/3.6.13
+
+Steps to reproduce:
+1. Right click somewhere
+2. Click an option
+3. Right click again and observe any changes
+
+Actual results:
+The right-click menu still does not display text.
+
+Expected results:
+It should have displayed context-dependent and standard text for the web page.

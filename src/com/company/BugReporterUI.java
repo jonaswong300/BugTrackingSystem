@@ -36,7 +36,7 @@ class BugReporterUI implements ActionListener
         panel.add(user);
 
         JButton addBugReport = new JButton("Add Bug Report");
-        addBugReport.setBounds(60, 80, 200, 100);
+        addBugReport.setBounds(60, 80, 300, 100);
         addBugReport.addActionListener(this);
         panel.add(addBugReport);
 
@@ -50,7 +50,7 @@ class BugReporterUI implements ActionListener
         //panel.add(trackBug);
 
         JButton searchBugs = new JButton("Search for Bugs");
-        searchBugs.setBounds(540, 80, 200, 100);
+        searchBugs.setBounds(400, 80, 300, 100);
         searchBugs.addActionListener(this);
         panel.add(searchBugs);
 

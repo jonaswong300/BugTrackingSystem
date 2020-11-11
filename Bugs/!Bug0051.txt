@@ -1,0 +1,22 @@
+Title : Opened "Bookmarks" menu from the Library menu glitches if Firefox window is positioned close to the bottom of the screen
+Keywords : open,bookmark,menu,library,menu,glitches,firefox,window,positioned,close,bottom,screen,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+1. Start Firefox.
+2. Drag Firefox window to the bottom of the screen.
+3. Click the "Library" button.
+4. Click the "Bookmarks" option.
+
+
+Actual results:
+The bookmarks panel is displayed on top of the Firefox window for a very short 
+period of time (even if there is the necessary available space to be displayed at the bottom) and then corrects itself.
+
+Expected results:
+The bookmarks panel is displayed on the bottom side of Firefox window (If it has the 
+necessary space available).

@@ -66,8 +66,8 @@ class BugDatabase {
                 createBugObject(bugFileName, idCounter);
 
                 in = new Scanner(reader);
-                split = in.nextLine().split(" : ");
-                //System.out.println("File : " + temp[0]);
+                split = in.nextLine().split(" :");
+                //System.out.println("File : " + temp[0] + "Title : " + split[1].trim());
                 titleMap.put(temp[0], split[1].trim());
                 idCounter++;
 
@@ -97,7 +97,7 @@ class BugDatabase {
                 }
 
                 //REPORTER
-                repSplit = in.nextLine().split(" : ");
+                repSplit = in.nextLine().split(" :");
                 repMap.put(temp[0], repSplit[1]);
 
                 //DEVELOPER

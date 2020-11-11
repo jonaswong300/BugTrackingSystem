@@ -1,0 +1,27 @@
+Title : Entering just username for remembered username/password and hitting enter should be enough to submit the form with correct credentials
+Keywords : enter,username,remembered,password,enough,submit,form,credentials,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : 1) in safe mode: https://support.mozilla.org/en-US/kb/troubleshoot-firefox-issues-using-safe-mode
+2) with a clean profile: https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles
+
+Does it work normally?
+
+
+Step to reproduce:
+
+1: Go to a website with a regular username/password login form. Probably works with other types of remembered info. I used https://github.com/ and https://cupcake.io. 
+
+2: Type in the full username of a remembered account, and press enter
+
+
+Actual results: 
+
+Password fails.
+
+
+Expected results: 
+
+The password should verify and succeed.

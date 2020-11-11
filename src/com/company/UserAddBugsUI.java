@@ -10,9 +10,11 @@ class UserAddBugsUI implements ActionListener
     JFrame form = new JFrame();
     JPanel panel = new JPanel();
     JTextField titleText, keywordsField;
-    JTextArea descriptionArea;
+    JTextArea descriptionArea = new JTextArea();
     String title, keywords, description, reporter;
     JButton submit;
+
+    JScrollPane jsp = new JScrollPane(descriptionArea);
 
     String[] terms = {"0", "1", "2", "3"};
     final JComboBox<String> severity = new JComboBox<String>(terms);
@@ -65,9 +67,17 @@ class UserAddBugsUI implements ActionListener
         descriptLabel.setBounds(20, 170, 200, 25);
         panel.add(descriptLabel);
 
-        descriptionArea = new JTextArea();
-        descriptionArea.setBounds(200, 170, 600, 300);
-        panel.add(descriptionArea);
+
+        jsp.setBounds(200, 170, 600, 300);
+        descriptionArea.setLineWrap(true);
+        descriptionArea.setEditable(true);
+
+        jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        
+        //panel.add(descriptionArea);
+        panel.add(jsp);
 
         JLabel submitLabel = new JLabel("Submit your bug report : ");
         submitLabel.setBounds(20, 440, 400, 100);

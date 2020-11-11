@@ -1,0 +1,21 @@
+Title : Address bar panel/view/popup opens behind other popups/menus, and focus is also broken
+Keywords : address,bar,behind,open,popup,menu,focus,broken,panel,view,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 
+Firefox/75.0
+
+Steps to reproduce:
+Open download menu
+"strg + l" to focus address bar (which opens in background??)
+type something and suggestion appears
+press arrow or tab to use suggestion
+
+Actual results:
+address bar disappears
+
+Expected results:
+the address should be in front of download menu
+tab or arrow select suggestion

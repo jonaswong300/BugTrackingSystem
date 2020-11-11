@@ -1,0 +1,29 @@
+Title : Panning / Zooming the Map of Google Flights is much slower in Firefox than Chrome
+Keywords : pan,zoom,map,google,flights,slower,firefox,chrome,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent:  Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0
+
+I have tested this issue on Windows 10 x64 with the latest Firefox release (50.1.0) and the 
+latest Nightly (53.0a1-20170110075905) and managed to reproduce it.
+When testing the specified page from step 1 in the description, when zooming and 
+"stepping", the page is significantly slower in Firefox than in Chrome.
+
+
+Step to reproduce: 
+
+1. Go to the map of Google Flights, e.g. https://www.google.de/flights/#search;f=TXL,SXF,QPP,BER;t=ORK;d=2017-08-19;r=2017-08-25;mc=m
+2. a) Zoom in with Mouse Wheel (very slow). Also the "Stepping" is not as nice as in Chrome here: Mousewheel and then you zoom in/out far too much.
+2. b) Or Pan the Map (slow)
+3. Do the same in Chrome (both fast)
+
+Actual results: 
+
+Google Flights is barely usable due to this slowness /sluggishness (eventually I 
+switched to Chrome for booking a flight)
+
+Expected results: 
+
+Should be as fast as Chrome.

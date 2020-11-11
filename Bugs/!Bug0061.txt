@@ -1,0 +1,32 @@
+Title : Password incorrectly detected as a username on mycochlear.com
+Keywords : password,detected,incorrectly,username,mycochlear.com,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 0
+Solved status : open
+Bug : FWIW, this bug still happens with the web site I initially reported. Both my Windows version and Firefox version have changed in the meantime: I am now on Win10 Pro with Firefox 64.0.2.
+However, when I was required a few minutes ago to create a new password for Bugzilla I use an @ in the new password ... and so far do not see this bug when logging out and then back into Bugzilla.
+
+Step to reproduce:
+ 
+1.)  Steps:
+enter a new password on the web site
+username = my_email_address@gmail.com
+password = Alpha@Beta_Delta
+2.)  Firefox asks if I want to save this login information:
+username = Alpha@Beta_Delta
+password = Alpha@Beta_Delta
+3.)  Manually corrected the username information by typing it in FireFox's little remember this logon dialog box.
+4.)  Next time I go to the Cochlear store Firefox correctly auto-fills my username and password ... but because my password contains the @ character  Firefox prompts my to save my "changed" logon information with my password AGAIN displayed in the username field.
+
+
+Actual results: 
+
+Mozilla continues to think my password is my username.
+
+
+Expected results:
+
+ Mozilla should have paid attention to the labels on the login form - UserName and Password - to determine which field is the username and which is the password.   The presence of the @ character in my password should have played no role whatsoever.
+
+And by displaying my password in plain text in the username field Mozilla is also showing it to anyone who happens to be looking over my shoulder.

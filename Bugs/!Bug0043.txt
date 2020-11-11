@@ -1,0 +1,24 @@
+Title : Signing in with a different user causes Lockwise to merge credentials from both old and new user
+Keywords : signin,different,user,lockwise,merge,credentials,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 
+Firefox/78.0
+
+Steps to reproduce:
+I had an account in Firefox in my pc.
+This account had my login credentials in Lockwise.
+I logged off from this account, created a new one with a different email and logged in 
+from it at the same pc.
+
+Actual results:
+While logged in with a different account the credentials from my account were visible in 
+Lockwise.
+Lockwise merged the credentials of the two accounts.
+Furthermore, after sync they were also available from other computers.
+
+Expected results:
+Each account should have only it's own user credentials. No merging of credentials 
+should be done.

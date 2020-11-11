@@ -1,0 +1,42 @@
+Title : Fast way to switch dictionary and/or support multiple active and/or all dictionaries to be used at the same time
+Keywords : fast,way,switch,dictionary,support,multiple,active,dictionaries,same,time,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+- Install two dictionaries.
+- Go to a page with an input field.
+- Enable spell checking (if not enabled yet).
+- Enter a text into the input field which is known to result in a spelling error marker to 
+be shown.
+- Open context menu of the input field.
+- Select context menu item "Languages".
+- Select desired language.
+
+Actual results:
+It takes three mouse clicks (including searching on the screen, mousing to the right 
+location, while paying attention to not go anywhere with the mouse where it is causing 
+the the Language sub menu to close again).
+
+This has been considered an inconvenient way to switch dictionaries (for people who 
+need to write in different languages a lot) by other people and someone created this 
+extension to have a GUI element that one can click on to cycle through the installed 
+dictionaries:
+https://addons.mozilla.org/en-US/firefox/addon/dictionary-switcher/
+This extensions has been commented on by 173 users, and has been attempted to be used by at least 14,260 users.
+This extensions does not work anymore and/or forces Firefox' "Multiprocess Windows" 
+(at "about:support") to be disabled ("0/1 (Disabled by add-ons)" in my particular case).
+
+Expected results:
+Ideally Firefox should offer these three things:
+- A setting to use all installed dictionaries for spell checking (like Google Chrome does). 
+(This is tricky on Linux where one has to dive into the operating system and remove some
+pre-installed dictionaries files which are automatically made available in Firefox.)
+- A way to select multiple dictionaries for spell checking.
+
+- A GUI element visible in all browser windows for cycling through the installed 
+dictionaries (like offered by
+https://addons.mozilla.org/en-US/firefox/addon/dictionary-switcher/).

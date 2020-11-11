@@ -1,0 +1,21 @@
+Title : No way to remove a spell-checking dictionary preference
+Keywords : remove,spell-check,dictionary,preference,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 
+Firefox/78.0
+
+Steps to reproduce:
+Firefox uses the “lang” attribute to detect the spell-checking language of a text area. 
+This works. But if I choose a dictionary manually, the auto-detect stops working, and it
+won't work again until I manually remove the pref from “content-prefs.sqlite”.
+Websites where this can be annoying are e.g. multi-lingual chatrooms and translators.
+
+Actual results:
+There is no way to unset the user-selected spell-checking dictionary and go back to 
+auto-detecting.
+
+Expected results:
+There should be a way to undo dictionary selection. E.g. an “Auto” option.

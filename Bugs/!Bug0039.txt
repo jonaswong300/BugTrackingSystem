@@ -1,0 +1,18 @@
+Title : “Send Tab to Device” doesn't preserve container
+Keywords : send,tab,to,device,preserve,container,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 
+Firefox/69.0
+
+Steps to reproduce:
+with a container tab, use “Send Tab to Device”
+
+Actual results:
+the link is opened in a non-container tab
+
+Expected results:
+the other device opens the tab in the same container, at least if it exists on the device 
+(e.g., if it's one of the default ones like “Personal”)

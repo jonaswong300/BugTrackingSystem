@@ -1,0 +1,27 @@
+Title : Overflow panel in toolbar breaks if I increase window's width to display all buttons on the toolbar
+Keywords : overflow,panel,toolbar,breaks,increase,window,width,display,buttons,toolbar,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18)
+ Gecko/2010021720 Iceweasel/3.0.6 (Debian-3.0.6-3)
+Build Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18) 
+Gecko/2010021720 Iceweasel/3.0.6 (Debian-3.0.6-3)
+
+
+Steps to reproduce:
+1. Make sure there's no overflow in toolbar when browser window is in maximized mode
+2. Dock browser window to the left side of screen (Win+Left), reduce the window's 
+width to trigger overflow in toolbar
+3. Click overflow button >>
+4. Press Win+Up to maximize the window
+5. Press Win+Left to trigger overflow again
+6. Click on the overflow button several times
+
+
+Actual Results:  
+After Step 5, you see empty overflow tooltip. After Step 6 it still contains no items
+
+Expected Results:  
+Overflow tooltip should always contain buttons which are not visible in narrow toolbar

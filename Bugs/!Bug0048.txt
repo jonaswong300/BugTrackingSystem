@@ -1,0 +1,17 @@
+Title : context menu spawn under mouse cursor thus leading you to click on the uppermost item.
+Keywords : context,menu,spawn,mouse,cursor,click,uppermost,item,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+right click and sometimes it will just happen.
+
+Actual results:
+context menu spawns at the mouse down event and at the mouse up event the item
+the cursor is erroneously hovering over will get activated.
+
+Expected results:
+context menu opens.

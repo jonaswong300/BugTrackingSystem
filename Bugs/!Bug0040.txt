@@ -1,0 +1,23 @@
+Title : "Reconnect to Sync" button text color is illegible on High Contrast Theme
+Keywords : reconnect,sync,button,text,color,illegible,high,contrast,theme,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Ubuntu 18.04x64
+Windows 10
+
+Steps to reproduce:
+In profile 1 click on the FxA avatar icon and go to Manage Account
+Find the word Password and click on "Change"
+Change your password.
+Go to profile 2 and click on the FxA avatar toolbar icon.
+See the font color of "Reconnect to Sync button.
+
+Actual results:
+As per screenshots "Capture dark theme ubuntu bug" no.1, 2 and 3, the font color is white. 
+Against the yellow highlighted area it becomes barely visible.
+
+Expected results:
+As per screenshot "Capture dark theme ubuntu bug 4", the font color of the text should be 
+black/grey so as to have contrast with the highlighted yellow.

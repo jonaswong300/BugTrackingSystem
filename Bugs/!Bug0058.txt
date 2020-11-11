@@ -1,0 +1,24 @@
+Title : "Clear Cache on Exit" interface pref should be renamed/moved
+Keywords : clear,cache,exit,interface,pref,renamed,moved,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; rv:23.0) Gecko/20100101 
+Firefox/23.0 (Beta/Release)
+Build ID: 20130730113002
+
+
+Steps to reproduce:
+Enabling the option to "clear the web cache on exit" doesn't actually do that , but instead 
+just disables the cache altogether.
+
+Actual Results:  
+Apparently, this is done on purpose to protect Firefox from the complaints of idiots who 
+would blame Firefox for hanging on exit while it clears the cache as instructed by 
+the user. There is apparently also no intention to change this behavior.
+
+Expected Results:  
+If that is the case and this behavior is to be kept, then I feel it would only be correct 
+to not label the option in the interface as "Options/Privacy/Clear history when Firefox 
+closes/Cache" but as "Options/Privacy/Disable disk web cache".

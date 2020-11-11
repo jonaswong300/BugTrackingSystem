@@ -1,0 +1,20 @@
+Title : Zoom out and Zoom in shortcut keys are displayed backwards
+Keywords : zoom,shortcut,key,display,backwards,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+Be on Windows
+Set intl.uidirection to 1 and restart
+On the top menu bar, click View > Zoom
+Observe the shortcut keys for Zoom In and Zoom Out
+
+
+Actual results:
+They're displayed backwards, ++Ctrl and -+Ctrl
+
+Expected results:
+Should be Ctrl++ and Ctrl+-

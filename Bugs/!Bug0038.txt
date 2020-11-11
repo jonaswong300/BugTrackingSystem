@@ -1,0 +1,21 @@
+Title : Home page URL may be appended to the URL bar if I'm start typing immediately
+Keywords : home,page,URL,appended,bar,typing,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 
+Firefox/69.0
+
+Steps to reproduce:
+Press Cmd-N to open a new browser window
+Press Cmd-L and start typing an address immediately
+
+Actual results:
+My default start page address sometimes gets appended to the URL I was typing after 
+the window finishes loading fully.
+(This only happens on occasion and only if I haven't opened a window in a while, so I 
+suspect there's some caching-related timing differences.)
+
+Expected results:
+Since I'd already started typing a URL, the default start page address shouldn't get appended.

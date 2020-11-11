@@ -1,0 +1,24 @@
+Title : View Image menu item is broken for an SVG image
+Keywords : view,image,menu,item,broken,svg,image,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 
+Firefox/78.0
+
+Steps to reproduce:
+1. Go to www.nytimes.com
+2. Right click on the NYTimes logo
+3. Click View Image
+
+
+Actual results:
+Nothing happens.
+
+Expected results:
+The following gets printed to browser console:
+Sending message that cannot be cloned. Are you trying to send an XPCOM object? 
+ContextMenu.jsm:620:6
+uncaught exception: Load of https://g1.nyt.com/assets/homepage/20180604-182648/
+images/foundation/logos/nyt-logo-379x64.svg denied.

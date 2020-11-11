@@ -1,0 +1,20 @@
+Title : Black square appears on first window Hamburger’s Menu when a drop down is presented on the second window
+Keywords : black,square,first,window,hamburger,menu,dropdown,presented,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+Open Firefox and open a new window.
+Go to about:addons and add a random extension from Recommended Extensions.
+Observe the hamburger menu from the first window as long as the Manage your 
+addons dropdown menu is active.
+
+Actual results:
+Black (or white depending on the theme) square appears on the hamburger menu as 
+long as a drop-down is active on the second one.
+
+Expected results:
+No visual glitches presented on the first Window.

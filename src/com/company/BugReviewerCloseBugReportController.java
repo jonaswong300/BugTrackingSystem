@@ -42,3 +42,5 @@ class BugReviewerCloseBugReportController {
     }
 
 }
+
+//Remarks dont seem to go anywhere...

@@ -1,0 +1,23 @@
+Title : Can't choose saved username and password to insert in popup query
+Keywords : choose,saved,username,password,insert,popup,query,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : This is my first submitted bug here so excuse me if I'm wrong. I think it's not an enhancement request because it doesn't work as it's supposed to. If the password query isn't a popup the problem doesn't occur and in my opinion, the password query of a popup and a "normal site" like for example Gmail should work the same. But they don't.
+
+
+Step to reproduce:
+
+1. Save two passwords on the same site where the query is a popup.
+2. Open the query and you won't be able to get the second password entered.
+
+
+Actual results: 
+
+no way of saving the credentials
+
+
+Expected results:
+
+ Give a menu to choose which pair of username and password should be used.

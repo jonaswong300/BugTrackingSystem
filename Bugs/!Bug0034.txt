@@ -1,0 +1,21 @@
+Title :Result fonts much larger than expected on classic theme
+Keywords :result,font,larger,classic,theme,
+Reporter :user2
+Assigned Developer : 
+Severity Level : 0
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0
+Build ID: 20160726073904
+
+Step to reproduce:
+Start typing some URL in the URL field
+
+Actual results:
+Below the URL/address field it appears a list of hints/suggestions. The font & 
+size there are noticeably bigger than in the address field. 
+
+Expected results:
+The suggestions should have the same font or smaller than the one in the URL field.
+
+..as the hints are subitems (one of the suggestions) and also they are very long so the 
+small font size makes sense.

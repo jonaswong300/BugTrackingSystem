@@ -1,0 +1,26 @@
+Title : Switching keyboard layout closes plugin dropdown menus
+Keywords : switch,keyboard,layout,close,plugin,dropdown,menu,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 
+Firefox/56.0
+Build ID: 20171003100843
+
+
+Steps to reproduce:
+1. Run GNOME in Linux
+2. Open Firefox
+3. Click on any button in the toolbar that presents a drop-down menu.  
+This includes many plugin menus like Bitwarden and LastPass, or even the standard "hamburger" menu or bookmarks.
+4. Attempt to fill out a form in said drop down
+5. Attempt to switch language support by hitting `Super+Space`.
+
+
+Actual results:
+Your keyboard layout is changed and the drop-down window closes.
+
+Expected results:
+Your keyboard layout is changed and the drop-down window remains open so 
+you can finish filing out the form with the new keyboard layout.

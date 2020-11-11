@@ -1,0 +1,23 @@
+Title : Drop-down menu item labels that contain a double quotation mark, are not returned properly.
+Keywords : dropdown,menu,item,label,contain,double,quotation,return,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18) 
+Gecko/2010021720 Iceweasel/3.0.6 (Debian-3.0.6-3)
+Build Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.18) 
+Gecko/2010021720 Iceweasel/3.0.6 (Debian-3.0.6-3)
+
+
+Steps to reproduce:
+1. Create a drop down menu with 2 menu items that have a double quote in the label.
+2. Fetch the menu from the DOM
+3. Fetch the selected menu items and compare their labels.
+
+
+Actual Results:  
+are in the script
+
+Expected Results:  
+are in the script

@@ -24,18 +24,13 @@ class BugReviewerUI implements ActionListener{
         user.setBounds(330, 10, 200, 100);
         panel.add(user);
 
-        JButton checkUnresolvedBugs = new JButton("Check Unresolved Bugs");
-        checkUnresolvedBugs.setBounds(100, 80, 200, 100);
+        JButton checkUnresolvedBugs = new JButton("Search for Bugs");
+        checkUnresolvedBugs.setBounds(60, 80, 300, 100);
         checkUnresolvedBugs.addActionListener(this);
         panel.add(checkUnresolvedBugs);
 
-        JButton testProposedSolution = new JButton("Test proposed solution");
-        testProposedSolution.setBounds(320, 80, 200, 100);
-        testProposedSolution.addActionListener(this);
-        panel.add(testProposedSolution);
-
         JButton closeBugReport = new JButton("Close Bug Report");
-        closeBugReport.setBounds(540, 80, 200, 100);
+        closeBugReport.setBounds(400, 80, 300, 100);
         closeBugReport.addActionListener(this);
         panel.add(closeBugReport);
 
@@ -46,13 +41,9 @@ class BugReviewerUI implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) 
     {
-        if(e.getActionCommand().equals("Check Unresolved Bugs"))
+        if(e.getActionCommand().equals("Search for Bugs"))
         {
-            BugReviewerCheckUnresolvedBugUI brcubUI = new BugReviewerCheckUnresolvedBugUI();
-        }
-        else if(e.getActionCommand().equals("Test proposed solution"))
-        {
-            BugReviewerTestIntendedSolutionUI brtisUI = new BugReviewerTestIntendedSolutionUI();
+            SearchUI brcubUI = new SearchUI();
         }
         else if(e.getActionCommand().equals("Close Bug Report"))
         {

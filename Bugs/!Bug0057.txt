@@ -1,0 +1,21 @@
+Title : Pressing Alt while dragging something unhide the menu bar when you release the mouse
+Keywords : alt,drag,unhide,menu,bar,release,mouse,
+Reporter : user33
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0) Gecko/20100101 
+Firefox/4.0
+Build Identifier: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0) Gecko/20100101 
+Firefox/4.0
+
+Steps to reproduce:
+1. Start draggin something
+2. Press and keep pressed Alt
+3. Release the mouse and then Alt
+
+Actual Results:  
+The menu bar will show up if it was hidden.
+
+Expected Results:  
+It shouldn't show up.

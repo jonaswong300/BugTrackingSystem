@@ -112,7 +112,7 @@ class SearchUI implements ActionListener
 
                         if(commentLinkMap.containsKey(tempCommentFileName)){
                             String commentString = String.valueOf(commentLinkMap.get(tempCommentFileName));
-                            System.out.println(commentString);
+                            //System.out.println(commentString);
                             comments.append(commentString);
                         }
                     }
@@ -142,7 +142,7 @@ class SearchUI implements ActionListener
                     for(Map.Entry<String,String> me : titlesMap.entrySet())
                     {
 
-                        System.out.println(me.getKey());
+                        //System.out.println(me.getKey());
                         if(("Bugs/" + me.getKey()).equals(keywordFiles.get(i)))
                         {
                             title = me.getValue();

@@ -1,0 +1,20 @@
+Title : Tracking protection panel - tab focus on elements lost when moving mouse
+Keywords : tracking,protection,panel,tab,focus,elements,lost,moving,mouse,
+Reporter : user2
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 
+Firefox/78.0
+
+Steps to reproduce:
+Launch Firefox, access website such as https://www.youtube.com/
+Click on the TP/info icon;
+Press the TAB key a couple of times;
+Move the mouse;
+
+Actual results:
+element in the dropdown is no longer highlighted/marked as tab_selected;
+
+Expected results:
+tabbed focus remains as it is;

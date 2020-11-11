@@ -24,7 +24,7 @@ class BugDeveloperUI extends JFrame implements ActionListener{
         user.setBounds(330, 10, 200, 100);
         panel.add(user);
 
-        JButton fixBugReport = new JButton("Fix Bug");
+        JButton fixBugReport = new JButton("Close Bug Report");
         fixBugReport.setBounds(60, 80, 300, 100);
         fixBugReport.addActionListener(this);
         panel.add(fixBugReport);
@@ -44,9 +44,9 @@ class BugDeveloperUI extends JFrame implements ActionListener{
         {
             SearchUI searchUI = new SearchUI();
         }
-        else if(e.getActionCommand().equals("Fix Bug"))
+        else if(e.getActionCommand().equals("Close Bug Report"))
         {
-            BugDeveloperFixBugReportUI fixBugUI = new BugDeveloperFixBugReportUI();
+            BugReviewerCloseBugReportUI fixBugUI = new BugReviewerCloseBugReportUI();
         }
     }
 
