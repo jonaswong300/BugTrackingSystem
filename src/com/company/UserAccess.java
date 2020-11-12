@@ -11,6 +11,7 @@ class UserAccess {
 
     private HashMap<String, String> userAccountMap = new HashMap<>();
     private HashMap<String, String> userRoleMap = new HashMap<>();
+    private HashMap<String, User> userDetailMap = new HashMap<>();
 
     public UserAccess(){
         readUserAccountFromFile();
@@ -83,6 +84,7 @@ class UserAccess {
                 temp = input.nextLine().split("\t");
                 userAccountMap.put(temp[0], temp[1]);
                 userRoleMap.put(temp[0], temp[2]);
+                userDetailMap.put(temp[0], new User(temp[0], temp[1], temp[2]));
             }
 
             fw.close();
@@ -99,5 +101,7 @@ class UserAccess {
     public HashMap<String, String> getUserRoleMap(){
         return userRoleMap;
     }
+
+    public HashMap<String, User> getUserDetailMap(){return userDetailMap;}
 
 }

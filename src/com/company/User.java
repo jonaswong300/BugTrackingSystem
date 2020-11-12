@@ -4,15 +4,17 @@ class User{
 
     private String userName;
     private String password;
+    private String role;
 
     public User()
     {
 
     }
 
-    public User(String userName, String password){
+    public User(String userName, String password, String role){
         this.userName = userName;
         this.password = password;
+        this.role = role;
     }
 
     public String getUserName(){
@@ -23,6 +25,8 @@ class User{
         return password;
     }
 
+    public String getRole(){return role;}
+
     public String toString(){
         return "I am in user";
     }
@@ -31,8 +35,8 @@ class User{
 
 class Reporter extends User{
 
-    public Reporter(String userName, String password) {
-        super(userName, password);
+    public Reporter(String userName, String password, String role) {
+        super(userName, password, role);
     }
 
     public String toString(){
@@ -44,8 +48,8 @@ class Reporter extends User{
 
 class Triager extends User{
 
-    public Triager(String userName, String password) {
-        super(userName, password);
+    public Triager(String userName, String password, String role) {
+        super(userName, password, role);
     }
 
     public String toString(){
@@ -55,8 +59,8 @@ class Triager extends User{
 
 class Developer extends User{
 
-    public Developer(String userName, String password) {
-        super(userName, password);
+    public Developer(String userName, String password, String role) {
+        super(userName, password, role);
     }
 
     public String toString(){
@@ -66,8 +70,8 @@ class Developer extends User{
 
 class Reviewer extends User{
 
-    public Reviewer(String userName, String password) {
-        super(userName, password);
+    public Reviewer(String userName, String password, String role) {
+        super(userName, password, role);
     }
 
     public String toString(){
