@@ -1,0 +1,9 @@
+Title : javascript: protocol URLs typed into the address bar no longer work
+Keywords : javascript,protocol,URL,address,bar,
+Reporter : user18
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : Caused by this regression:
+https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?fromchange=9112406a54a2d3806112111620f25267203a992e&tochange=b5e9fdddf12e598962d6282a4b053aa66b7aabda
+

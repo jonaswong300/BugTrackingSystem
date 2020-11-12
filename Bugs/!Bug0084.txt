@@ -1,0 +1,20 @@
+Title : Download stays "appended" when downloading from email
+Keywords : download,appended,email,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0
+Firefox for Android
+
+Steps to reproduce:
+
+I'm using firefox 68.3.0 on galaxy S8 with Android P. Firefox is the predefined browser. When I receive an email and tap on a link, Firefox is open "inside" the email app. Sometimes I receive an email from a github repository informing me that a new version of an app has been released, I click on the release page and download the apk.
+
+Actual results:
+
+Mozilla download the apk, but when it's finished, starts again (at 98-ish percent) and stays there forever. The file have been actually downloaded: I can install and use the app. There is no way to remove the "download in progress" notification: I have to restart the phone.
+
+Expected results:
+
+After finished notification should go away and not trying to download the file again.

@@ -1,0 +1,21 @@
+Title : Printing websites cuts off content
+Keywords : printing,website,cut,content,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:70.0) Gecko/20100101 Firefox/70.0
+
+Steps to reproduce:
+
+Opening website https://www.diepresse.com/5711204/syrien-russland-will-friedlichen-kurden-sicherheit-garantieren and trying to print
+
+same is for Firefox on Android, using an extension "Printable – The Print Doctor" fixes the issue, but I can't expect all people in my company to install add ons, with Chrome it works
+
+Actual results:
+
+Printing preview already cuts off the content
+
+Expected results:
+
+printing the whole content

@@ -1,0 +1,26 @@
+Title : Firefox produces printer error
+Keywords : firefox,printer,error,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : 
+User Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0
+
+Steps to reproduce:
+
+opened web page and selected print
+
+Actual results:
+
+found default printer
+selected page 1
+selected ok
+reported with "An error occurred while printing"
+
+Expected results:
+
+page should have printed on default printer
+
+W7 Pro 64 bit
+Print works on Chrome and IE (no changes in printer setup)

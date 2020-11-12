@@ -1,0 +1,27 @@
+Title : Pasting an image from Clipboard does not work on WhatsApp web
+Keywords : paste,image,clipboard,whatsapp,web,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : thanks for the report. I'm unable to reproduce the issue in Firefox 59 for Linux.
+
+Can you confirm if the issue still happens for you?
+
+
+Step to reproduce:
+
+1. Open WhatsApp web (web.whatsapp.com)
+2. Open a chat 
+3. Copy some image in the clipboard
+4. Click on the chat box and press Ctrl+V
+
+Actual results:
+
+The image gets pasted in the chat box text field.
+
+
+Expected results:
+
+A prompt for sending images as an attachment should have appeared.
+

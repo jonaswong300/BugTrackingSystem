@@ -1,0 +1,17 @@
+Title : Exporting results from a test run is not working when there are more test cases
+Keywords : export,result,testrun,working,testcase,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4 Build Identifier: 2.3
+Step to reproduce:
+1. 	Log in to Testopia
+2. 	Click on 'Product Dashboard'.
+3. 	Select a product in the left panel and Click on the Test Run on right side
+4. 	Go to File > Export Results to CSV
+Actual results: 
+When we have hundreds of test cases to export, the application hangs for some time and shows a blank page.
+ 
+Expected results: 
+Test Cases should be extracted to a CSV file.

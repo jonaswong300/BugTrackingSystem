@@ -1,0 +1,17 @@
+Title : Support key wrap/unwrap with RSA-OAEP
+Keywords : support,key,wrap,unwrap,RSA-OAEP,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0
+Step to reproduce:
+Attempted to use PK11_PubWrapSymKey with type = CKM_RSA_PKCS_OAEP.
+Also failed to use PK11_PubUnwrapSymKey with OAEP as this lacks a way to indicate mechanism type.
+Actual results:
+When attempting to use PK11_PubWrapSymKey with type = CKM_RSA_PKCS_OAEP, PK11_PubWrapSymKey succeeds but silently (!) switches to the CKM_RSA_PKCS mechanism. Partly this is because PK11_PubWrapSymKey lacks a way to specify mechanism parameters. PK11_PubUnwrapSymKey behaves similarly, but it also lacks a way to specify the exact mechanism (again, defaulting to CKM_RSA_PKCS).
+Expected results:
+In consultation with Bob Relyea, I'm proposing three patches:
+Causes PK11_PubWrapSymKey to return an error when type != CKM_RSA_PKCS and a RSA key is passed in.
+Introduces PK11_PubWrapSymKeyWithMechanism, which also accepts a mechanism parameter value to pass down into C_Wrap.
+Introduces PK11_PubUnwrapSymKeyWithMechanism, which also accepts a type and a mechanism parameter value to pass down into C_Unwrap.

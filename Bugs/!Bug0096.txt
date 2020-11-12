@@ -1,0 +1,23 @@
+Title : Preferences Windows does not display
+Keywords : preferences,window,display,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b7) Gecko/20100101 Firefox/4.0b7
+Build Identifier: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b7) Gecko/20100101 Firefox/4.0b7
+
+When I select preferences out of the menu it does not display on the screen.  I can see that the browser takes the window out of focus when you select Preferences or press command+, but it doesn't give me any access to the preferences.  This has been like this since I used beta 3 or 4.  
+
+Reproducible: Always
+
+
+Step to reproduce:
+
+Select Preferences from the Firefox menu.
+
+
+Actual results: nothing
+
+
+Expected results: display a preferences popup

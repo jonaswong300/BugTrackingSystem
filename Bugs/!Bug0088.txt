@@ -1,0 +1,25 @@
+Title : Unable to log into the network with HTTPS Everywhere
+Keywords : unable,login,network,https,everywhere,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0
+
+Steps to reproduce:
+
+I tried to log into a public network. It is done by intercepting HTTP requests and sending the login form instead.
+
+Actual results:
+
+I didn't succeed because of HTTPS Everywhere extension and its strict mode. It tried to redirect http://detectportal.firefox.com/success.txtto HTTPS, so I could not log into the network.
+
+Expected results:
+
+http://detectportal.firefox.com/success.txt should be fetched with HTTP and the login form should be sent.
+
+Maybe it's a good idea to disallow extensions to interact with the URL used for detecting if login is required (http://detectportal.firefox.com/success.txt).
+
+I also submitted an issue in HTTPS Everywhere:
+https://github.com/EFForg/https-everywhere/issues/17409
+

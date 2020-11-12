@@ -1,0 +1,22 @@
+Title : Browser history not cleared during SeaMonkey shutdown
+Keywords : browser,history,cleared,seamonkey,shutdown,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.1 Lightning/5.8.1
+Step to reproduce:
+In SeaMonkey latest version 2.53.1, I create 5 profiles and in each profile my main setting is to set:
+"Always clear private data when I close Seamonkey"
+with more options that it will erase all of 9 checked items (from "Browsing History", to "Authenticated Session", see menu Preferences>Privacy & Security>Private Data).
+I browse some sites, say using profile1, and when I close it, a form called "Clear Private Data" is displayed that warns me before everything is deleted; and I hit the 'Clear Private Data Now' button.
+Then I open a browser again with the same profile (profile1). A bug is, all of the links since last used, are still remembered.
+This issue did not happen in SeaMonkey version 2.49.5, but now happened in the latest version.
+Wanted to let you know that I also found this issue for all versions (from version 38 to now on) of firefox browser, that is why I no longer interested with firefox and I don't want this issue to happen to seamonkey.
+PS: I'm a thunderbird and seamonkey lover and currently always make a donation. But now thunderbird stop all donation, please also fix it because I'll glad to make donation
+ 
+Actual results:
+Cookies/History not removed in a Seamonkey (or FireFox) profile
+Expected results: 
+I want Cookies/History is completely removed in a Seamonkey (or FireFox) profile
+

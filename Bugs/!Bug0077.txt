@@ -1,0 +1,15 @@
+Title : Orders placed from Ammar Foods (Web & IOS) are not showing on Merchant portal
+Keywords : orders,placed,ammar,foods,showing,merchant,portal,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36
+Step to reproduce:
+I logged into Ammar Foods Customer Portal and IOS App
+I put things in my cart
+I placed on order after checking out
+Actual results: 
+The Merchant Portal did not receive any new order after placing from above two platforms
+Expected results: 
+The order placed from the above platforms must be shown into the Requested or Accepted Tab in orders menu in Merchant Portal

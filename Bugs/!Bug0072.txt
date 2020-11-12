@@ -1,0 +1,15 @@
+Title : window.print() does not print in Firefox 81
+Keywords : window,print,firefox,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
+Step to reproduce: 
+i ran the print command on on firefox version 79 and it worked fine
+
+Actual results: 
+after updating to v81 for firefox the print functions stopped working, I needed to click multiple times to open the print preview window.
+Note: no code change, It works 100% on google chrome, IE and previously on firefox 79
+Expected results: 
+print preview window open

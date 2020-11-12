@@ -1,0 +1,29 @@
+Title : Need an improved design of the uninstall pop-up
+Keywords : design,uninstall,popup,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 0
+Solved status : open
+Bug : I mentioned this in bug 702773 so perhaps this is the correct place to examine this process.
+
+I'd like to use the same dialog used for installing: https://people.mozilla.com/~faaborg/files/projects/apps/creation-i1/permissions.html
+
+Change the  ( Add ) button to be a ( Remove ) button.  This dialog will hopefully also give us a future way to add or remove the application from the native menu.
+
+
+Step to reproduce:
+
+1. Launch Firefox
+2. Go to apps.mozillalabs.com/appdir and install an app (with or without the extension)
+3. Go to myapps.mozillalabs.com
+4. Click and hold down on an app and when the 'X' appears, release the mouse
+
+
+Actual results:
+
+The uninstall pop-up appears but needs an improved design.
+
+
+Expected results:
+
+An improved design of the uninstall pop-up appears.

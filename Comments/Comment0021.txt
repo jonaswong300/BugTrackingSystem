@@ -2,3 +2,5 @@ Date : 20/10/2020 09:31:33
 Comment : Checked that build, and still the same thing. Only option show is for a password or a different account., 
 Date : 22/10/2020 10:51:15
 Comment : It seems like Chromium may have the same issue for some users: https://bugs.chromium.org/p/chromium/issues/detail?id=943682, 
+Date : 12/11/2020 15:31:06
+Comment : testing comments,

@@ -1,0 +1,14 @@
+Title : Prevent web pages forcing picture-in-picture without user consent
+Keywords : prevent,web,pages,force,picture,user,consent,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0
+Step to reproduce:
+ A web page can make an invisible video follow the mouse cursor, causing a video to pop up in picture-in-picture mode if the user clicks anywhere on the page. This could be used by spammy websites to create autoplaying video popup ads.
+
+Actual results:
+ The PiP flyout on an invisible video can be unintentionally clicked by a user.
+Expected results: 
+Either make the PiP flyout always visible, regardless of video opacity. Or prevent the PiP flyout displaying if the video is not visible.

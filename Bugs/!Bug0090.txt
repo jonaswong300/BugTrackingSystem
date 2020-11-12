@@ -1,0 +1,21 @@
+Title : Applications list fails to populate if a plugin reports an empty MIME Type
+Keywords : application,list,fail,populate,plugin,report,empty,mime,type,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0 (Beta/Release)
+Build ID: 20131015004002
+
+Step to reproduce: 
+
+I have a plugin (IBM Java 7 plugin) that reports a blank MIME type.  This blank MIME type is causing nsExternalHelperAppService::GetFromTypeAndExtension() to return NS_ERROR_NOT_AVAILABLE, thus causing the _loadPluginHandlers() function in applications.js to fail.  This causes the Applications list to not populate at all.
+
+The following is logged to the Browser Console when opening Options->Applications:
+NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIMIMEService.getFromTypeAndExtension]
+Tested on Firefox 24 and 26 (Aurora)
+
+Actual results: The Options->Applications list is empty, when it should be populated.
+
+Expected results: While there is certainly a bug in the IBM Java 7 plugin - it should not report a blank MIME type, Firefox should be more resilient and handle this issue by simply skipping that MIME type and move on, populating the Applications list as normal except for the problem MIME type.  One bad plugin should not prohibit a user from viewing the Applications list.
+

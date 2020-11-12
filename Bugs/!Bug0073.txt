@@ -1,0 +1,16 @@
+Title : printing broken again on trunk – Print dialog come up but will not send output to the printer
+Keywords : printer,print,broken,trunk,dialog,output,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 3
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36
+Step to reproduce:
+this is related to 2020-10-12 83.01a version
+alt-f / p
+print dialog comes up ok
+  
+Actual results: 
+click print no output
+Expected results:
+ output should have printed

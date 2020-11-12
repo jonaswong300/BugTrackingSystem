@@ -1,0 +1,11 @@
+Title : Message Filters Not Running or Not Working When Run Manually
+Keywords : message,filters,not,running,not,working,manually,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : I have had filters running for many years without issues. Now in TB 78.2.0 most messages are properly filtered upon arrival (after Junk classification) but some are not ever processed. Even when I run the filters on the folder (inbox) they do nothing. Editing a filter and making NO changes will cause the filter to operate correctly, manually on the next try. After that, it doesn't work again.
+Actual results: 
+Nothing. New emails are sometimes ignored but mostly are processed by the same filter.
+Expected results:
+ Emails should have been moved to the correct folder.

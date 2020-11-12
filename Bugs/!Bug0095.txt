@@ -1,0 +1,23 @@
+Title : PDF viewer: When copying text to clipboard, some spaces are missing
+Keywords : pdf,viewer,copy,text,clipboard,space,missing,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0
+
+Step to reproduce: 
+
+1. Open a PDF file. For example: https://people.mpi-sws.org/~dreyer/papers/iris-ground-up/paper.pdf
+
+2. Copy-paste some text, e.g. the first sentence of the abstract of that paper.
+
+Actual Results:  
+The result is: "Irisis a framework for higher-order concurrent separation logic, which has been implemented in theCoq proof assistant and deployed very effectively in a wide variety of verification projects."
+Notice the missing spaces in "Irisis" and "theCoq".
+
+Expected Results:  
+Spaces should have been copied. Copying the same text from the same PDF opened in a local PDF readers does copy spaces as expected.
+
+This bugs makes it very annoying to copy-paste more than individual words from a PDF using Firefox' PDF viewer.
+

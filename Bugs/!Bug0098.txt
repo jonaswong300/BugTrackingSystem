@@ -1,0 +1,25 @@
+Title : File upload dialog firing click event behind itself
+Keywords : file,upload,dialog,firing,click,event,behind,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (Windows; U; Windows NT 6.0; en-GB; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3 (.NET CLR 3.5.30729)
+Build Identifier: Mozilla/5.0 (Windows; U; Windows NT 6.0; en-GB; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3 (.NET CLR 3.5.30729)
+
+When I double click to select a file from the file upload dialog, if there is a clickable entity in the web page behind the dialog, it will autofill the file upload field and close the file upload dialog, but also clicks the entity behind!
+
+Reproducible: Always
+
+Step to reproduce: 
+
+1. Open up file upload dialog
+2. Move it so that the icon of the file you wish to click is directly over a clickable entity on the web page
+3. Double-click
+
+Actual Results:  
+Navigates away
+
+
+Expected Results:  
+Just filled in my file field

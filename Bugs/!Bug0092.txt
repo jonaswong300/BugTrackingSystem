@@ -1,0 +1,22 @@
+Title : Shortcut such as Paste does not work in shared menu from page action menu.
+Keywords : shortcut,paste,work,shared,menu,page,action,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0
+Build ID: 20180704003137
+
+Step to reproduce:
+
+Using Mac o/s macOS Sierra 10.12.6 ( on a MacBook Air)
+
+1)Open the shared menu from the action menu of the URL bar.
+2)For example, choose Twitter.
+3)Twitter's common screen opens, TEXT can be added additionally.
+
+Actual results: But operation such as pasting of shortcut operation is impossible. (Menu bar shortcuts are not Grayed out)
+
+Expected results: Shortcut such as copy paste cutting is effective
+
+

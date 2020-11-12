@@ -1,0 +1,24 @@
+Title : Print preview and print output not correct
+Keywords : print,preview,output,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:70.0) Gecko/20100101 Firefox/70.0
+
+Steps to reproduce:
+
+I opened a pdf file in firefox. Then I printed it.
+
+On the printer output a part of the footer is missing, in the Firefox print preview it is also missing.
+In Firefox pdf viewer the page is displayed correctly.
+
+When I set scaling to 90 % in print preview I can see the footer completely.
+
+Actual results:
+
+A part of the footer is missing in print preview and print output.
+
+Expected results:
+
+At 100% scaling the page should be shown completely in print preview and should be printed completely.

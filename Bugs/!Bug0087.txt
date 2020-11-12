@@ -1,0 +1,26 @@
+Title : Content scripts sometimes run twice for about:blank
+Keywords : content,scripts,run,twice,aboutblank,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Build ID: 20180905135451
+
+Steps to reproduce:
+
+1. Install the attached webExtension
+2. change the setting so that a new tab opens a blank page
+3. open a new tab
+4. open the browser console
+
+
+Actual results:
+
+The follwing error is shown: SyntaxError: redeclaration of const test
+
+
+Expected results:
+
+No error
+

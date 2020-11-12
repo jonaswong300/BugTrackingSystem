@@ -1,0 +1,33 @@
+Title : Audible Background Noise While Playing Video After Having Visited Applicable Site
+Keywords : background,noise,video,applicable,site,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:79.0) Gecko/20100101 Firefox/79.0
+
+Steps to reproduce:
+
+In Firefox on Ubuntu (this problem has persisted across several versions).
+Issue is triggered intermittently; but, consistent once triggered.
+cases
+
+visit/play videos on FoxNews.com: after playing some different ones, should be triggered
+if not triggered by above, view their live stream - almost always triggers it
+start a video playing in a tab .. then pause it .. then load an ad heavy site in another tab .. then (even if nothing playing in other tab) return to 1st tab and resume playback .. should hear background static with video, even after closing 2nd tab, even after refreshing 1st tab, even if switching to other videos in 1st (now only) tab
+Actual results:
+
+Once background static noise condition is triggered it does not clear until restarting Firefox (closing and opening tabs has no effect).
+
+Any vid played will have the noise, in any tab, until restart.
+Clearing cache has no effect.
+Closing and opening tabs has no effect, unless only tab (ie closing FF).
+
+Expected results:
+
+A cleanly playable video should continue to play cleanly.
+If there are conditions that would impact playback (ie another playback), stopping or closing the applicable condition(s) should clear up the playback.
+Restarting the browser to clear up playback should not be needed.
+The static noise condition should not be triggered; let alone, persistent across refresh, cache clear, tab close, etc.
+When playing a single video (or audio) stream, should only be audio from that stream (no background noise), irregardless of other pages visited in other (or same) tabs (before, or after stream start).
+

@@ -1,0 +1,29 @@
+Title : The window shown when download a file should have an option to specify a path different than the default
+Keywords : window,download,file,option,path,different,default,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User-Agent:       Mozilla/5.0 (Windows; Windows NT 5.1; en-US; rv:2.0b2pre) Gecko/20100705 Minefield/4.0b2pre
+Build Identifier: Mozilla/5.0 (Windows; Windows NT 5.1; en-US; rv:2.0b2pre) Gecko/20100705 Minefield/4.0b2pre
+
+Sometimes it's useful to download a file to a different local than the default. Firefox should have an option to easily assist on this.
+
+I propose a simple UI in the window. Note that the "Do this automatically for files like this from now on." option would be disabled when the new "Save file to" option is selected.
+
+See attached screenshot for mockup.
+
+
+Step to reproduce: 
+
+1. Click a file to download.
+2. Try to save it to another location than the default.
+
+
+Actual Results:  
+You can't. You would need to change Firefox configuration.
+
+
+Expected Results:  
+You should be able.
+

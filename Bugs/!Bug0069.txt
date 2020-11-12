@@ -1,0 +1,19 @@
+Title : Slack shows images at wrong rotation, with the new ‘image-orientation:from-image’ default behavior
+Keywords : slack,image,wrong,rotation,new,default,behavior,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : The problematic 90 degree rotation here is actually a supplemental CSS-transform rotation that slack is adding, with slack mistakenly expectating that the image will be shown at the wrong orientation (due to the old image-orientation:none default) and hence assuming that it needs an additional transform to display properly.
+I have tested this issue on Windows 10 x64 with the latest Firefox release (50.1.0) and the latest Nightly (53.0a1-20170110075905) and managed to reproduce it.
+When testing the specified page from step 1 in the description, when zooming and "stepping", the page is significantly slower in Firefox than in Chrome.
+Step to reproduce: 
+Have a slack account somewhere.
+Save the attached "sample EXIF-rotated image" file to your computer.
+In Slack, use the "paperclip" icon at the right edge of the type-a-comment text field, to upload an attachment.
+Choose the EXIF-rotated image from this bug (your saved copy, from step 2)
+Look at slack's preview rendering of the image
+Actual results: 
+The image is rotated 90 degrees -- it's displayed tall-and-skinny, with pink on top.
+Expected results: 
+The image should be shown at its correct EXIF rotation -- short-and-wide, with pink on the left side.

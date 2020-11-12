@@ -1,0 +1,14 @@
+Title : Firefox does not permit printing to any installed PDF app. Will not work with NuancePDF or native PDF in Windows.
+Keywords : firefox,permit,print,installed,pdf,app,nuancepdf,windows,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0
+Step to reproduce: 
+Attempt to Print webpage to a pdf
+ 
+Actual results:
+Attempt to print webpage to a .PDF page fails. Select the .pdf app to print to and the printing does not occur. The page does not print at all. No result.
+Expected results:
+ Page should have been printed to a .pdf document.

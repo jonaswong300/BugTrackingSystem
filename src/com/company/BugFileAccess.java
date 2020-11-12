@@ -171,7 +171,7 @@ class BugFileAccess {
                 split = fileInput.nextLine().split(":");
                 solved = split[1];
 
-                split = fileInput.nextLine().split(" : ");
+                split = fileInput.nextLine().split(" :");
                 description = new StringBuilder(split[1]);
                 
                 while(fileInput.hasNextLine())

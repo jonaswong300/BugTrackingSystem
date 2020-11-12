@@ -1,0 +1,26 @@
+Title : WebExtensions tabs are closed on restart
+Keywords : webextensions,tab,closed,restart,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 2
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0
+Build ID: 20171107220115
+
+Steps to reproduce:
+
+1. Install this extension: https://addons.mozilla.org/uk/firefox/addon/new-tab-tools/
+2. Open new tab (in address bar it shows that this is an Extension's page)
+3. Close browser
+4. Open browser
+
+
+Actual results:
+
+Tab where extension was opened disappeared
+
+
+Expected results:
+
+Al tabs that were present before Firefox was closed should be present after restart
+

@@ -1,0 +1,20 @@
+Title : Opening a link in a new tab does not make the tab bar scroll to the right so you can see it
+Keywords : open,link,tab,bar,scroll,right,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0
+Build ID: 20180310025718
+How it works now makes sense if the current tab would get hidden if the tab bar scrolled right. However if there's enough room so you can see both the current tab and the new tab, the tab bar should scroll accordingly. The tabs to the left are usually old ones that you don't need to see all the time so that's why it makes more sense to show the new ones (if there's enough room).
+
+
+
+Step to reproduce:
+
+Open so many tabs that you get the left and right arrows at the left and right end of the tab bar. Then on the last tab open a link in a new tab.
+
+Actual results: The tab opens hidden underneath the "scroll tab bar to the right" button. The button glows blue for a short time.
+
+
+Expected results: The tab should open and the tab bar should scroll the width of one tab to the right so you can actually see it.

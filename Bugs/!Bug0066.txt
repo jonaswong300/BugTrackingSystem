@@ -1,0 +1,27 @@
+Title : Make it easy for a person without a password to get a password reset link
+Keywords : password,reset,link,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 0
+Solved status : open
+Bug : What is actually needed here is the ability to re-authenticate to GitHub and change the email to another one associated with the same account.
+Pending some auth re-architecture, this will be possible.
+
+As a stop-gap, you can perform a password reset and then use the password to change the email address. 
+
+I'll leave this bug open until we can change Github auth backed accounts without setting a password on them.
+
+
+Step to reproduce: 
+
+Attempt to change the email address
+
+
+Actual results: 
+
+Cannot change email as I have no password do to Github login
+
+
+Expected results:
+
+Remove requirement for passwords on Github accounts

@@ -1,0 +1,26 @@
+Title : Form autocomplete sometimes does not work
+Keywords : form,autocomplete,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0
+Build ID: 20170628075643
+
+Steps to reproduce:
+
+1. Open 1st page with form (e.g. login form for email);
+2. When 1st page is still loading, immediately open new tab and some other page in it;
+3. After a while return to 1st page and start typing data into form fields (e.g. email address);
+
+
+Actual results:
+
+When I start typing, sometimes FF does not show dropdown list below input field with previously entered values which match entered text. This occurs only sometimes, other times it works as expected.
+
+
+Expected results:
+
+FF should show dropdown list below input field with previously entered value(s).
+
+This is old bug, I recall that for the first time I encountered it few years ago.

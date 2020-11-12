@@ -1,0 +1,23 @@
+Title : Firefox account reset lost passwords
+Keywords : firefox,account,reset,password,lost,
+Reporter : user44
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : I tested this issue on Mac OS X 10.13 with FF 63 release and I updated it to FF 63.0.1 
+release after which I reset my FF account password but I can't reproduce this issue. 
+Did you update it from 62 to 63.0.1 version?
+
+Step to reproduce:
+
+I did an update of firefox and reset the firefox account password
+
+
+Actual results: 
+
+Firefox lost all saved logins, passwords, bookmarks
+
+
+Expected results: 
+
+It should have brought me back my saved logins, passwords, and bookmarks

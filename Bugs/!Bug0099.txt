@@ -1,0 +1,37 @@
+Title : Problems in Firefox with an encoded backslash in url.
+Keywords : problems,firefox,encoded,backslash,URL,
+Reporter : user18
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+
+Steps to reproduce:
+
+My Firefox version is: 57.0 (64-bit) up to date
+
+I reduced the bug to this example. On my server is made a directory "test" with the following htaccess file:
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^a\\b$ http://www.example.com/first-match [L]
+        RewriteRule ^a/b$ http://www.example.com/second-match [L]
+    </IfModule>
+
+%5c = backslash encoded
+
+The first time i typed: http://www.my-domain.com/test/a%5cb in the addressbar, Firefox sent me to: http://www.example.com/first-match
+The second time i typed: http://www.my-domain.com/test/a%5cb in the addressbar, Firefox sent me to: http://www.example.com/second-match
+
+Firefox needs to send me in both cases to http://www.example.com/first-match like for example Google Chrome is doing.
+
+
+Actual results:
+
+Firefox sent me to the wrong url.
+
+
+Expected results:
+
+Firefox should send me to the right url.

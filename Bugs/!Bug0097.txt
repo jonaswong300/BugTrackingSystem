@@ -1,0 +1,20 @@
+Title : Sync CTP exceptions
+Keywords : sync,ctp,exceptions,
+Reporter : user17
+Assigned Developer : 
+Severity Level : 1
+Solved status : open
+Bug : User Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0 (Beta/Release)
+Build ID: 20131118212339
+
+
+Step to reproduce:
+
+turn on CTP,set some expetions.
+turn on firefox sync too.
+
+Actual results: the exptions won't be sync
+
+
+Expected results: sync these important settings as chrome
+
