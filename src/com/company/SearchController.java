@@ -31,6 +31,12 @@ class SearchController
         return cd.getCommentLinkMap();
     }
 
+    public void getCommentMap()
+    {
+        CommentAccess cd = new CommentAccess();
+        cd.getCommentMap();
+    }
+
     public String searchByTitle()
     {
         String fileReturn = "";

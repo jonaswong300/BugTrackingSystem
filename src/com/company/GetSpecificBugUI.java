@@ -202,15 +202,19 @@ class GetSpecificBugUI implements ActionListener
         frame.setSize(1100, 600);
         frame.add(panel);
         panel.setLayout(null);
-
         JLabel addCommentL = new JLabel("Add your comment in the text field : ");
         addCommentL.setBounds(10, 10, 350, 20);
         panel.add(addCommentL);
 
 
+        //panel.add(commentArea);
+
         commentArea.setEditable(true);
-        commentArea.setBounds(10,50,850,200);
-        panel.add(commentArea);
+
+        JScrollPane add_scroll = new JScrollPane(commentArea);
+        add_scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        add_scroll.setBounds(10,50,850,200);
+        panel.add(add_scroll);
 
         addC.setBounds(710,280,150,20);
         addC.addActionListener(this);

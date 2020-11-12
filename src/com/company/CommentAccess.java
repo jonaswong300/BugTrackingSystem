@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 class CommentAccess {
@@ -73,6 +74,10 @@ class CommentAccess {
                     if(tempDescription.contains("Date")){
                         description.append("\n\n").append(tempDescription).append("\n").append(input.nextLine());
                     }
+                    else
+                    {
+                        description.append("\n").append(tempDescription);
+                    }
 
                 }
 
@@ -121,6 +126,7 @@ class CommentAccess {
     }
 
     public HashMap<Integer, String> getCommentMap(){
+
         return commentMap;
     }
 
