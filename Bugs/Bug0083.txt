@@ -1,10 +1,10 @@
-Title : Youtube full screen not working in safe mode
-Keywords : yotube,fullscreen,safe,mode,
-Reporter : user17
-Assigned Developer : 
+Title :  Youtube full screen not working in safe mode
+Keywords :  yotube,fullscreen,safe,mode,
+Reporter :  user17
+Assigned Developer : N/A due to duplicate bug
 Severity Level : 2
-Solved status : open
-Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:80.0) Gecko/20100101 Firefox/80.0
+Solved status : closed (FLAGGED AS DUPLICATE)
+Bug :  User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:80.0) Gecko/20100101 Firefox/80.0
 
 Steps to reproduce:
 
@@ -13,4 +13,3 @@ OS: Mac Mojave
 I opened firefox in safe mode, after clearing all the cache. A video starts on being clicked. However, the theater button somehow cannot be clicked, and on clicking full screen, the original sized video keeps playing and the remaining screen is black.
 
 This does not happen on some videos, but happens on most videos. This does not happen on chrome.
-

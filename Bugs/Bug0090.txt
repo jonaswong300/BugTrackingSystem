@@ -1,10 +1,10 @@
-Title : Applications list fails to populate if a plugin reports an empty MIME Type
-Keywords : application,list,fail,populate,plugin,report,empty,mime,type,
-Reporter : user17
-Assigned Developer : 
+Title :  Applications list fails to populate if a plugin reports an empty MIME Type
+Keywords :  application,list,fail,populate,plugin,report,empty,mime,type,
+Reporter :  user17
+Assigned Developer : N/A due to duplicate bug
 Severity Level : 1
-Solved status : open
-Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0 (Beta/Release)
+Solved status : closed (FLAGGED AS DUPLICATE)
+Bug :  User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0 (Beta/Release)
 Build ID: 20131015004002
 
 Step to reproduce: 
@@ -18,4 +18,3 @@ Tested on Firefox 24 and 26 (Aurora)
 Actual results: The Options->Applications list is empty, when it should be populated.
 
 Expected results: While there is certainly a bug in the IBM Java 7 plugin - it should not report a blank MIME type, Firefox should be more resilient and handle this issue by simply skipping that MIME type and move on, populating the Applications list as normal except for the problem MIME type.  One bad plugin should not prohibit a user from viewing the Applications list.
-

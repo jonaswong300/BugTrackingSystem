@@ -12,6 +12,7 @@ import java.util.HashMap;
 // FOR THE BUTTONS OF BUGS LISTED
 class GetSpecificBugUI implements ActionListener
 {
+    int clicker;
     String whichAction;
     String bugFile;
     JFrame bugThread = new JFrame();
@@ -30,6 +31,8 @@ class GetSpecificBugUI implements ActionListener
 
     JScrollPane jsp = new JScrollPane(bug);
     JScrollPane scrollC = new JScrollPane(comments);
+
+    AddCommentController acc = new AddCommentController();
 
     public GetSpecificBugUI(String whichAction, String title)
     {
@@ -115,6 +118,7 @@ class GetSpecificBugUI implements ActionListener
 
     public void getForm()
     {
+        clicker = 0;
         frame.setTitle("Get Specific Bug UI");
         bugThread.setSize(1500,900); 
         bugThread.setVisible(true);
@@ -217,10 +221,17 @@ class GetSpecificBugUI implements ActionListener
 
     public void callCommentController()
     {
-        String comm = commentArea.getText();
-        AddCommentController acc = new AddCommentController(comm);
-
-        acc.writeCommentToFile(tempCommentFileName);
+        if(clicker < 1)
+        {
+            String comm = commentArea.getText();
+            acc = new AddCommentController(comm);
+    
+            acc.writeCommentToFile(tempCommentFileName);
+            JOptionPane.showMessageDialog(frame, "Close and open bug thread again for your comment to be shown.", 
+            "Comment Added", JOptionPane.INFORMATION_MESSAGE);
+        }
+        clicker++;
+        System.out.println("CLICK : " + clicker);
     }
     @Override
     public void actionPerformed(ActionEvent evt) 
@@ -232,11 +243,9 @@ class GetSpecificBugUI implements ActionListener
         }
         else if (evt.getActionCommand().equals("Submit Comment"))
         {
-            
             //write to files
             callCommentController();
-            JOptionPane.showMessageDialog(frame, "Close and open bug thread again for your comment to be shown.", 
-                                        "Comment Added", JOptionPane.INFORMATION_MESSAGE);
+            
             //close comment frame
             frame.dispose();
             bugThread.dispose();

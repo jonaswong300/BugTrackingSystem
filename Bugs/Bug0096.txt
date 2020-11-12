@@ -1,7 +1,7 @@
 Title : Preferences Windows does not display
 Keywords : preferences,window,display,
 Reporter : user17
-Assigned Developer : 
+Assigned Developer : user49
 Severity Level : 3
 Solved status : open
 Bug : User-Agent:       Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b7) Gecko/20100101 Firefox/4.0b7

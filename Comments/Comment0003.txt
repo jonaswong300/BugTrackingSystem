@@ -1,3 +1,5 @@
 Date : 09/09/2020 04:23:41
 Comment : mini ux spec : https://mozilla.invisionapp.com/share/R3XX2AF2XN5#/423736091_Import_From_CSV
 Please note: Import Summary Report » requires CS review (text and icons placeholder for now), 
+Date : 12/11/2020 17:50:00
+Comment : yes,

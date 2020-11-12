@@ -1,7 +1,7 @@
 Title : Switching keyboard layout closes plugin dropdown menus
 Keywords : switch,keyboard,layout,close,plugin,dropdown,menu,
 Reporter : user33
-Assigned Developer : 
+Assigned Developer : user22
 Severity Level : 1
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 

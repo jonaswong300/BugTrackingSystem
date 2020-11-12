@@ -41,6 +41,11 @@ class AddCommentController implements ActionListener
         return id_S;
     }
 
+    public void setComment(String comment)
+    {
+        this.comment = comment;
+    }
+
     public void writeCommentToFile(String id)
     {
         if(id.trim().isEmpty())

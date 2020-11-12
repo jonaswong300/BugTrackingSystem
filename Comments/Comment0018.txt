@@ -2,3 +2,7 @@ Date : 30/10/2020 21:28:12
 Comment : do you have any ideas that I could try to get me in a state similar to yours?, 
 Date : 02/11/2020 19:21:55
 Comment : can you please test this build and let me know if you now get a PIN prompt?, 
+Date : 12/11/2020 17:22:52
+Comment : Yeah, users complained that we made it too easy to access saved logins by adding the autocomplete 
+"View Saved Logins" footer and the main menu item last year.
+,

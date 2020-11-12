@@ -1,7 +1,7 @@
 Title : Panning / Zooming the Map of Google Flights is much slower in Firefox than Chrome
 Keywords : pan,zoom,map,google,flights,slower,firefox,chrome,
 Reporter : user33
-Assigned Developer : 
+Assigned Developer : user29
 Severity Level : 1
 Solved status : open
 Bug : User Agent:  Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0

@@ -1,7 +1,7 @@
 Title : Alt+Enter in address bar when a "switch to tab" result is selected doesnt switch to tab.
 Keywords : alt,enter,switch,tab,result,selected,address,bar,
 Reporter : user2
-Assigned Developer : 
+Assigned Developer : user10
 Severity Level : 1
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101

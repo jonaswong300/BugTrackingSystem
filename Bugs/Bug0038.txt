@@ -1,7 +1,7 @@
 Title : Home page URL may be appended to the URL bar if I'm start typing immediately
 Keywords : home,page,URL,appended,bar,typing,
 Reporter : user2
-Assigned Developer : 
+Assigned Developer : user43
 Severity Level : 1
 Solved status : open
 Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 
