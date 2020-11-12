@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-class UserAddBugController
+class BugReporterAddBugController
 {
     String title;
     String keywords;
@@ -13,7 +13,7 @@ class UserAddBugController
     String reporter;
     String level;
 
-    public UserAddBugController(String title, String keywords, String description, String reporter, String level) {
+    public BugReporterAddBugController(String title, String keywords, String description, String reporter, String level) {
         this.title = title;
         this.keywords = keywords;
         this.description = description;

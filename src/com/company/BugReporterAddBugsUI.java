@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class UserAddBugsUI implements ActionListener
+class BugReporterAddBugsUI implements ActionListener
 {
 
     JFrame form = new JFrame();
@@ -21,7 +21,7 @@ class UserAddBugsUI implements ActionListener
 
     String level;
    
-    public UserAddBugsUI(String reporter)
+    public BugReporterAddBugsUI(String reporter)
     {
         System.out.println("At add bugs UI");
         this.reporter = reporter;
@@ -96,7 +96,7 @@ class UserAddBugsUI implements ActionListener
 
     public void sendBugRequest(String title, String keywords, String description, String reporter, String level)
     {
-        UserAddBugController addBugController = new UserAddBugController(title, keywords, description, reporter, level);
+        BugReporterAddBugController addBugController = new BugReporterAddBugController(title, keywords, description, reporter, level);
         if(addBugController.checkEmpty())
         {
             JOptionPane.showMessageDialog(form, "Ensure that you have filled in the bug report and did not leave any empty text fields.", 
@@ -110,7 +110,7 @@ class UserAddBugsUI implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // on submit, the details will be sent to useraddbugcontroller
+        // on submit, the details will be sent to BugReporterAddBugController
         title = titleText.getText();
         keywords = keywordsField.getText();
         description = descriptionArea.getText();

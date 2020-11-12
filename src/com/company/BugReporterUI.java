@@ -63,11 +63,11 @@ class BugReporterUI implements ActionListener
     {
         if(e.getActionCommand().equals("Add Bug Report"))
         {
-            UserAddBugsUI addbugUI = new UserAddBugsUI(reporter);
+            BugReporterAddBugsUI addbugUI = new BugReporterAddBugsUI(reporter);
         }
         else if(e.getActionCommand().equals("Track Reported Bugs"))
         {
-            UserTrackBugUI trackUI = new UserTrackBugUI();
+            BugReporterTrackBugUI trackUI = new BugReporterTrackBugUI();
         }
         else if(e.getActionCommand().equals("Search for Bugs"))
         {

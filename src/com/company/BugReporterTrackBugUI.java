@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class UserTrackBugUI implements ActionListener {
+class BugReporterTrackBugUI implements ActionListener {
 
     final static int width = 1050, height = 600;
 
@@ -15,7 +15,7 @@ class UserTrackBugUI implements ActionListener {
     final JComboBox<String> options = new JComboBox<String>(terms);
     JButton submit = new JButton("Track");
 
-    public UserTrackBugUI(){
+    public BugReporterTrackBugUI(){
         System.out.println("At track bug UI");
         showForm();
     }
@@ -49,7 +49,7 @@ class UserTrackBugUI implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-        UserTrackBugController utbc = new UserTrackBugController();
+        BugReporterTrackBugController utbc = new BugReporterTrackBugController();
 
         String inputFromUser = trackInput.getText();
 
