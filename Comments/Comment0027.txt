@@ -1,0 +1,10 @@
+Date : 13/11/2020 14:40:10
+Comment : A temporary workaround is introduced by bug 1560359 and this bug is filed to remove the workaround and find the root cause and a long-term fix.,
+Date : 13/11/2020 14:40:25
+Comment : Mass move to about:logins,
+Date : 13/11/2020 14:40:41
+Comment : I'm out my Ramen Noodle
+We have nothin' in common, poodle
+I'm a Doberman, pinch yourself in the arm and pay homage, pupil,
+Date : 13/11/2020 14:40:51
+Comment : It is my understanding that on Linux we show the Confirmation button first, then the Cancel button. Can you post a screenshot of a system dialog with the buttons in the opposite order? I think we usually defer to Ubuntu as representative of Linux in cases like this.,

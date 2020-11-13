@@ -1,2 +1,17 @@
 Date : 22/11/2020 07:47:52
 Comment : From bug 1549814, about:logins allows users to create new logins but these logins will not get autofilled in HTTP auth dialogs since the login has formSubmitURL: "" which is incompatible with HTTP auth dialogs., 
+Date : 12/11/2020 19:15:10
+Comment : If we end up finding out that some Intl code is causing them to be falsy, it may be moved back to Core::Internationalization.
+,
+Date : 12/11/2020 19:15:19
+Comment : NI on Jared, since he wrong those lines.
+,
+Date : 12/11/2020 19:15:30
+Comment : I KNEW JARED COULDNT DO ANYTHING RIGHT,
+Date : 12/11/2020 19:15:39
+Comment : What's the status for this bug wrt our upcoming releases? Thanks
+,
+Date : 12/11/2020 19:15:59
+Comment : Also Sam, please stop provoking Jared, he is threatening to escalate to HR,
+Date : 12/11/2020 19:16:17
+Comment : @Jared nobody likes a tattletale,

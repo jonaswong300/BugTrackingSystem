@@ -1,0 +1,17 @@
+Date : 12/11/2020 18:54:32
+Comment : Idea is to prevent "snooping". But it's only active without a master password.
+,
+Date : 12/11/2020 18:54:57
+Comment : "You are just what the doc ordered."
+,
+Date : 12/11/2020 19:26:26
+Comment : This has been asked in the support forums and chats.
+,
+Date : 12/11/2020 19:26:35
+Comment : Currently, it's not possible to remove all stored logins from within Firefox. Every removal of a login and requires a confirmation which becomes cumbersome (one user had 400+ logins).
+,
+Date : 12/11/2020 19:26:42
+Comment : Hmm… I thought we had a bug on this. I think bug 1208194 will end up being the solution though.
+,
+Date : 12/11/2020 19:26:54
+Comment : This is also a common issue in uninstaller surveys. Since both the uninstaller and Sync disconnection removed the option to delete data users are really stuck without us doing this ourselves.,

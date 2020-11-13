@@ -1,0 +1,33 @@
+Date : 12/11/2020 19:20:35
+Comment : No, I do not use a master password.
+,
+Date : 12/11/2020 19:20:47
+Comment : What I did now:
+Start Firefox
+Start capturing
+Open about:logins
+Stop capturing
+As you can see, it took 5 seconds to show the logins.
+,
+Date : 12/11/2020 19:21:00
+Comment : Inspired enough to one day grow up, blow up and be in a position
+To meet Run–D.M.C., induct them
+Into the motherf**kin' Rock and Roll Hall of Fame,
+Date : 12/11/2020 19:21:15
+Comment : Thanks Thomas. Apologies, but it looks like the thread that decryption runs in (StreamTrans) is not enabled by default for any of the profiler presets. Would you mind recording one more time with that thread enabled?
+,
+Date : 12/11/2020 19:21:24
+Comment : In the presets dropdown for the Profiler popup, select Custom
+Click Edit Settings
+Under Profiler Settings, select the Firefox Front-End preset
+Under Threads, enable StreamTrans
+,
+Date : 12/11/2020 19:21:35
+Comment : It is rather alarming that it looks like decryptMany is taking around 4000ms for 750 logins, which would mean an average of around 5ms to decrypt each login... which is orders of magnitude longer than I would expect. Thomas, is there any chance that one of these logins is very long? Were these logins imported from another profile? A quick way of getting an idea of this would be to export the logins to a file from the ... menu in about:logins, and see how big the file is. For reference, I have 210 logins in my profile, and the file is 40KB.
+,
+Date : 12/11/2020 19:40:25
+Comment : Bug 1592682 will handle the headings for date/alert sorts but this bug will need to use the ICU API to do section headings for a-z/z-a sorts.,
+Date : 12/11/2020 19:40:38
+Comment : Ryan – Could provide dark-mode specs as well? Some of these don't have a dark mode counter part. Changing what I can beyond that!,
+Date : 12/11/2020 19:40:54
+Comment : In the past, I believe dark mode handling has largely been supported somewhat automagically based on how the light-mode colors are set, rather than setting specific dark-mode specs. Jaws, please correct me if I'm wrong.,

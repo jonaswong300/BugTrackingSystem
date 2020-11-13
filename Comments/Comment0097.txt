@@ -2,3 +2,18 @@ Date : 12/11/2020 17:51:47
 Comment : this is my comment,
 Date : 12/11/2020 17:51:55
 Comment : comment again,
+Date : 12/11/2020 18:50:57
+Comment : Part of me wants to put in all variations of the navyseal copypasta but I won't cause there are bad words in it.,
+Date : 12/11/2020 19:44:46
+Comment : Is this something we could possibly add into fx? (not sure how difficult or feasible it would be),
+Date : 12/11/2020 19:44:56
+Comment : Has there been any update with this? Thinking about implementing this as my first contribution to Mozilla :P,
+Date : 12/11/2020 19:45:05
+Comment : There are no current plans to implement this. We would need to think through the requirements and user experience quite carefully.
+,
+Date : 12/11/2020 19:45:16
+Comment : For example,
+What happens if the about:logins tab is closed, would we expect the timeout to still fire and clear the clipboard when the timer expires?
+Should we show a notification when the clipboard is cleared? Perhaps only if it is cleared as a result of timing out, not when used.
+The paste that uses the copied password could be in any window. Would we need to observe all pastes across all windows until the timer expired to know when to clear the clipboard?
+If you want to explore this I would be happy to work with you on a prototype patch, but I think we would need a lot more clarity before we could ship this feature.,

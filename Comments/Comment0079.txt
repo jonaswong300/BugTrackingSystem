@@ -1,0 +1,4 @@
+Date : 13/11/2020 15:01:26
+Comment : I'd rather reprogram the whole thing than write more comments,
+Date : 13/11/2020 15:01:45
+Comment : But Im also too lazy to write a script for this,

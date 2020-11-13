@@ -2,3 +2,10 @@ Date : 18/10/2020 12:37:28
 Comment : I had to use a third party tool to be able to extract passwords that were stored only in Firefox on this portable computer., 
 Date : 09/11/2020 21:16:52
 Comment : comments working,
+Date : 12/11/2020 19:07:50
+Comment : RyanVM sent me a breakdown of which Windows 10 versions our users are on and given that <1803 usage is low I think we're fine to ship. Ryan also suspects the issue would have been fixed in 1903 as 1909 was a minor release on top of that.
+,
+Date : 12/11/2020 19:09:27
+Comment : When trying to show/copy/edit a password from about:logins the OS auth dialog requires my PIN code, but after a few attempts OS auth dialog requires the account password and there is not PIN option in the "More choices". This seems to be random since I can reproduce it when entering the valid password, or when entering the wrong password, or canceling the OS dialog.
+I have tested this on Windows 10 1903 and Windows 10 1909 and I can confirm that this issue is not reproducible on these versions.
+,

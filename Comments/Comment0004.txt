@@ -2,3 +2,8 @@ Date : 12/10/2020 12:38:16
 Comment : After a user imports from a CSV file, link from the confirmation dialog to a detailed report so the user knows which lines fall into additions, updates, unchanged exact matches, and errors., 
 Date : 09/11/2020 19:27:16
 Comment : test the CSV file for errors,
+Date : 12/11/2020 19:07:02
+Comment : In my new Edge VM that is still on 1809 I captured the recordings:,
+Date : 12/11/2020 19:07:25
+Comment : In the account connected to my personal Microsoft account it sometimes defaulted to showing a blank username AND password field:
+,

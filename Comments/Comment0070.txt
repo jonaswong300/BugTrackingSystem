@@ -1,0 +1,9 @@
+Date : 13/11/2020 14:41:04
+Comment : For example the "Bookmark" panel. On Linux (Arch and Ubuntu) the "Cancel" button is on the left and the "Done" button is on the right (see this screenshot). On Windows are reversed.,
+Date : 13/11/2020 14:41:17
+Comment : Also, on Linux (Arch and Ubuntu) the buttons from the "Quit and close tabs?" panel are displayed in the following order: "Cancel" on the left and "Close tabs" on the right(see this screenshot). On Windows are reversed.,
+Date : 13/11/2020 14:41:27
+Comment : Hello all, I would like to work on this one. For another example, on Fedora 31 (Linux) I see the 'Remove' button on the left and the 'Cancel' button on the right ( see screenshot ).,
+Date : 13/11/2020 14:42:00
+Comment : It's me, my honesty's brutal
+But it's honestly futile if I don't utilize what I do though,

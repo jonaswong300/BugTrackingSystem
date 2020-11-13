@@ -1,2 +1,12 @@
 Date : 12/11/2020 17:50:14
 Comment : yes,
+Date : 12/11/2020 18:50:27
+Comment : Rap God is hidden in the comments. Why? Cause I'm very bored.,
+Date : 12/11/2020 19:43:52
+Comment : When viewing the Password Manager User Interface (that shows all logins), somehow flag logins that are on HTTP pages as insecure.,
+Date : 12/11/2020 19:44:00
+Comment : We are removing the ability to dismiss a breach on about:logins now so I don't know what we want to do here…,
+Date : 12/11/2020 19:44:09
+Comment : I think it would be a good idea if we cleared the clipboard after x amount of seconds when using the "Copy Password" feature via "Saved Passwords" under about:preferences#security. Most password managers, at least the ones I've used, have this feature built into them.,
+Date : 12/11/2020 19:44:20
+Comment : Currently if someone copies their password, it stays in the clipboard until something else is copied into it and replaces the password. I don't think this a huge issue as the password is already saved in the manager but I'm not sure how comfortable I'm with the password lingering around after it's been copied into the clipboard. Users might accidentally paste it into an IM message or something along those lines and could cause major problems if they're using the same password for a majority of websites and they just accidentally pasted it somewhere undesired.,

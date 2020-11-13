@@ -1,0 +1,15 @@
+Date : 12/11/2020 18:46:11
+Comment : "Look, I was gonna go easy on you not to hurt your feelings.",
+Date : 12/11/2020 18:46:43
+Comment : Yeah, users complained that we made it too easy to access saved logins by adding the autocomplete "View Saved Logins" footer and the main menu item last year.
+,
+Date : 12/11/2020 19:35:14
+Comment : I realized we should split this so it only handles the section headers for date/alerts since those are more straightforward and don't require using the ICU API.,
+Date : 12/11/2020 19:35:23
+Comment : Right clicking on the password input field does not give the option of generating a password.,
+Date : 12/11/2020 19:35:34
+Comment : These are different issues with different solutions.,
+Date : 12/11/2020 19:35:45
+Comment : I have confirmed locally that this bug is fixed by the patch in bug 1572478.,
+Date : 12/11/2020 19:35:56
+Comment : The issue is still reproducible with the provided steps on the latest Nightly 70.0a1 (2019-08-30) build even if the fix for bug 1572478 landed. Tested on Windows 7 x64, Mac 10.14 and Arch Linux 4.12.,

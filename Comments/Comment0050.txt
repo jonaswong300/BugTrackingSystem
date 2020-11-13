@@ -1,0 +1,6 @@
+Date : 13/11/2020 14:39:28
+Comment : A temporary workaround is introduced by bug 1560359 and this bug is filed to remove the workaround and find the root cause and a long-term fix.,
+Date : 13/11/2020 14:39:40
+Comment : When tabbing through about:logins, keyboard focus gets trapped in the login-list, cycling between the <ol> and the <select id="login-sort">. Disabling the multiple overflow CSS properties fixes this, though the desired design of the page specifies that the list be scrollable.,
+Date : 13/11/2020 14:39:54
+Comment : Yup running out of comments,

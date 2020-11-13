@@ -5,3 +5,6 @@ password, and read it from the DOM (eg. document.querySelector("input[type=passw
 Better yet, you can go to the profile folder and copy out logins.json and key4.db, which gets you all the passwords in 
 unencrypted format. Maybe users want this feature for peace of mind, but I find it a hassle.,
 
+Date : 12/11/2020 19:07:12
+Comment : In the local account it kept flipping defaults between PIN and password entry (no username entry, which is good):
+,

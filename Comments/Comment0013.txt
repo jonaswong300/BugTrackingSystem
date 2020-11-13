@@ -7,3 +7,9 @@ Date : 12/11/2020 18:05:48
 Comment : test,
 Date : 12/11/2020 18:05:56
 Comment : test2,
+Date : 12/11/2020 19:19:26
+Comment : Is it possible to run some profiling within Firefox, e.g. how long the decryption takes vs. other functionality when the logins are opened?
+,
+Date : 12/11/2020 19:19:37
+Comment : Thanks for the information.
+,

@@ -1,0 +1,14 @@
+Date : 12/11/2020 19:14:20
+Comment : It also explains why after reload it looks good (since the values are not falsy anymore).
+,
+Date : 12/11/2020 19:14:34
+Comment : Well, to be truthful the blueprint's
+Simply rage and youthful exuberance
+Everybody loves to root for a nuisance
+Hit the Earth like an asteroid,
+Date : 12/11/2020 19:14:46
+Comment : I'm tentatively reassigning it to about:logins component because while the bug is visible depending on locale, it seems like the solution requires understanding why those variables are falsy.
+,
+Date : 12/11/2020 19:14:58
+Comment : I also couldn't reproduce it in pseudolocalization, so my first hypothesis is that since ar is incomplete, we load two locales, which takes a bit more time, and somehow in that scenario those variables are falsy.
+,

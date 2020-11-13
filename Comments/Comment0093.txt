@@ -1,0 +1,10 @@
+Date : 13/11/2020 14:38:26
+Comment : Currently, select-all select in-content label (see attached).,
+Date : 13/11/2020 14:38:40
+Comment : Improved the mock-up depicting the desired state,
+Date : 13/11/2020 14:39:01
+Comment : And I should not be woken
+I'm the walkin' dead, but I'm just a talkin' head, a zombie floatin'
+But I got your mom deep-throatin',
+Date : 13/11/2020 14:39:14
+Comment : When tabbing through about:logins, keyboard focus gets trapped in the login-list, cycling between the <ol> and the <select id="login-sort">. Disabling the multiple overflow CSS properties fixes this, though the desired design of the page specifies that the list be scrollable.,

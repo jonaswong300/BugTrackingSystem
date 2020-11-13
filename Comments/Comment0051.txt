@@ -1,0 +1,13 @@
+Date : 12/11/2020 19:19:48
+Comment : Me? I'm a product of Rakim
+Lakim Shabazz, 2Pac, N.W.A, Cube, hey Doc, Ren
+Yella, Eazy, thank you, they got Slim,
+Date : 12/11/2020 19:20:01
+Comment : Do you use Primary Password (formerly Master Password)? I ask, because that can further slow down decryption of logins.
+,
+Date : 12/11/2020 19:20:13
+Comment : Is it possible to run some profiling within Firefox, e.g. how long the decryption takes vs. other functionality when the logins are opened?
+,
+Date : 12/11/2020 19:20:21
+Comment : Yes it is. Would you be comfortable capturing a profile of the about:logins page load in the slow case? There are some instructions for how to report a performance problem on MDN.
+,

@@ -6,3 +6,5 @@ Date : 12/11/2020 15:31:06
 Comment : testing comments,
 Date : 12/11/2020 17:49:51
 Comment : yes,
+Date : 12/11/2020 18:49:26
+Comment : Perhaps rather than removing the perf entirely, you make it hidden instead? If someone knows about perf, and has time to type it out, they probably also have enough time to email themselves the logins.json and key4.db files.,

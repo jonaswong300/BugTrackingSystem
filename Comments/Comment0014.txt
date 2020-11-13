@@ -5,3 +5,5 @@ disable browser_sessionRestore.js on debug builds. r=MattN,egao
 
 
 https://hg.mozilla.org/mozilla-central/rev/38e0c3020d03, 
+Date : 12/11/2020 19:02:10
+Comment : Btw. I tried running the autoland build before bug 1622542 to test this theory but it was even worse, always defaulting to the username+password empty with the PIN option seemingly randomly appearing in More Choices.,

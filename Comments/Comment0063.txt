@@ -1,0 +1,27 @@
+Date : 12/11/2020 19:21:50
+Comment : Pushed by rmaries@mozilla.com:
+Remove mention of Lockwise mobile apps from about:logins. r=sfoster,fluent-reviewers
+,
+Date : 12/11/2020 19:22:02
+Comment : Even though I'll walk in the church and burst in a ball of flames
+Only Hall of Fame I'll be inducted in is the alcohol of fame
+On the wall of shame,
+Date : 12/11/2020 19:22:13
+Comment : Thanks for the backout Natalia, will fix.
+,
+Date : 12/11/2020 19:22:27
+Comment : Pushed by rmaries@mozilla.com:
+
+Remove mention of Lockwise mobile apps from about:logins. r=sfoster,fluent-reviewers
+
+Thanks for the backout Razvan, will fix. Hopefully this is the last time I need to update the patch
+,
+Date : 12/11/2020 19:36:23
+Comment : If no logins are saved and a password master is set, when creating the first login the "Password Required" pop-up is displayed after clicking the "Save" button. If the "Cancel" button of the pop-up is clicked, a yellow banner warning is displayed on the top of the page that informs you that you need to enter your master password. If you press the "Log in" button from the banner, the "Create New Login" form is dismissed even if the fields are completed. From the QA point of view, the users might expect that the "Password Required" pop-up is redisplayed and the entered data is lost.,
+Date : 12/11/2020 19:36:35
+Comment : Considering this, I will reopen the issue.,
+Date : 12/11/2020 19:36:50
+Comment : Here is the regression range:
+Last Good: 2019-07-18
+First Bad: 2019-07-19
+I don't realize which bug may be caused this issue, but I observe that the issue was introduced when the Logins and Passwords form was changed (Firefox Lockwise was introduced).,

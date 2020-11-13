@@ -2,3 +2,14 @@ Date : 12/11/2020 17:50:08
 Comment : yes,
 Date : 12/11/2020 18:03:37
 Comment : test,
+Date : 12/11/2020 18:49:15
+Comment : "But I'm only going to get this one chance." (Six minutes— Six minutes—),
+Date : 12/11/2020 19:27:29
+Comment : We should first implement the warnings that Katie designed to warn in the delete confirmation dialog when Sync is setup so users know the data will be deleted from all devices.
+,
+Date : 12/11/2020 19:27:40
+Comment : WIP UX mini-spec: ,
+Date : 12/11/2020 19:27:52
+Comment : Depends on D89078,
+Date : 12/11/2020 19:28:02
+Comment : UX and other engineers came to a consensus on a particular case: primary password will not prompt after confirming to delete all logins. This is consistent with the current behavior of deleting a login. Primary passwords prevents snooping, but does not prevent other destructive operations.,

@@ -1,0 +1,13 @@
+Date : 12/11/2020 19:02:42
+Comment : Made a livin' and a killin' off it,
+Date : 12/11/2020 19:02:53
+Comment : We are actively discussing this and bug 1624255 with Microsoft. It's on me to provide some logs for them today because Jared can't repro the issue.
+,
+Date : 12/11/2020 19:03:30
+Comment : Yo teach, you said we could generate a random script for the test data, SO THEORETICALLY, I could create a script to just make all eminem lyrics as out test data.,
+Date : 12/11/2020 19:38:29
+Comment : Sorry, should have definitely given more context. You had mentioned this bug in reference to my master password policy work so I wanted to know if I needed to worry about it or go ahead and get my patch reviewed and landed.,
+Date : 12/11/2020 19:38:38
+Comment : You can go ahead and get your patch reviewed and landed.,
+Date : 12/11/2020 19:38:47
+Comment : Password reuse is a big problem on the web and causes numerous account compromises.  Users use the same password for the survey site they used one time and their bank account.  If an attacker can compromise one, they can compromise the other.,

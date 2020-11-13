@@ -1,0 +1,11 @@
+Date : 12/11/2020 19:13:03
+Comment : Possibly regressed by bug 1622042?
+,
+Date : 12/11/2020 19:13:58
+Comment : I looked into it, and found two-layer issue:
+This code fallbacks are wrong. They use "" as a fallback, but since this is used as epoch it should be a number.
+With (1) fixed, the values of this._timeCreated|this._timeUsed|this._timeChanged is falsy in ar but not in pl or en-US
+,
+Date : 12/11/2020 19:14:07
+Comment : I'm not sure what causes the difference, it may be a race condition maybe? But it seems like some timing bug since I don't believe this code should be called with falsy values.
+,

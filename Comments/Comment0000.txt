@@ -4,3 +4,6 @@ Date : 09/11/2020 18:41:42
 Comment : test,
 Date : 09/11/2020 18:48:04
 Comment : why no show,
+Date : 12/11/2020 19:08:02
+Comment : Also I calculated that a maximum of 0.56% of all users would see the OS-reauth dialog per day across all OSs. If we see issues in the gradual rollout in the first few days then we can address this.
+,

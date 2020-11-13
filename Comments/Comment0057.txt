@@ -1,0 +1,15 @@
+Date : 12/11/2020 19:01:29
+Comment : My pen'll go off when I half-cock it,
+Date : 12/11/2020 19:01:42
+Comment : [Tracking Requested - why for this release]: Unexpected and confusing behavior for users on Windows in a new feature, unknown how common this is.,
+Date : 12/11/2020 19:01:55
+Comment : (In reply to Matthew N. [:MattN] from comment #0)
+The repeated failing calls to check if the password is empty are causing Windows to act like the previous authentication failed? We should maybe cache this. I think I saw that Chromium is.,
+Date : 12/11/2020 19:34:10
+Comment : I filed Bug 1642679 looking at how to check the scheme of the Document.,
+Date : 12/11/2020 19:34:18
+Comment : We may want to apply the same scheme check to the DocShell and Principal functions....,
+Date : 12/11/2020 19:34:26
+Comment : This would be a much smaller/tighter fix than Bug 1450398, but Bug 1450398 still contains the comprehensive answer.,
+Date : 12/11/2020 19:34:38
+Comment : Maybe we could use the URI_DANGEROUS_TO_LOAD flag? That way moz-extension pages that are not exposed to the web would also be immune RFP.,

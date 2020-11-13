@@ -4,3 +4,9 @@ Date : 09/11/2020 20:53:52
 Comment : big problem,
 Date : 12/11/2020 17:39:12
 Comment : check comment,
+Date : 12/11/2020 19:12:40
+Comment : Cosmin - I'm referring to the first bug, and glad to hear that it doesn't reproduce. The folks from that team are following up with MattN via email (I'm not on this team, I just randomly found this bug while looking at 'This week in Firefox' :) )
+,
+Date : 12/11/2020 19:12:53
+Comment : m_kato, could you prioritize this one? Also do you think this should be tracked for a dot release?
+,

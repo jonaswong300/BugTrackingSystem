@@ -1,0 +1,17 @@
+Date : 12/11/2020 18:52:52
+Comment : Will we get marked down for nonsense comments?,
+Date : 12/11/2020 18:53:16
+Comment : "Just a feeling I've got. Like something's about to happen, but I don't know what. 
+If that means what I think it means, we're in trouble, big trouble; 
+And if he is as bananas as you say, I'm not taking any chances.",
+Date : 12/11/2020 19:31:28
+Comment : Thanks for figuring this out! Makes sense as the in-content dark mode uses prefers-color-scheme.
+,
+Date : 12/11/2020 19:31:37
+Comment : Been sort of an epiphany to reckon that setting being the culrpit. The matter apparently been discussed already in bug 1535189 but prior it started to break the theme coherency of internal about:pages.,
+Date : 12/11/2020 19:31:48
+Comment : reopening in light of bug 1535189comment #12,
+Date : 12/11/2020 19:31:58
+Comment : Cause being RFP not responding to any media@ queries.,
+Date : 12/11/2020 19:32:09
+Comment : Also not knowing whether other about:pages will be coded with CSS Media Queries Level 5 code prefers-color-scheme this should probably be sorted in general.,

@@ -1,0 +1,14 @@
+Date : 12/11/2020 19:16:26
+Comment : S1 or S2 bugs need an assignee - could you find someone for this bug?
+,
+Date : 12/11/2020 19:16:38
+Comment : This is on Jared. See comment 4.
+,
+Date : 12/11/2020 19:16:47
+Comment : Get dunked on JARED,
+Date : 12/11/2020 19:16:57
+Comment : I question putting this at S1 or S2. The metadata is not critical functionality and a workaround does exist.
+,
+Date : 12/11/2020 19:17:08
+Comment : Bugbug thinks this bug should belong to this component, but please revert this change in case of error.
+,

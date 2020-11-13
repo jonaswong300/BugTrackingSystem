@@ -6,3 +6,6 @@ Comment : can you please test this build and let me know if you now get a PIN pr
 https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/B1u4NJwMRF2aX_P2KnBs1A/runs/0/artifacts/public/build/target.zip, 
 Date : 09/11/2020 18:24:46
 Comment : Testing new comment,
+Date : 12/11/2020 19:06:52
+Comment : Microsoft didn't answer whether this was a known issue in 1809 but did acknowledge receipt of my Feedback Hub reports.
+,

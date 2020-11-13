@@ -1,0 +1,24 @@
+Date : 12/11/2020 19:22:41
+Comment : Hello!
+I would like to work on this if that's okay
+,
+Date : 12/11/2020 19:23:07
+Comment : Hi, sure, I think you should base this patch on top of the patch in Bug 1613620 to avoid duplicating work around the new confirmation dialog template. You will be automatically assigned to this bug when you upload a patch. Thanks!
+,
+Date : 12/11/2020 19:23:23
+Comment : And a "way to go" from your label every day, lookin' boy
+Hey, lookin' boy! What you say, lookin' boy?
+I get a "hell yeah" from Dre, lookin' boy
+I'ma work for everything I have, never asked nobody for shit
+Get outta my face, lookin' boy!,
+Date : 12/11/2020 19:23:36
+Comment : Mass removing [skyline] and [passwords:management] from about:logins bugs which are no longer useful.
+
+,
+Date : 12/11/2020 19:23:46
+Comment : Hi. I'm not finding your designs for this at the moment? Can you share a link?
+,
+Date : 12/11/2020 19:39:20
+Comment : If a user has saved the same password on multiple sites, perhaps we can somehow flag this in the Password Manager interface.  Particularly if the same password is being used on an HTTP page and an HTTPS page.  Since the former can be read in cleartext, it exposes the later to compromise.,
+Date : 12/11/2020 19:39:29
+Comment : Don't get too naggy about it though. I have 30-ish legitimate instances of my mozilla LDAP password. Even "same eTLD+1" heuristics will get the recommendation wrong because there's a mix of mozilla.ORG and .COM sites, as well as the completely different mozilla.okta.com and mozilla.service-now.com,

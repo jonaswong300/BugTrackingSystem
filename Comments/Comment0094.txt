@@ -2,3 +2,5 @@ Date : 12/11/2020 18:08:22
 Comment : FIXED COMMENTS YAY,
 Date : 12/11/2020 18:08:27
 Comment : FIXED COMMENTS YAY2,
+Date : 12/11/2020 18:48:54
+Comment : But the OS authentication feature is disabled if you have a master password set, so that attack is always feasible when this feature is active. You say it's meant to prevent casual snooping, but I'm not sure whether having to copy out 2 files from the profile directory is that much harder than setting an about:config setting.,

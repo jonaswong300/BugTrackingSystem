@@ -1,2 +1,5 @@
 Date : 18/10/2020 04:17:52
 Comment : Depends on D87851, 
+Date : 12/11/2020 18:53:34
+Comment : (and apropos of this, Bugzilla upon creation of my account did not accept as valid a password which satisfactorily used 3 of the required facets: lower/upper/number).
+,

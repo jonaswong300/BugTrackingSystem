@@ -1,0 +1,7 @@
+Date : 12/11/2020 18:59:34
+Comment : Exactly what do you mean by "snooping?'
+,
+Date : 12/11/2020 18:59:49
+Comment : Meta-bug for a Monitor integration idea:
+When a user is viewing about:logins, offer to add all the email addresses used in their saved logins to Firefox Monitor.
+,

@@ -1,0 +1,9 @@
+Date : 12/11/2020 19:07:32
+Comment : I have video recordings of both of these scenarios I can share, if needed. They were sent to MSFT.
+,
+Date : 12/11/2020 19:07:41
+Comment : At this point it seems like we can add a note to SUMO that upgrading to Windows 10 1909 will address some problems… otherwise we could not ship this feature to earlier versions but then our behaviour would be even more confusing across OS versions.
+,
+Date : 12/11/2020 19:09:17
+Comment : I have managed to install Windows 10 Home version 1809 OS build 17763.379 on a virtual machine and verified if I can reproduce this behavior. Here are the results:
+,

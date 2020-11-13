@@ -1,0 +1,9 @@
+Date : 13/11/2020 14:44:25
+Comment : Chatted with Betsy, here's our new and improved string:
+"Make sure this matches the exact address of the website where you log in.",
+Date : 13/11/2020 14:44:42
+Comment : But I gotta keep a few punchlines
+Just in case 'cause even you unsigned
+Rappers are hungry lookin' at me like it's lunchtime,
+Date : 13/11/2020 14:44:58
+Comment : This banner in the Lockwise desktop UI currently points users in a desktop environment to the app stores. We should optimize them to Send to Device widgets so that a user can submit a number to which a link to the app stores can be opened on their mobile device.,

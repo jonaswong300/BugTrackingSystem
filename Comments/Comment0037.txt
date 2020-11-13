@@ -1,2 +1,7 @@
 Date : 12/11/2020 17:58:24
 Comment : Why are there so many comments with just the word test?,
+Date : 12/11/2020 19:18:47
+Comment : I've noticed that the same logins (they are synced) open much faster on my 3.6 GHz i9 desktop machine. There it takes slightly less than 1 second. Same Firefox version, but Windows 10 Home (Version 2004).
+,
+Date : 12/11/2020 19:19:05
+Comment : Not everyone can be smart like you, sometimes the only thing we have to say is test,

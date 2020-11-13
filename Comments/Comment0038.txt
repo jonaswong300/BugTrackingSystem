@@ -1,0 +1,15 @@
+Date : 12/11/2020 18:49:37
+Comment : "Something's wrong, I can feel it." (Six minutes, Slim Shady, you're on!),
+Date : 12/11/2020 18:50:05
+Comment : No leave this in.,
+Date : 12/11/2020 19:30:27
+Comment : This is the display when I tried to log in through add-ons. The password reveal option does not reveal itself unless I start typing., or does not reveal itself at all.,
+Date : 12/11/2020 19:30:43
+Comment : The content of attachment 9160835 [details] has been deleted for the following reason:
+
+Deleted at the request of the uploader.,
+Date : 12/11/2020 19:30:53
+Comment : currently Lockwise's about:logins is not adhering to OS/browser dark theme (browser.in-content.dark-mode),
+Date : 12/11/2020 19:31:03
+Comment : Hmm, it should be adhering to the OS dark mode. Are you sure you have app dark mode enabled on your machine ?
+,

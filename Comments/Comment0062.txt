@@ -1,2 +1,10 @@
 Date : 11/11/2020 20:53:08
 Comment : hello,
+Date : 13/11/2020 14:43:44
+Comment : For good at least once in a while
+So I wanna make sure somewhere in this chicken scratch I scribble and doodle enough rhymes
+To maybe try to help get some people through tough times,
+Date : 13/11/2020 14:43:56
+Comment : IMO we should use <input type=search> and the clear button should be implemented for all type=search in DOM code like Safari does.,
+Date : 13/11/2020 14:44:08
+Comment : Ryan, what should we put in a popup here? Our code will already add "https://" to the beginning of the address if the user doesn't add it themselves. The "www" prefix is not always wanted.,

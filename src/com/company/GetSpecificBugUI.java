@@ -210,7 +210,7 @@ class GetSpecificBugUI implements ActionListener
         //panel.add(commentArea);
 
         commentArea.setEditable(true);
-
+        
         JScrollPane add_scroll = new JScrollPane(commentArea);
         add_scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         add_scroll.setBounds(10,50,850,200);

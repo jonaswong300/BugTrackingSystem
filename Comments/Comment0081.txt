@@ -1,0 +1,4 @@
+Date : 12/11/2020 18:52:23
+Comment : Hahaha,
+Date : 12/11/2020 18:52:40
+Comment : But for a bunch of convenience passwords for low-value sites (each forum seems to have different password requirements), I use the Firefox password manager, and I don't need the impediment of "casual" security via OS password authentication to access them. It's already ceded that "there are so many ways to extract this data," so why the hoops? Keep this in as an option at least, yeesh. >_< If anything, I would like the passwords not to be hidden at all (no "eye")!,

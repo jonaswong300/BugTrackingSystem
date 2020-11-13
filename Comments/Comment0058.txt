@@ -1,0 +1,12 @@
+Date : 12/11/2020 19:11:03
+Comment : I have encountered the mentioned behaviors on both Firefox 76.0.1 release and the latest Nightly 78.0a1 build on Windows 10 Home version 1809.
+,
+Date : 12/11/2020 19:11:16
+Comment : @Matt please let me know if you need any information.
+,
+Date : 12/11/2020 19:11:28
+Comment : We believe that this is fixed in 2004. Can you please attempt the repro on that build?
+,
+Date : 12/11/2020 19:11:42
+Comment : In this report there are two different behaviors and I have tested both on 3 different Windows versions (Windows 10 Home version 1809 OS build 17763.379, Windows 10 PRO version 1903 OS build 18362.836 and Windows 10 Pro version 2004 OS build 19041.264). Here are the results:
+,

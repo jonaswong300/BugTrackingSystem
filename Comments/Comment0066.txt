@@ -1,0 +1,18 @@
+Date : 12/11/2020 18:57:14
+Comment : Now, who thinks their arms are long enough to slap box, slap box?
+They said I rap like a robot, so call me Rap-bot
+,
+Date : 12/11/2020 18:57:38
+Comment : All the comments are so boring,
+Date : 12/11/2020 19:37:13
+Comment : Yes, but we also aren't obligated to delete their form data at this point either. We can instead just return them back to the form with their values preserved, let them make any changes they want, and click Save thus showing the prompt again.
+,
+Date : 12/11/2020 19:37:24
+Comment : Implementing this adds extra complexity actually since the event is dispatched asynchronously, thus we can't use cancelable events + event.preventDefault, we would need to have a new listener that could listen for a failure response from the parent JSM.,
+Date : 12/11/2020 19:37:38
+Comment : UX recommendation:
+Expectation - User populated data fields should retain content until the user actively selects Cancel (intentionally backs out of the add new login flow).,
+Date : 12/11/2020 19:37:48
+Comment : The approach wasn't ideal, is for an edge case, was possibly going to be obsoleted by other improvements to authentication on about:logins, and now needs rebasing on bug 1639347.,
+Date : 12/11/2020 19:37:57
+Comment : Do you have a need for it? If so, it would be helpful to save a round-trip and give more context in advance.,

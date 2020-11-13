@@ -1,0 +1,24 @@
+Date : 12/11/2020 18:55:39
+Comment : I have a travel machine which is locked down - and of course has a master password.
+,
+Date : 12/11/2020 18:56:04
+Comment : I wonder if I can get through the whole Music to be murdered by album. ,
+Date : 12/11/2020 18:56:22
+Comment : So at home I need to enter another password to "avoid snooping" But in the outside world you just show the entry when I ask.
+,
+Date : 12/11/2020 19:01:17
+Comment : But for me to rap like a computer it must be in my genes
+I got a laptop in my back pocket,
+Date : 12/11/2020 19:42:32
+Comment : Sounds like an edge case, I don't think this is a priority to fix in 70. Let me know if you disagree once this is triaged by the team though.,
+Date : 12/11/2020 19:42:45
+Comment : This is quite an edge case since the user has to sign in to Firefox using the button in the browser toolbar. Any action on the page such as creating, deleting, opening a site, or clicking the Accounts button within the page will cause the future synced logins to load properly. I'll change this to 70-wontfix.,
+Date : 12/11/2020 19:42:56
+Comment : Bugbug thinks this bug is a regression, but please revert this change in case of error.,
+Date : 12/11/2020 19:43:07
+Comment : In the event that the strings in aboutLogins.ftl are used in a different context, we should proactively add the "about-logins-" prefix to the string names. As part of this work, a migration script should be created so localizers will not have to retranslate all of the strings.,
+Date : 12/11/2020 19:43:16
+Comment : There's a risk here:
+about:logins was exposed in 70
+if we land this in 71, we'll have to carry around both strings (prefixed and non) for a few cycles because of cross-channel. And locales who didn't translate before we run the migration will have to translate them twice.
+A solution would be to do this and make sure we uplift to beta if it doesn't land before next Monday.,

@@ -1,2 +1,25 @@
 Date : 12/11/2020 17:55:51
-Comment : I hte speling wrd corect, soo tis gud fur mi,
+Comment : I hte speling wrd corect, soo tis gud fur mi,Date : 12/11/2020 19:17:27
+Comment : Thank you for filing this bug. This might be caused by slower decryption on Windows, and the fact that we decrypt every login on page load currently.
+,
+Date : 12/11/2020 19:17:41
+Comment : Did nothing but shoot for the Moon since (Pew!)
+MCs get taken to school with this music
+'Cause I use it as a vehicle to "bus the rhyme"
+Now I lead a new school full of students,
+Date : 12/11/2020 19:17:51
+Comment : Are you using portable Firefox or storing your Firefox profile on an external device (e.g. flash drive, network folder, ...)?
+,
+Date : 12/11/2020 19:18:02
+Comment : No, I'm using a normal (non-portable) installation of Firefox 79.0 on Windows 10 Enterprise (Version 1803), on a Dell Precision 7520 laptop (2.9 GHz i7 Processor) with a 512 GB SSD and 32 GB memory. The profile is stored on the SSD, no network folders or external devices are used. With an idle CPU it takes 5 seconds to show the logins when about:logins is used.
+,
+Date : 12/11/2020 19:32:37
+Comment : Presumably here we check IsSystemPrincipal and that's false.
+,
+Date : 12/11/2020 19:32:47
+Comment : The answer is probably a comprehensive fix in Bug 1450398 for these types of exceptions....
+,
+Date : 12/11/2020 19:32:58
+Comment : Bug 1535189 could not have regressed this. There was no change in that bug.,
+Date : 12/11/2020 19:33:08
+Comment : My thinking is that here we should check if the scheme is about: and exempt from RFP then. This will affect a lot more than just the color scheme of about:logins, so it needs a bit of thought, but I don't think we should be allowing anything that could result in about: pages making people fingerprintable from the web so probably safe?,

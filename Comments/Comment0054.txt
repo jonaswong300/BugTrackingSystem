@@ -1,0 +1,6 @@
+Date : 12/11/2020 19:06:24
+Comment : I just asked Microsoft if this was fixed in 1909 and sent the Feedback report with logs from my 1809 VMs that still experience this and bug 1624255 (only intermittently).
+,
+Date : 12/11/2020 19:06:35
+Comment : I get slightly different behaviour in a local account vs. a Microsoft account.
+,

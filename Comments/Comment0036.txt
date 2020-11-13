@@ -1,2 +1,22 @@
 Date : 12/11/2020 17:51:39
 Comment : testing,
+Date : 12/11/2020 18:52:07
+Comment : What de fack did yuw just facking say about me, yuw wittwe bitch? I’ww have yuw know I gwaduated top of my cwass in de Navy Seaws, and I’ve been invowved in numewous secwet waids on Aw-Quaeda, and I have ovew 300 confiwmed kiwws. I am twained in gowiwwa wawfawe and I’m de top snipew in de entiwe US awmed fowces. yuw awe nofing to me but just anofew tawget. I wiww wipe yuw de fack out wif pwecision de wikes of which has nevew been seen befowe on dis Eawd, mawk my facking wowds. yuw dink yuw can get away wif saying dat shit to me ovew de Intewnet? dink again, fackew. As we speak I am contacting my secwet netwowk of spies acwoss de USA and yuw IP is being twaced wight now so yuw bettew pwepawe fow de stowm, maggot. de stowm dat wipes out de padetic wittwe ding yuw caww yuw wife. yuw’we facking deaf, kid. I can be anywhewe, anytime, and I can kiww yuw in ovew seven hundwed ways, and dat’s just wif my bawe hands. Not onwy am I extensivewy twained in unawmed combat, but I have access to de entiwe awsenaw of de United States Mawine Cowps and I wiww use it to its fuww extent to wipe yuw misewabwe ass off de face of de continent, yuw wittwe shit. If onwy yuw couwd have known what unhowy wetwibution yuw wittwe “cwevew” comment was about to bwing down upon yuw, maybe yuw wouwd have hewd yuw facking tongue. But yuw couwdn’t, yuw didn’t, and now yuw’we paying de pwice, yuw gawddamn idiot. I wiww shit fuwy aww ovew yuw and yuw wiww dwown in it. yuw’we facking deaf, kiddo. uwu
+,
+Date : 12/11/2020 19:28:32
+Comment : Jared, did your recent related fix also fix this?,
+Date : 12/11/2020 19:28:40
+Comment : No, my change wouldn't have fixed this since we only store what passwords are vulnerable per profile and don't sync that list. Once a password is marked as vulnerable it's only known to be vulnerable for that profile. Since the breached login has its password changed, when the logins are synced to the new profile the new profile won't know that the there are vulnerable logins.,
+Date : 12/11/2020 19:28:49
+Comment : When clicking on the footer or "Install on mobile device" ellipsis menubutton, we should show a modal with details and steps for how to install Lockwise on your mobile devices as well as how to connect the two using a Firefox account.,
+Date : 12/11/2020 19:29:12
+Comment : Oh boy look at me, I'm Jared, I'm so incompetent my  fixes don't even fix things,
+Date : 12/11/2020 19:29:24
+Comment : Sam please stop before we are forced to fire you,
+Date : 12/11/2020 19:29:32
+Comment : Fine,
+Date : 12/11/2020 19:29:42
+Comment : Can you assign a priority?
+,
+Date : 12/11/2020 19:29:54
+Comment : Mass removing [skyline] and [passwords:management] from about:logins bugs which are no longer useful.,

@@ -1,0 +1,11 @@
+Date : 12/11/2020 19:10:12
+Comment : Congrats to Joe Biden for winning the election.,
+Date : 12/11/2020 19:10:28
+Comment : When trying to show/copy/edit a password from about:logins the OS auth dialog requires entering the username and the password. Both fields are blank (this seems to be another issue). If I choose "More choices" the email account is listed and can be used, but there is no PIN option.
+,
+Date : 12/11/2020 19:10:37
+Comment : After a few attempts, the OS auth dialog asks for the PIN code. So this seems to also be random. Sometimes the OS auth requires username and password (both blank fields) and sometimes the PIN code.
+,
+Date : 12/11/2020 19:10:50
+Comment : If I remove the PIN code, the OS auth dialog always requires to enter a username and a password (the fields are blank). If I enter the Microsoft email account and the email's password in the blank fields, the OS auth accepts these credentials and the password is shown/copied or the edit mode is opened. But is confusing since you don't know exactly what credentials should be used. I have logged this behavior in Bug 1640925.
+,

@@ -1,0 +1,27 @@
+Date : 12/11/2020 19:12:02
+Comment : The first bug encountered:
+If you have an OS password and also a PIN code, the OS auth dialog randomly require to enter the password or the PIN code. This issue is also reproducible if you have an account linked to a Microsoft Account.
+I have managed to reproduce this issue only on Windows 10 Home version 1809 OS build 17763.379. The issue is not reproducible with Windows 1903, 1909, and 2004. So probably this was fixed started with Windows 10 1903.
+The second bug encountered:
+Blank username and password is the default option of the OS auth when having an OS account linked to Microsoft Account. For tracking purpose I have logged this in a separate bug: Bug 1640925.
+I have managed to reproduce this issue on all 3 Windows versions inclusive Windows 10 version 2004.
+However, I have observed that on Windows 10 Pro version 2004 OS build 19041.264 if you don't have a PIN code only the account linked to the Microsoft account, the OS auth requires by default blank username and password and there is no "More choices" option. But if you add a PIN code, the "More choices" option is available but the email account is not listed there.
+I have added more information about this in Bug 1640925 and shared the screenshots with you Jonathan.
+,
+Date : 12/11/2020 19:12:14
+Comment : @Jonathan about which of the described issues did you refer?
+,
+Date : 12/11/2020 19:12:27
+Comment : 'Cause I'm beginnin' to feel like a Rap God, Rap God
+All my people from the front to the back nod, back nod
+Now, who thinks their arms are long enough to slap box, slap box?
+Let me show you maintainin' this shit ain't that hard, that hard
+Everybody wants the key and the secret to rap immortality like Ι have got,
+Date : 12/11/2020 19:41:31
+Comment : Rather than replicate the styling, I think Mark was looking at sharing the menu component so it can also be used on about:addons. Mark, what's the status of that?,
+Date : 12/11/2020 19:41:41
+Comment : Bug 1615938 is a small P2 bug that you could work on in the meantime. Same with bug 1615215.,
+Date : 12/11/2020 19:41:54
+Comment : We store a list of "subscribers" in AboutLoginsParent.jsm that get notified of updates to storage changes. When a tab is detached, the subscribers list will contain the old target. This old target is thrown away and replaced with the new target when an event happens on the page that messages the parent JSM. In these STR, there is no event happening on the page after detaching, thus the subscribers list still contains the stale target.,
+Date : 12/11/2020 19:42:03
+Comment : To fix this bug, we should have AboutLoginsParent.jsm update their list of subscribers when a tab is detached. We could use pagehide/pageshow from the aboutLogins.js side to do this (though that would fire when the selected tab changes without a detach), or we could use "TabBrowserInserted".,
