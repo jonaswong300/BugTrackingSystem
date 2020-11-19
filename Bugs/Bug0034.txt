@@ -1,10 +1,10 @@
-Title :Result fonts much larger than expected on classic theme
-Keywords :result,font,larger,classic,theme,
-Reporter :user2
-Assigned Developer : 
+Title : Result fonts much larger than expected on classic theme
+Keywords : result,font,larger,classic,theme,
+Reporter : user2
+Assigned Developer : N/A due to invalid bug
 Severity Level : 0
-Solved status : open
-Bug : User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0
+Solved status : closed (FLAGGED AS INVALID)
+Bug :  User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0
 Build ID: 20160726073904
 
 Step to reproduce:

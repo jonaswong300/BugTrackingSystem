@@ -1,0 +1,7 @@
+Title : some title here
+Keywords : some,keywords,here,
+Reporter : user1
+Assigned Developer : 
+Severity Level : 0
+Solved status : open
+Bug : some description here

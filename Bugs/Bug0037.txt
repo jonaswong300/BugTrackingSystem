@@ -1,10 +1,10 @@
-Title : CTRL+ENTER on @amazon and @google brings up login confirmation window
-Keywords : ctrl,enter,amazon,google,login,confirmation,window,
-Reporter : user2
-Assigned Developer : 
-Severity Level : 2
-Solved status : open
-Bug : User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 
+Title :  CTRL+ENTER on @amazon and @google brings up login confirmation window
+Keywords :  ctrl,enter,amazon,google,login,confirmation,window,
+Reporter :  user2
+Assigned Developer :  user3
+Severity Level : 1
+Solved status : closed
+Bug :  User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 
 Firefox/81.0
 
 Steps to reproduce:
@@ -21,3 +21,5 @@ Actual results:
 Expected results:
 - the  log in to the site(with username) confirmation window is displayed;
 - www.@google.com / www.@amazon.com address in the address bar;
+
+CLOSED REMARKS : closing this bug now

@@ -1,10 +1,10 @@
-Title :   Malicious website can hijack Google search initiated from search bar
-Keywords :  search,malicious,
-Reporter :   user33
-Assigned Developer : N/A due to duplicate bug
+Title :    Malicious website can hijack Google search initiated from search bar
+Keywords :   search,malicious,
+Reporter :    user33
+Assigned Developer :  N/A due to duplicate bug
 Severity Level : 1
-Solved status : closed (FLAGGED AS DUPLICATE)
-Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
+Solved status : closed
+Bug :  User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0
 Build ID: 20170302120751
 Malicious websites can listen for the keyup event, and perform a redirect when the user types a search term in the search bar and presses enter.
 I found this issue after experiencing this weird behaviour on a website which was using the keyup listener to submit a form when enter is pressed.
@@ -21,3 +21,5 @@ Performs a redirect when the user types a search term.
 
 Expected results:
 No redirect is supposed to occur.
+
+CLOSED REMARKS : 

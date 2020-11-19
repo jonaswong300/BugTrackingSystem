@@ -1,10 +1,10 @@
-Title : Home page URL may be appended to the URL bar if I'm start typing immediately
-Keywords : home,page,URL,appended,bar,typing,
-Reporter : user2
-Assigned Developer : user43
+Title :  Home page URL may be appended to the URL bar if I'm start typing immediately
+Keywords :  home,page,URL,appended,bar,typing,
+Reporter :  user2
+Assigned Developer :  user43
 Severity Level : 1
-Solved status : open
-Bug : User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 
+Solved status : closed
+Bug :  User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:69.0) Gecko/20100101 
 Firefox/69.0
 
 Steps to reproduce:
@@ -19,3 +19,5 @@ suspect there's some caching-related timing differences.)
 
 Expected results:
 Since I'd already started typing a URL, the default start page address shouldn't get appended.
+
+CLOSED REMARKS : reviewed and closed.

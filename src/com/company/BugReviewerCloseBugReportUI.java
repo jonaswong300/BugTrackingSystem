@@ -68,9 +68,18 @@ class BugReviewerCloseBugReportUI implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        closeBugRequest(bugIDField.getText(), titleField.getText(), remarksArea.getText());
-        JOptionPane.showMessageDialog(form, "Closing bug now", "Close Bug Report", JOptionPane.INFORMATION_MESSAGE);
-        form.dispose();
+        if(bugIDField.getText().isEmpty() || titleField.getText().isEmpty() || remarksArea.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(form, "Ensure that you have filled in the closing report and did not leave any empty text fields.", 
+            "Form empty", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            closeBugRequest(bugIDField.getText(), titleField.getText(), remarksArea.getText());
+            JOptionPane.showMessageDialog(form, "Closing bug now", "Close Bug Report", JOptionPane.INFORMATION_MESSAGE);
+            form.dispose();
+        }
+        
     }
 
 

@@ -198,7 +198,7 @@ class TriagerGenerateReportController {
             for(int i = 0; i < allReps.size(); i++)
             {
                 //add count
-                if(k.getReporter().trim().equals(allReps.get(i)))
+                if(k.getReporter().trim().equals(allReps.get(i).trim()))
                 {
                     rePorted.set(i, (rePorted.get(i)+1));
                 }
@@ -208,18 +208,18 @@ class TriagerGenerateReportController {
 
         String reps = "";
         int highest = rePorted.get(0);
-        
+        System.out.println(rePorted.size());
         //check who has highest count
         for(int i = 0; i < rePorted.size(); i++)
         {
             if(highest < rePorted.get(i))
             {
                 highest = rePorted.get(i);
-                reps = allReps.get(i);
+                reps = allReps.get(i).trim();
             }
-            else if (highest == rePorted.get(i) && reps != allReps.get(i))
+            else if (highest == rePorted.get(i) && !reps.equals(allReps.get(i).trim()))
             {
-                reps = reps + " | " + allReps.get(i) + " | "; 
+                reps = reps + " | " + allReps.get(i).trim() + " | "; 
             }
         }
 

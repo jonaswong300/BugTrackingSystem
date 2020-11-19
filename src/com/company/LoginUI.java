@@ -58,6 +58,9 @@ class LoginUI implements ActionListener {
         showLoginButton();
 
         frame.setVisible(true);
+        //when login screen close, auto logout/close system
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
     }
 
     private void showLoginButton(){

@@ -13,3 +13,5 @@ Date : 12/11/2020 19:34:26
 Comment : This would be a much smaller/tighter fix than Bug 1450398, but Bug 1450398 still contains the comprehensive answer.,
 Date : 12/11/2020 19:34:38
 Comment : Maybe we could use the URI_DANGEROUS_TO_LOAD flag? That way moz-extension pages that are not exposed to the web would also be immune RFP.,
+Date : 19/11/2020 08:25:55
+Comment : adding comment here,
