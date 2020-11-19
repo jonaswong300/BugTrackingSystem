@@ -5,6 +5,7 @@ Program is done in Java. Tested on Windows platform only.
 
 
 Functionalities for each class is as follows.
+
 Bug reporter
 - add bug report
 - search for bug
