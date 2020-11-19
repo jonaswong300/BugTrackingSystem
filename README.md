@@ -2,7 +2,9 @@
 Bug tracking is the process of logging and monitoring bugs or errors during software testing. It is also referred to as defect tracking or issue tracking. Large systems may have hundreds or thousands of defects. Each needs to be evaluated, monitored and prioritized for debugging. In some cases, bugs may need to be tracked over a long period of time.
 
 Program is done in Java. Tested on Windows platform only. 
-
+userAccount contains 50 random generated password and roles.
+CommentFileDatabase contains 100 comments files with sub comments attached in each file. 
+BugFileDatabase contains 100 bugs of different severity level, unassigned or assigned to users, close or still waiting to be resolved. 
 
 Functionalities for each class is as follows.
 
@@ -46,3 +48,12 @@ Bug Reviewer
   - keywords
   - developer
   - severity level
+  
+  
+User Account
+user1  	LLXxJeCJ	Reporter
+user3	  fqJUfDkZ	Developer
+user11	ZKCg8V1v	Triager
+user13	mooa5iXN	Reviewer
+
+*Refer to userAccount.txt to utilizer other account for the various roles. 
